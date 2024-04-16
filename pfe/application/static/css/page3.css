@@ -1,0 +1,409 @@
+.backgroung-page02-2-icon {
+    position: absolute;
+    height: 208.89%;
+    width: 100%;
+    top: 0.2%;
+    right: -0.07%;
+    bottom: -109.08%;
+    left: 0.07%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .page3-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 1024px;
+    object-fit: cover;
+  }
+  .page3-item {
+    position: absolute;
+    top: 943px;
+    left: 877px;
+    border-radius: var(--br-mini);
+    width: 227px;
+    height: 62px;
+  }
+  .page3-child1,
+  .page3-inner {
+    position: absolute;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .page3-inner {
+    height: 40.04%;
+    width: 23.96%;
+    top: 41.94%;
+    right: 120.83%;
+    bottom: 18.02%;
+    left: -44.79%;
+    border-radius: var(--br-11xl);
+  }
+  .page3-child1 {
+    height: 1.17%;
+    width: 59.58%;
+    top: 15.04%;
+    right: 0.07%;
+    bottom: 83.79%;
+    left: 40.35%;
+    background-color: #ffff;
+  }
+  /*
+  .acceuil1 {
+    position: absolute;
+    height: 4.88%;
+    width: 8.61%;
+    top: 7.13%;
+    left: 84.03%;
+    display: inline-block;
+    color: var(--color-black);
+  }
+  */
+  .acceuil {
+    position: relative;
+  }
+  .acceuil-wrapper,
+  .page2-inner {
+    position: absolute;
+    border: 1px solid var(--color-white);
+    box-sizing: border-box;
+    color:#ffff;
+  }
+  .acceuil-wrapper {
+    top: 58px;
+    left: 1173px;
+    border-radius: var(--br-11xl);
+    width: 167px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 30px;
+  }
+  .page3-child2 {
+    position: absolute;
+    top: 938px;
+    left: 1117px;
+    border-color: #ffff;
+    border-radius: var(--br-11xl);
+    background-color: rgba(217, 217, 217, 0.3);
+    width: 217px;
+    height: 67px;
+  }
+  .valider1 {
+    position: absolute;
+    top: 940px;
+    left: 701px;
+    color: #98ca3b;
+  }
+  .page3-child3,
+  .test1 {
+    position: absolute;
+    top: 940px;
+    left: 1209px;
+  }
+  .resultat1{
+  position: absolute;
+  top: 940px;
+  left: 951px;
+}
+  .page3-childd{
+    position: absolute;
+    top: 943px;
+    left: 877px;
+    border-radius: var(--br-11xl);
+    background-color: rgba(217, 217, 217, 0.3);
+    border-color:  #ffff;
+    width: 227px;
+   height: 67px;
+  }
+  .page3-child3 {
+    top: 940px;
+    left: 625px;
+   /* border-radius: var(--br-mini);*/
+    border-radius: var(--br-11xl);
+    border-color: #ffff;
+    background-color: rgba(200, 218, 41, 0.5);
+    width: 217px;
+    height: 67px;
+  }
+  .background-page03-2 {
+    position: absolute;
+    height: 56.54%;
+    width: 54.17%;
+    top: 145.31%;
+    right: 102.99%;
+    bottom: -101.86%;
+    left: -57.15%;
+    background: linear-gradient(
+      180deg,
+      #7c7171,
+      rgba(252, 245, 245, 0.58) 14.4%,
+      rgba(255, 255, 255, 0) 36.4%
+    );
+  }
+  .page3-child4 {
+    position: absolute;
+    top: 198px;
+    left: 604px;
+    border-radius: var(--br-xl);
+    background-color: var(--color-gainsboro-100);
+    width: 768px;
+    height: 655px;
+  }
+  .frame-child3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--br-11xl);
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    background-color: #ffff;
+    border-radius: var(--br-11xl);
+  }
+  .dashboard5 {
+    position: absolute;
+    top: 24px;
+    left: 78px;
+    font-weight: 500;
+  }
+  .tabelu-de-bord-21 {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .dashboard-parent1 {
+    position: absolute;
+    height: 16.86%;
+    width: 82.03%;
+    top: 77.17%;
+    right: 8.99%;
+    bottom: 5.97%;
+    left: 8.99%;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    color:#ffff;
+  }
+  .frame-container,
+  .vector-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 345px;
+    height: 427px;
+  }
+  .frame-container {
+    top: 346.5px;
+  }
+  .tabelu-de-bord-12 {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .dashboard-parent2 {
+    position: absolute;
+    height: 9.31%;
+    width: 83.19%;
+    top: 87.39%;
+    right: 8.41%;
+    bottom: 3.3%;
+    left: 8.41%;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    display: none;
+  }
+  .affichage-annuel5 {
+    position: absolute;
+    top: 24px;
+    left: 75px;
+    font-weight: 500;
+  }
+  .line-div {
+    position: absolute;
+    height: 1.39%;
+    width: 26.83%;
+    top: 4.86%;
+    right: 65.68%;
+    bottom: 93.75%;
+    left: 7.49%;
+    border-top: 1px solid var(--color-darkorange-200);
+    box-sizing: border-box;
+  }
+  .affichage-annuel-parent1 {
+    position: absolute;
+    height: 9.31%;
+    width: 83.19%;
+    top: 76.15%;
+    right: 8.99%;
+    bottom: 14.54%;
+    color:#ffff;
+    left: 7.83%;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+  }
+  .affichage-p16 {
+    position: absolute;
+    top: 24px;
+    left: 81px;
+    font-weight: 500;
+  }
+  .frame-child4 {
+    position: absolute;
+    height: 1.39%;
+    width: 26.83%;
+    top: 102.08%;
+    right: 34.67%;
+    bottom: -3.47%;
+    left: 38.5%;
+    border-top: 1px solid var(--color-darkorange-200);
+    box-sizing: border-box;
+  }
+  .affichage-p1-parent1 {
+    position: absolute;
+    height: 9.31%;
+    width: 83.19%;
+    top: 64.9%;
+    right: 8.99%;
+    bottom: 25.79%;
+    left: 7.83%;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    color: #ffff;
+  }
+  .traitement-mensuel5 {
+    position: absolute;
+    top: 24px;
+    left: 71px;
+    font-weight: 500;
+    white-space: pre-wrap;
+  }
+  .traitement-de-linformation-1-icon6 {
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .traitement-mensuel-parent1 {
+    position: absolute;
+    height: 9.31%;
+    width: 83.19%;
+    top: 53.65%;
+    right: 8.99%;
+    bottom: 37.04%;
+    left: 7.83%;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    color: var(--color-snow-200);
+  }
+  .group-child1,
+  .group-child2 {
+    position: absolute;
+    height: 0.13%;
+    width: 17.54%;
+    top: 49.26%;
+    right: 65.07%;
+    bottom: 50.61%;
+    left: 17.39%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    background-color: var(--color-darkorange-100);
+  }
+  .group-child2 {
+    width: 16.81%;
+    right: 19.13%;
+    left: 64.06%;
+  }
+  .menu5 {
+    position: absolute;
+    height: 4.91%;
+    width: 20.87%;
+    top: 46.8%;
+    left: 39.71%;
+    font-size: var(--font-size-5xl);
+    display: inline-block;
+    color: var(--color-darkorange-200);
+  }
+  .logo-icon3 {
+    position: absolute;
+    height: 16.81%;
+    width: 49.28%;
+    top: 0;
+    right: 28.41%;
+    bottom: 83.19%;
+    left: 22.32%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .group-container {
+    position: absolute;
+    top: 79px;
+    left: 61px;
+    width: 345px;
+    height: 773.5px;
+    font-size: var(--font-size-xl);
+  }
+  .icon {
+    position: absolute;
+    top: 949px;
+    left: 883px;
+    width: 51px;
+    height: 51px;
+    object-fit: cover;
+  }
+  .product-testing-service-test-i-icon {
+    position: absolute;
+    top: 946px;
+    left: 1127px;
+    width: 39px;
+    height: 48px;
+    object-fit: cover;
+  }
+  .rsultat {
+    position: absolute;
+    top: 956px;
+    left: 951px;
+  }
+  .tlchargement-1-icon {
+    position: absolute;
+    top: 950px;
+    left: 631px;
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .page3 {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 1024px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-11xl);
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+  }
+  

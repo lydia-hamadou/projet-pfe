@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/page4.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="page4">
+      <img class="vector-icon" alt="" src="./public/vector.svg" />
+
+      <img class="page4-child" alt="" src="{% static 'images/Group 26.png'%}" />
+      <a class="acceuil-wrapper" href="page1">
+        <b class="acceuil">Acceuil</b>
+      </a>
+      <div class="page4-inner">
+        <select class="mois">
+          <option value="">Mois</option>
+          <option value="janvier" class="option">janvier</option>
+          <option value="fevrier" class="option">février</option>
+          <option value="mars" class="option">Mars</option>
+        </select>
+        <select class="annee">
+          <option value="">Année</option>
+          <option value="2022" class="option">2022</option>
+          <option value="2023" class="option">2023</option>
+          <option value="2024" class="option">2024</option>
+        </select>
+      </div>
+      <div class="rectangle-div"></div>
+      <button class="btnOK">
+      <b class="ok">OK</b>
+    </button>
+      <div class="group-div">
+        <div class="group-child3"></div>
+
+        <a class="dashboard-parent3" href="">
+          <div class="dashboard7">Dashboard</div>
+          <img
+            class="tabelu-de-bord-13"
+            alt=""
+            src="{% static 'images/tabelu de bord.png'%}"
+          />
+        </a>
+        <a class="affichage-annuel-parent2" href="">
+          <div class="affichage-annuel6">Affichage Annuel</div>
+          <div class="frame-child5"></div>
+          <img
+            class="traitement-de-linformation-1-icon7"
+            alt=""
+            src="{% static 'images/traitement-de-linformation.png'%}"
+          />
+        </a>
+        <a class="affichage-p1-parent2" href="page4">
+          <div class="affichage-p17">Affichage P1</div>
+          <div class="frame-child6"></div>
+          <img class="tabelu-de-bord-13" alt="" src="{% static 'images/bilan.png'%}"  />
+        </a>
+        <a class="traitement-mensuel-parent2" href="page2">
+          <div class="traitement-mensuel6">Traitement mensuel</div>
+          <img
+            class="traitement-de-linformation-1-icon8"
+            alt=""
+            src="{% static 'images/traitement-de-linformation (1).png'%}"
+          />
+        </a>
+        <div class="group-child4"></div>
+
+        <div class="group-child5"></div>
+
+        <b class="menu6">Menu</b>
+        <img class="logo-icon4" alt="" src="{% static 'images/logo.png'%}" />
+      </div>
+      <img class="page4-child10"></div>
+    </div>
+  </body>
+</html>

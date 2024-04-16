@@ -1,6 +1,6 @@
 from django.db import models
 
-from django.db import models
+
 
 class Region(models.Model):
     id_region = models.CharField(max_length=10, primary_key=True)
