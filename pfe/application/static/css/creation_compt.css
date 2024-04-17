@@ -292,24 +292,6 @@
     overflow: hidden;
     font-size: larger;
   }
-  .nouveau-compte {
-    position: absolute;
-    color:white;
-    top: 7px;
-    left: 28px;
-    font-size: large;
-  }
-  .nouveau-compte-wrapper {
-    position: absolute;
-    top: 515px;
-    left: 120px;
-    border-radius: var(--br-11xl);
-    background-color: #1867ff;
-    width: 235px;
-    height: 38px;
-    overflow: hidden;
-    font-size: var(--font-size-xl);
-  }
   .line-group,
   .sonatrach-siege-2-icon {
     position: absolute;

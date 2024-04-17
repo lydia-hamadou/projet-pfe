@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import essay1,essay2,essay3,essay4,essay5,essay6
+from .views import essay1,essay2,essay3,essay4,essay5,essay6,essay7
 
 app_name = 'application'
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('traitement_annuel', essay4, name='traitement_annuel'),
     path('dashboard', essay5, name='dashboard'),
     path('login', essay6, name='login'),
+    path('compte', essay7, name='compte'),
 ]

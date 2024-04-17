@@ -26,20 +26,20 @@
             <div class="frame-child11"></div>
 
             <div class="connexion1">Connexion</div>
-            <div class="utilisateur-container">
-                <lebel class="utilisateur1">Utilisateur</lebel>
-                <input autocomplete="off" type="text" id="username" name="username" required class="champ-utilisateur">
-            </div>
-            <div class="frame-wrapper2">
-                <label class="mot-de-pass1"> Mot de pass</label>
-                <input autocomplete="off" type="password" id="password" name="password" required>
-            </div>
-            <button class="se-connecter-container">
-              <div class="se-connecter1">Se connecter</div>
-            </button>
-            <button class="nouveau-compte-wrapper">
-              <div class="nouveau-compte">Nouveau compte</div>
-            </button>
+            <form id="create-account-form" method="POST">
+              {% csrf_token %}
+              <div class="utilisateur-container">
+                  <label class="utilisateur1" for="username">Utilisateur</label>
+                  <input type="text" id="username" name="username" required class="champ-utilisateur">
+              </div>
+              <div class="frame-wrapper2">
+                  <label class="mot-de-pass1" for="password"> Mot de passe</label>
+                  <input type="password" id="password" name="password" required>
+              </div>
+              <button type="submit" class="se-connecter-container">
+                  <div class="se-connecter1">Valider</div>
+              </button>
+            </form>
           </div>
           <img
             class="sonatrach-siege-2-icon"
@@ -51,13 +51,11 @@
     </div>
   </body>
   <script>
-  const usernameField = document.querySelector('.champ-utilisateur');
+  const usernameField = document.getElementById('username');
 const usernameLabel = document.querySelector('.utilisateur1');
 
-const passwordField = document.querySelector('.frame-wrapper2 input[type="password"]');
+const passwordField = document.getElementById('password');
 const passwordLabel = document.querySelector('.mot-de-pass1');
-
-const showLabelsButton = document.getElementById('showLabelsButton');
 
 usernameField.addEventListener('input', () => {
   toggleLabelVisibility(usernameLabel, usernameField.value);
@@ -67,11 +65,6 @@ passwordField.addEventListener('input', () => {
   toggleLabelVisibility(passwordLabel, passwordField.value);
 });
 
-showLabelsButton.addEventListener('click', () => {
-  toggleLabelVisibility(usernameLabel);
-  toggleLabelVisibility(passwordLabel);
-});
-
 function toggleLabelVisibility(label, inputValue = '') {
   if (inputValue.trim()) {
     label.style.display = 'none';
@@ -79,6 +72,7 @@ function toggleLabelVisibility(label, inputValue = '') {
     label.style.display = 'block';
   }
 }
+
 
   </script>
 </html>
