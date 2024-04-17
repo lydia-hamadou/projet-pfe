@@ -1,0 +1,398 @@
+.group-26-1 {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 1440px;
+    height: 990px;
+    object-fit: cover;
+  }
+  .group-child6 {
+    position: absolute;
+    height: 99.44%;
+    width: 100%;
+    top: 0.56%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--br-mini);
+    background-color: var(--color-gainsboro-100);
+  }
+  .anne1 {
+    position: absolute;
+    height: 22.97%;
+    width: 45.28%;
+    top: 0;
+    left: 27.16%;
+    font-size: var(--font-size-16xl);
+    display: inline-block;
+  }
+  .group-child7,
+  .group-child8 {
+    position: absolute;
+    height: 17.09%;
+    width: 61.13%;
+    top: 79.63%;
+    right: 16.99%;
+    bottom: 3.28%;
+    left: 21.88%;
+    border-radius: var(--br-mini);
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .group-child8 {
+    top: 59.88%;
+    right: 19.64%;
+    bottom: 23.03%;
+    left: 19.23%;
+  }
+  .b3,
+  .b4,
+  .b5,
+  .group-child9 {
+    position: absolute;
+    top: 37.4%;
+  }
+  .group-child9 {
+    height: 17.09%;
+    width: 61.13%;
+    right: 19.26%;
+    bottom: 45.51%;
+    left: 19.61%;
+    border-radius: var(--br-mini);
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .b3,
+  .b4,
+  .b5 {
+    height: 16.04%;
+    width: 24.16%;
+    left: 38.49%;
+    display: inline-block;
+  }
+  .b4,
+  .b5 {
+    width: 23.4%;
+    top: 78.58%;
+    left: 40.76%;
+  }
+  .b5 {
+    top: 60.93%;
+  }
+  .rectangle-parent {
+    position: absolute;
+    top: 32.03%;
+    right: 12.37%;
+    bottom: 49.8%;
+    left: 30%;
+    background-color:transparent;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rectangle-parent select {
+    width: 48%;
+    font-size: 50px;
+    height: 3em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #f2f2f2;
+    padding: 0 1em;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+  }
+  .rectangle-parent select,
+  .annee {
+    border-radius: var(--br-11xl);
+   
+  }
+  .rectangle-parent select:focus {
+    box-shadow: 0 0 0 2px #ffa500;
+  }
+  
+  .rectangle-parent select option {
+    padding: 0.5em;
+  }
+  
+  .rectangle-parentselect option.option {
+    background-color: #fff;
+    color: #333;
+   
+  }
+  
+  .rectangle-parent select option.option:checked {
+    background-color: #ffa500;
+    color: #fff;
+  }
+  
+  .rectangle-parentselect option.option:checked:focus {
+    background-color: #ffa500;
+    color: #fff;
+  }
+  
+  .rectangle-parent select option.option:hover {
+    background-color: #fff;
+    color: #ffa500;
+  }
+  
+  .rectangle-7-9 select option.option:hover:focus {
+    background-color: #fff;
+    color:#ffa500;
+  }
+  .logo-1-icon4 {
+    position: absolute;
+    top: 59px;
+    left: 111px;
+    width: 163.5px;
+    height: 126.8px;
+    object-fit: cover;
+  }
+  .acceuil12 {
+    position: relative;
+  }
+  .acceuil11,
+  .frame-child12 {
+    position: absolute;
+    border-radius: var(--br-11xl);
+  }
+  .acceuil11 {
+    top: 49px;
+    left: 1184px;
+    border: 1px solid var(--color-white);
+    box-sizing: border-box;
+    width: 167px;
+    height: 57px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    font-size: var(--font-size-11xl);
+  }
+  .frame-child12 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .menu16 {
+    position: absolute;
+    height: 8.9%;
+    width: 20.9%;
+    top: 0.23%;
+    left: 40.58%;
+    display: inline-block;
+  }
+  .frame-child13,
+  .frame-child14 {
+    position: absolute;
+    height: 0.23%;
+    width: 16.84%;
+    top: 4.68%;
+    right: 66.35%;
+    bottom: 95.08%;
+    left: 16.81%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .frame-child14 {
+    width: 17.57%;
+    right: 15.48%;
+    left: 66.96%;
+  }
+  .menu-inner1,
+  .vector-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .menu-inner1 {
+    font-size: var(--font-size-5xl);
+    color: var(--color-darkorange-300);
+  }
+  .dashboard13 {
+    position: absolute;
+    top: 24px;
+    left: 78px;
+    font-weight: 500;
+  }
+  .icone-dashboard4 {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .dashboard-parent7 {
+    position: absolute;
+    height: 16.86%;
+    width: 83.3%;
+    top: 77.17%;
+    right: 8.26%;
+    bottom: 5.97%;
+    left: 8.43%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+  }
+  .acceuil {
+    position: relative;
+  }
+  .acceuil-wrapper,
+  .page2-inner {
+    position: absolute;
+    border: 1px solid var(--color-white);
+    box-sizing: border-box;
+    color : #ffff;
+  }
+  .acceuil-wrapper {
+    top: 58px;
+    left: 1173px;
+    border-radius: var(--br-11xl);
+    width: 167px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 30px;
+  }
+  .affichage-annuel11 {
+    position: absolute;
+    top: 24px;
+    left: 75px;
+    font-weight: 500;
+  }
+  .icone-annuel4 {
+    position: absolute;
+    top: 14px;
+    left: 22px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .affichage-annuel-parent7 {
+    position: absolute;
+    height: 16.86%;
+    width: 83.3%;
+    top: 56.79%;
+    right: 8.84%;
+    bottom: 26.35%;
+    left: 7.86%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+  }
+  .affichage-p112 {
+    position: absolute;
+    top: 24px;
+    left: 81px;
+    font-weight: 500;
+  }
+  .icone-p14 {
+    position: absolute;
+    top: 17px;
+    left: 22px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .affichage-p1-parent7 {
+    position: absolute;
+    height: 16.86%;
+    width: 83.3%;
+    top: 36.42%;
+    right: 8.84%;
+    bottom: 46.72%;
+    left: 7.86%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    color: var(--color-snow-100);
+  }
+  .traitement-mensuel11 {
+    position: absolute;
+    top: 24px;
+    left: 71px;
+    font-weight: 500;
+    white-space: pre-wrap;
+  }
+  .icon-traitement4 {
+    position: absolute;
+    height: 55.56%;
+    width: 13.95%;
+    top: 27.78%;
+    right: 78.39%;
+    bottom: 16.67%;
+    left: 7.65%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .traitement-mensuel-parent7 {
+    position: absolute;
+    height: 16.86%;
+    width: 83.3%;
+    top: 16.04%;
+    right: 8.84%;
+    bottom: 67.1%;
+    left: 7.86%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    color: var(--color-snow-200);
+  }
+  .menu15 {
+    position: absolute;
+    height: 43.13%;
+    width: 23.96%;
+    top: 44.95%;
+    right: 73.96%;
+    bottom: 11.92%;
+    left: 2.08%;
+    font-size: var(--font-size-xl);
+    color: var(--color-white);
+  }
+  .rectangle-7-9 {
+    position: absolute;
+    top: 130px;
+    left: 571px;
+    width: 858px;
+    height: 11px;
+    object-fit: cover;
+  }
+  .page-annuel {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 990px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-6xl);
+    color: var(--color-black);
+    font-family: var(--font-montserrat);
+  }
+  

@@ -2,12 +2,17 @@ from django.shortcuts import render
 
 
 def essay1(request):
-   return render(request,'page1.html')
+   return render(request,'acceuil.html')
 def essay2(request):
-   return render(request,'page2.html')
+   return render(request,'traitement_mansuel.html')
 def essay3(request):
-   return render(request,'page3.html')
+   return render(request,'traitm_p1.html')
 def essay4(request):
-   return render(request,'page4.html')
+   return render(request,'traitm_annuel.html')
+def essay5(request):
+   return render(request,'dashboard.html')
+def essay6(request):
+   return render(request,'login.html')
+
 
 

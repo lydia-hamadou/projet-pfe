@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}"  />
+    <link rel="stylesheet" href="{% static 'css/traitement_annuel.css' %}"  />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="page-annuel">
+      <img class="group-26-1" alt=""  src="{% static 'images/Group 26.png'%}" />
+
+      <div class="rectangle-parent">
+        <select class="annee">
+          <option value="">Année</option>
+          <option value="2022" class="option">2022</option>
+          <option value="2023" class="option">2023</option>
+          <option value="2024" class="option">2024</option>
+        </select>
+      </div>
+      <img class="logo-1-icon4" alt="" src="{% static 'images/logo.png' %}" />
+
+      <a class="acceuil-wrapper" href="acceuil">
+        <b class="acceuil">Acceuil</b>
+      </a>
+      <div class="menu15">
+        <div class="menu-inner1">
+          <div class="vector-container">
+            <div class="frame-child12"  style =" background-color: white"  ></div>
+
+            <b class="menu16" style =" color: var(--color-darkorange-200);">Menu</b>
+            <div class="frame-child13"  style =" background-color: var(--color-darkorange-200);" ></div>
+
+            <div class="frame-child14"  style =" background-color: var(--color-darkorange-200);"></div>
+          </div>
+        </div>
+        <a class="dashboard-parent7" href="dashboard">
+          <div class="dashboard13">Dashboard</div>
+          <img
+            class="icone-dashboard4"
+            alt=""
+            src="{% static 'images/tabelu de bord.png' %}"
+          />
+        </a>
+        <a class="affichage-annuel-parent7" href="traitement_annuel">
+          <div class="affichage-annuel11">Affichage Annuel</div>
+          <img
+            class="icone-annuel4"
+            alt=""
+            src="{% static 'images/traitement-de-linformation.png' %}"
+          />
+        </a>
+        <a class="affichage-p1-parent7" href="traitement_p1">
+          <div class="affichage-p112">Affichage P1</div>
+          <img class="icone-p14" alt="" src="{% static 'images/bilan.png' %}"  />
+        </a>
+        <a class="traitement-mensuel-parent7" href="traitement_mansuel">
+          <div class="traitement-mensuel11">Traitement mensuel</div>
+          <img
+            class="icon-traitement4"
+            alt=""
+            src="{% static 'images/traitement-de-linformation (1).png' %}"
+          />
+        </a>
+      </div>
+      <div class="rectangle-7-9" style =" background-color: white" ></div>
+    </div>
+  </body>
+</html>

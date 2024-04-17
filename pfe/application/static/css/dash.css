@@ -1,0 +1,306 @@
+.group-26-11 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 990px;
+    object-fit: cover;
+  }
+  .dash-fin-child {
+    position: absolute;
+    top: 821px;
+    left: 1270px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .menu-child8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 345px;
+    height: 427px;
+    border-radius: var(--br-11xl);
+  }
+  .acceuil {
+    position: relative;
+  }
+  .acceuil-wrapper,
+  .page2-inner {
+    position: absolute;
+    border: 1px solid var(--color-white);
+    box-sizing: border-box;
+    color : #ffff;
+  }
+  .acceuil-wrapper {
+    top: 58px;
+    left: 1173px;
+    border-radius: var(--br-11xl);
+    width: 167px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 30px;
+  }
+  .dashboard15 {
+    position: absolute;
+    top: 24px;
+    left: 78px;
+    font-weight: 500;
+  }
+  .icone-dashboard6 {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .dashboard-parent9 {
+    position: absolute;
+    height: 16.3%;
+    width: 83.3%;
+    top: 71.55%;
+    right: 8.26%;
+    bottom: 12.15%;
+    left: 8.43%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+  }
+  .affichage-annuel13 {
+    position: absolute;
+    top: 24px;
+    left: 75px;
+    font-weight: 500;
+  }
+  .icone-annuel6 {
+    position: absolute;
+    top: 14px;
+    left: 22px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .affichage-annuel-parent9 {
+    position: absolute;
+    height: 16.3%;
+    width: 83.3%;
+    top: 51.85%;
+    right: 8.84%;
+    bottom: 31.85%;
+    left: 7.86%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+  }
+  .affichage-p114 {
+    position: absolute;
+    top: 24px;
+    left: 81px;
+    font-weight: 500;
+  }
+  .icone-p16 {
+    position: absolute;
+    top: 17px;
+    left: 22px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .affichage-p1-parent9 {
+    position: absolute;
+    height: 16.3%;
+    width: 83.3%;
+    top: 32.15%;
+    right: 8.84%;
+    bottom: 51.55%;
+    left: 7.86%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    color: var(--color-snow-100);
+  }
+  .traitement-mensuel13 {
+    position: absolute;
+    top: 24px;
+    left: 71px;
+    font-weight: 500;
+    white-space: pre-wrap;
+  }
+  .icon-traitement6 {
+    position: absolute;
+    height: 55.6%;
+    width: 13.95%;
+    top: 27.73%;
+    right: 78.39%;
+    bottom: 16.67%;
+    left: 7.65%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .traitement-mensuel-parent9 {
+    position: absolute;
+    height: 16.3%;
+    width: 83.3%;
+    top: 12.46%;
+    right: 8.84%;
+    bottom: 71.24%;
+    left: 7.86%;
+    color:#ffff;
+    border-radius: var(--br-11xl);
+    background-color: var(--color-darkorange-200);
+    overflow: hidden;
+    color: var(--color-snow-200);
+  }
+  .menu19,
+  .menu20 {
+    position: absolute;
+    top: 392.5px;
+    left: 21px;
+    width: 345px;
+    height: 427px;
+    font-size: var(--font-size-xl);
+  }
+  .menu20 {
+    height: 3.71%;
+    width: 5.01%;
+    top: 39.85%;
+    left: 10.99%;
+    font-size: var(--font-size-5xl);
+    display: inline-block;
+    color: var(--color-darkorange-300);
+  }
+  .dash-fin-inner,
+  .dash-fin-item {
+    position: absolute;
+    height: 0.1%;
+    width: 4.03%;
+    top: 41.7%;
+    right: 79.14%;
+    bottom: 58.2%;
+    left: 16.83%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .dash-fin-inner {
+    width: 4.21%;
+    right: 90.16%;
+    left: 5.63%;
+  }
+  .logo-1-icon6 {
+    position: absolute;
+    top: 43px;
+    left: 85px;
+    width: 163.5px;
+    height: 126.8px;
+    object-fit: cover;
+  }
+  .ajouter-votre-commentaire1{
+    position: absolute;
+    margin-left: 10px;
+    /*top: 500px;
+    left: 444px;*/
+      background: linear-gradient(#837676, #837676),
+        linear-gradient(#837676, #837676), linear-gradient(#837676, #837676),
+        #837676;
+      background: linear-gradient(#837676, #837676),
+      linear-gradient(#837676, #837676),
+      linear-gradient(#837676, #837676),
+      #837676;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #0000;
+  }
+  .champ-commentaire-icon1 {
+    position: absolute;
+    background-color: #cccc;
+    top: 831px;
+    left: 444px;
+    width: 926px;
+    height: 97px; 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: var(--br-11xl);
+  }
+  .champ-commentaire-icon1 input[type="text"]{
+    margin-right: 30px;
+    width: 800px;
+    height: 97px;
+    background-color: transparent;
+    top: 831px;
+    border: none;
+    font-size: 20px;
+  
+  }
+  .champ-commentaire:focus {
+    border: none; 
+    outline: none; 
+    box-shadow: none; 
+  }
+  .affichage6 {
+    position: absolute;
+    height: 63.43%;
+    width: 61.88%;
+    top: 17.17%;
+    right: 7.29%;
+    bottom: 19.39%;
+    left: 30.83%;
+    border-radius: var(--br-xl);
+    background-color: var(--color-gainsboro-200);
+  }
+  .acceuil16 {
+    position: relative;
+  }
+  .acceuil15 {
+    position: absolute;
+    top: 26px;
+    left: 1203px;
+    border-radius: var(--br-11xl);
+    border: 1px solid var(--color-white);
+    box-sizing: border-box;
+    width: 167px;
+    height: 57px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    color: var(--color-black);
+  }
+  .icon-user1,
+  .rectangle-7-10 {
+    position: absolute;
+    top: 130px;
+    left: 582px;
+    width: 858px;
+    height: 11px;
+    object-fit: cover;
+  }
+  .icon-user1 {
+    top: 855px;
+    left: 1300px;
+    width: 50px;
+    height: 50px;
+  }
+  .dash-fin {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 990px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-11xl);
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+  }
+  

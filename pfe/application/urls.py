@@ -1,12 +1,13 @@
 from django.urls import path,include
-from .views import essay1,essay2,essay3,essay4
+from .views import essay1,essay2,essay3,essay4,essay5,essay6
 
 app_name = 'application'
 
 urlpatterns = [
-    path('page1', essay1, name='achat_list'),
-    path('page2', essay2, name='achat_list'),
-    path('page3', essay3, name='achat_list'),
-    path('page4', essay4, name='achat_list'),
-
+    path('acceuil', essay1, name='acceuil'),
+    path('traitement_mansuel', essay2, name='traitement_mansuel'),
+    path('traitement_p1', essay3, name='traitement_p1'),
+    path('traitement_annuel', essay4, name='traitement_annuel'),
+    path('dashboard', essay5, name='dashboard'),
+    path('login', essay6, name='login'),
 ]
