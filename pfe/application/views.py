@@ -1,30 +1,6 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from .forms import LoginForm, UtilisateurForm
-
-def login_view(request):
-    if request.method == 'POST':
-        login_form = LoginForm(request.POST)
-        if login_form.is_valid():
-            username = login_form.cleaned_data['username']
-            password = login_form.cleaned_data['password']
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('home')
-    else:
-        login_form = LoginForm()
-    return render(request, 'login.html', {'login_form': login_form})
-
-def register_view(request):
-    if request.method == 'POST':
-        utilisateur_form = UtilisateurForm(request.POST)
-        if utilisateur_form.is_valid():
-            utilisateur = utilisateur_form.save()
-            return redirect('login')
-    else:
-        utilisateur_form = UtilisateurForm()
-    return render(request, 'register.html', {'utilisateur_form': utilisateur_form})
+from django.shortcuts import render
+from django.http import HttpResponse
+import pandas as pd
 
 
 def essay1(request):
@@ -42,3 +18,18 @@ def essay6(request):
 def essay7(request):
    return render(request,'creation_compt.html')
 
+
+def upload_file(request):
+    if request.method == 'POST' and request.FILES['file'].name.endswith('.xlsx'):
+        # read the data from the Excel file using pandas
+        data = pd.read_excel(request.FILES['file'], engine='openpyxl')
+        # convert the data to a Python list of dictionaries for use in the template
+        data_list = data.to_dict('records')
+        context = {'data': data_list}
+        return render(request, 'upload.html', context)
+
+    elif request.method == 'GET':
+        return render(request, 'upload.html', {'data': None})
+
+    else:
+        return HttpResponse('Invalid file type. Please upload an Excel file.')
