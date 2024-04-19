@@ -71,19 +71,18 @@
       <a class="acceuil-wrapper" href="acceuil">
         <b class="acceuil">Acceuil</b>
       </a>
-      <form method="post" enctype="multipart/form-data" id="file-upload-form">
+      <form method="post" enctype="multipart/form-data" id="file-upload-form" action="{% url 'application:upload_file' %}">
         {% csrf_token %}
         <div class="page2-inner">
-          <label class="choose-file-label" for="file">Choisir fichier</label>
-          <input type="file" name="file" class="choose-file-button">
-          <br><br>
+            <label class="choose-file-label" for="file">Choisir fichier</label>
+            <input type="file" name="file" class="choose-file-button">
+            <br><br>
         </div>
         <div class="frame-div"></div>
-        <div class="rectangle-div"></div>
-        <button class="btnOK" id="upload-button">
-         <b class="ok">OK</b>
+        <button class="rectangle-div" id="upload-button" type="submit">
+            <b class="ok">OK</b>
         </button>
-     </form>
+    </form>
     <div class="page2-child1" ></div>
 
       <a class="dashboard-parent" href="dashboard">
@@ -124,29 +123,103 @@
       <img class="logo-icon" alt="" src="{% static 'images/logo.png'%}" />
     </div>
   </body>
-  <script >
-  document.getElementById("upload-button").addEventListener("click", function(event) {
-  event.preventDefault(); // Empêche le comportement par défaut du formulaire
-  document.getElementById("file-upload-form").submit(); // Soumet le formulaire
-  });
-
-
-const chooseFileInput = document.querySelector('.choose-file-button');
-const chooseFileLabel = document.querySelector('.choose-file-label');
-
-chooseFileInput.addEventListener('change', () => {
-  if (chooseFileInput.files.length > 0) {
-    chooseFileLabel.dataset.fileName = chooseFileInput.files[0].name;
-    chooseFileLabel.textContent = chooseFileInput.files[0].name;
-    chooseFileInput.classList.remove('invalid');
-    chooseFileInput.classList.add('valid');
-  } else {
-    chooseFileLabel.dataset.fileName = '';
-    chooseFileLabel.textContent = 'Choisir fichier';
-    chooseFileInput.classList.remove('valid');
-    chooseFileInput.classList.add('invalid');
+  <script>
+  
+  function checkFile(file) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var content = e.target.result;
+      var data = JSON.parse(content);
+  
+      for (var i = 0; i < data.length; i++) {
+        var row = data[i];
+        var perimetre_id = row.perimetre_id;
+        var mois = row.mois;
+        var annee = row.annee;
+        var data = row.data;
+  
+        // Check if the element exists before setting its textContent
+        var element = document.getElementById(perimetre_id + '-' + mois + '-' + annee);
+        if (element) {
+          element.textContent = 'Uncaught Error';
+        }
+      }
+    };
+    reader.readAsText(file);
+  }function checkFile(file) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var content = e.target.result;
+      var data = JSON.parse(content);
+  
+      for (var i = 0; i < data.length; i++) {
+        var row = data[i];
+        var perimetre_id = row.perimetre_id;
+        var mois = row.mois;
+        var annee = row.annee;
+        var data = row.data;
+  
+        // Check if the element exists before setting its textContent
+        var element = document.getElementById(perimetre_id + '-' + mois + '-' + annee);
+        if (element) {
+          element.textContent = 'Uncaught Error';
+        }
+      }
+    };
+    reader.readAsText(file);
   }
-});
 
-  </script>
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+   var error_message = "{{ error_message }}";
+   var errorMessageSpan = document.querySelector('.error-message');
+   var chooseFileLabel = document.querySelector('.choose-file-label');
+   const chooseFileInput = document.querySelector(".choose-file-button");
+ 
+   if (error_message) {
+    chooseFileLabel.textContent = error_message;
+   }
+ 
+   chooseFileInput.addEventListener("change", () => {
+    checkFile();
+   });
+ 
+   document.getElementById("upload-button").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default form submission
+ 
+    // Ensure checkFile returns true for a valid file
+    if (checkFile()) {
+     document.getElementById("file-upload-form").submit();
+    }
+   });
+ 
+   function checkFile() {
+    var fileInput = chooseFileInput;
+    var chooseFileLabel = document.querySelector('.choose-file-label');
+    var errorMessageSpan = document.querySelector('.error-message');
+ 
+    if (fileInput.files.length === 0) {
+     chooseFileLabel.textContent = 'Veuillez sélectionner un fichier.';
+     errorMessageSpan.textContent = 'Veuillez sélectionner un fichier.';
+     return false; // Prevent submission
+    } else {
+     var fileName = fileInput.files[0].name;
+     if (!fileName.endsWith('.xlsx')) {
+      errorMessageSpan.textContent = 'Veuillez sélectionner un fichier Excel (.xlsx).';
+      return false; // Prevent submission
+     }
+     chooseFileLabel.dataset.fileName = fileName;
+     chooseFileLabel.textContent = fileName;
+     fileInput.classList.remove("invalid");
+     fileInput.classList.add("valid");
+     errorMessageSpan.textContent = '';
+     // Added this line to explicitly return true for valid files
+     return true; // Allow submission
+    }
+   }
+  });
+ </script>
+
+
 </html>

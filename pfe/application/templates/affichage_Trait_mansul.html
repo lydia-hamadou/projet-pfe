@@ -28,32 +28,56 @@
       <a class="acceuil-wrapper" href="acceuil">
         <b class="acceuil">Acceuil</b>
       </a>
-      <button class="page3-child2" onclick="testData()"></button>
-      <h2 class="valider1" >valider</h2>
-      <h2 class="test1">Test</h2>
-      <button class="page3-child3" onclick="saveData()" ></button>
+      <form id="save-form" method="post" onsubmit="event.preventDefault(); saveData()">
+        <button type="submit" class="page3-child2"></button>
+        <h2 class="valider1" >valider</h2>
+      </form>
+      <h2 class="test1" onclick="testData()">Test</h2>
+      <form id="test-form" method="post" onsubmit="event.preventDefault(); testData()" style="display: none;">
+        <button type="submit" class="page3-child3"></button>
+      </form>
       <button class="page3-childd"> </button>
       <h2 class="resultat1">Résultat</h2>
       <div class="background-page03-2"></div>
-      <div class="page3-child4">
-        <table style="border:1;" >
-          <thead>
-              <tr>
-                  {% for column_name, _ in data.0.items %}
-                      <th>{{ column_name }}</th>
-                  {% endfor %}
-              </tr>
-          </thead>
-          <tbody>
-              {% for row in data %}
-                  <tr>
-                      {% for _, value in row.items %}
-                          <td>{{ value }}</td>
-                      {% endfor %}
-                  </tr>
-              {% endfor %}
-          </tbody>
-      </table>
+      <div class="page3-child4" id="result-container">
+        {% if data %}
+        <table (style="border:'1';") >
+          <tr>
+            <th>Mois</th>
+            <th>Année</th>
+            <th>Stock initial</th>
+            <th>Apport consommation</th>
+            <th>Produit</th>
+            <th>Consomme</th>
+            <th>Prélève</th>
+            <th>Pertes</th>
+            <th>Expédié</th>
+            <th>Livraison</th>
+            <th>Densité</th>
+            <th>Périmètre</th>
+          </tr>
+          {% for row in data %}
+          <tr>
+            <td>{{ row.mois }}</td>
+            <td>{{ row.annee }}</td>
+            <td>{{ row.stock_ini }}</td>
+            <td>{{ row.Apport_consommation }}</td>
+            <td>{{ row.produit }}</td>
+            <td>{{ row.consomme }}</td>
+            <td>{{ row.preleve }}</td>
+            <td>{{ row.pertes }}</td>
+            <td>{{ row.expedie }}</td>
+            <td>{{ row.livraison }}</td>
+            <td>{{ row.densite }}</td>
+            <td>{{ row.perimetre }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+        <br>
+        {% else %}
+        <p>No data available</p>
+        {% endif %}
+        
       </div>
       <div class="group-container">
         <div class="frame-container">
@@ -117,4 +141,101 @@
     </div>
   </body>
   <script src="{% static 'js/page2.js' %}"></script>
+  <script>
+   function saveData() {
+    const data = {}; // Collect data to send
+    fetch('/save_data/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Failed to save data');
+        }
+    })
+    .then(data => {
+        // Handle response data if needed
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function testData() {
+    const data = {}; // Collect data to send
+    fetch('/test_data/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Failed to test data');
+        }
+    })
+    .then(data => {
+        // Handle response data if needed
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function displayData(data) {
+    const resultContainer = document.getElementById('result-container');
+    resultContainer.innerHTML = ''; // Clear previous content
+    
+    if (data.length === 0) {
+        resultContainer.innerHTML = '<p>No data available</p>';
+        return;
+    }
+    
+    const table = document.createElement('table');
+    table.style.border = '1px solid black';
+    
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    for (const key in data[0]) {
+        const th = document.createElement('th');
+        th.textContent = key;
+        headerRow.appendChild(th);
+    }
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+    
+    const tbody = document.createElement('tbody');
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+        for (const key in row) {
+            const td = document.createElement('td');
+            td.textContent = row[key];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    
+    resultContainer.appendChild(table);
+}
+
+document.getElementById('file-upload-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    fetch('/upload_file/', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        displayData(data);
+    })
+    .catch(error => console.error('Error:', error));
+});
+
+  </script>
 </html>

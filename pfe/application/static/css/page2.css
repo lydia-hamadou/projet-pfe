@@ -243,21 +243,17 @@
   bottom: 43.84%;
   left: 39.72%;
   border-radius: 20px;
-  border: 1px solid var(--color-black);
-  box-sizing: border-box;
-  border-radius: var(--br-11xl);
-  border-color: #ffff;
+  border: 1px solid #000000;
   background-color: rgba(200, 218, 41, 0.5);
 }
+
 .ok {
   position: absolute;
-  height: 3.12%;
-  width: 2.92%;
-  top: 50.78%;
-  left: 42.64%;
-  font-size: var(--font-size-7xl);
-  display: inline-block;
-  color:#ffff;
+  top: 52.5%;
+  left: 43.5%;
+  transform: translate(-50%, -50%); /* Centrage vertical et horizontal */
+  font-size: 30px; /* Taille de police modifiée */
+  color: #ffffff; /* Couleur du texte */
 }
 .page2-child1 {
   position: absolute;
