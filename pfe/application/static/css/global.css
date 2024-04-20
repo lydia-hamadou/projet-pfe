@@ -1,6 +1,8 @@
 body {
     /*margin: 0;*/
-    /*line-height: normal;
+    /*line-height: normal;*/
+    height:800;
+    width:1080;
   }
   
   :root {

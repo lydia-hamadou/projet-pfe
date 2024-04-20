@@ -6,13 +6,13 @@ from .models import Fichier_mansuelle,Périmètre
 
 
 def essay1(request):
-   return render(request,'acceuil.html')
+   return render(request,'page_acceuil.html')
 def essay2(request):
-   return render(request,'traitement_mansuel.html')
+   return render(request,'taritemnt_mansuel.html')
 def essay3(request):
-   return render(request,'traitm_p1.html')
+   return render(request,'page_resultat_verifier.html')
 def essay4(request):
-   return render(request,'traitm_annuel.html')
+   return render(request,'page_resultat_non_verifier.html')
 def essay5(request):
    return render(request,'dashboard.html')
 def essay6(request):

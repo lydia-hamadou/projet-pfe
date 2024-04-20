@@ -1,0 +1,381 @@
+.frame-child24,
+.group-28-11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.group-28-11 {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 1490px;
+    height: 990px;
+    object-fit: cover;
+}
+.frame-child24 {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius:30%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.traitement-de-linformation-2-icon3 {
+  position: absolute;
+  top: 9.8px;
+  left: 9px;
+  width: 31px;
+  height: 31px;
+  object-fit: cover;
+}
+.traitement-mansuelle2 {
+  color:white;
+  position: absolute;
+  top: 17px;
+  left: 40px;
+  font-weight: 500;
+}
+.traitement-de-linformation-2-container {
+  position: absolute;
+  height: 14.75%;
+  width: 72.83%;
+  top: 15.16%;
+  right: 14.72%;
+  bottom: 70.09%;
+  left: 12.45%;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-darkorange-400);
+  overflow: hidden;
+  font-size: var(--font-size-smi);
+}
+.affichage-bilan2 {
+  margin: 0;
+}
+.affichage-bilan-par-container2 {
+  color:white;
+  position: absolute;
+  top: 4.9px;
+  left: 50.8px;
+  font-weight: 500;
+}
+.bilan-2-icon3 {
+  position: absolute;
+  top: 4.9px;
+  left: 12.8px;
+  width: 35px;
+  height: 33px;
+  object-fit: cover;
+}
+.affichage-bilan-par-primetre-container {
+  position: absolute;
+  height: 14.29%;
+  width: 72.83%;
+  top: 33.24%;
+  right: 14.72%;
+  bottom: 52.48%;
+  left: 12.45%;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-darkorange-400);
+  overflow: hidden;
+}
+.affichage-annuel16 {
+  position: absolute;
+  top: 16px;
+  left: 57px;
+  font-weight: 500;
+}
+.traitement-de-linformation-1-icon11 {
+  position: absolute;
+  top: 11px;
+  left: 19px;
+  width: 32px;
+  height: 27px;
+  object-fit: cover;
+}
+.affichage-annuel-parent12 {
+  position: absolute;
+  height: 13.99%;
+  width: 75.09%;
+  top: 53.06%;
+  right: 14.72%;
+  bottom: 32.94%;
+  left: 10.19%;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-darkorange-400);
+  overflow: hidden;
+  color: var(--color-white);
+}
+.dashboard18 {
+  position: absolute;
+  top: 13px;
+  left: 72px;
+  font-weight: 500;
+}
+.tabelu-de-bord-25 {
+  position: absolute;
+  top: 3px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.dashboard-parent12 {
+  position: absolute;
+  height: 12.54%;
+  width: 76.98%;
+  top: 72.59%;
+  right: 12.83%;
+  bottom: 14.87%;
+  left: 10.19%;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-darkorange-400);
+  overflow: hidden;
+  color: var(--color-white);
+}
+.menu23 {
+  position: absolute;
+  height: 8.89%;
+  width: 28.68%;
+  top: 2.8%;
+  left: 38.11%;
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  color: var(--color-darkorange-300);
+}
+.frame-child25,
+.frame-child26 {
+  position: absolute;
+  height: 0.29%;
+  width: 17.55%;
+  top: 7.26%;
+  right: 15.66%;
+  bottom: 92.45%;
+  left: 66.79%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  background-color: var(--color-darkorange-300);
+}
+.frame-child26 {
+  width: 16.83%;
+  right: 68.11%;
+  left: 15.06%;
+}
+.ui2-inner,
+.vector-parent6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 265px;
+  height: 343px;
+}
+.ui2-inner {
+  top: 226px;
+  left: 27px;
+  font-size: var(--font-size-sm);
+  color: var(--color-snow-100);
+  background-color: white;
+  border-radius: var(--br-11xl);
+}
+.group-child14 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-5xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.icon1 {
+  width: 32px;
+  position: relative;
+  height: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.actions-frame {
+  position: absolute;
+  top: 14px;
+  left: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+/*.base-excelxlsx {
+  position: absolute;
+  top: 14px;
+  left: 82px;
+  font-weight: 500;
+  display: inline-block;
+  width: 194px;
+  height: 29px;
+}
+.choose-file-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+*/
+/*.page2-inner {
+  height: 100%;
+  width: 100%;
+  top: 34.28%;
+  right: 5.56%;
+  bottom: 56.83%;
+  left: 39.72%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}*/
+.choose-file-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.choose-file-label {
+  position: absolute;
+  font-size: 50px;
+  top: 60%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.choose-file-button:invalid + .choose-file-label:before {
+  content: "Choose a file";
+}
+
+.choose-file-button:valid + .choose-file-label:before {
+  content: attr(data-file-name);
+}
+
+.choose-file-button:valid + .choose-file-label:after {
+  content: "File selected";
+  color: #007bff;
+}
+
+.choose-file-button::-webkit-file-upload-button {
+  display: none;
+}
+
+.vector-parent7 {
+  position: absolute;
+  height: 7.73%;
+  width: 50%;
+  top: 31.6%;
+  right: 12.02%;
+  bottom: 60.67%;
+  left: 30%;
+  color: var(--color-black);
+  border-radius: 10px;
+  font-family: var(--font-poppins);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.retour1 {
+  position: relative;
+}
+.acceuil18 {
+  position: absolute;
+  text-decoration: none;
+  top: 35px;
+  left: 85%;
+  color:white;
+  border-radius: var(--br-11xl);
+  border: 1px solid var(--color-white);
+  box-sizing: border-box;
+  width: 137px;
+  height: 47px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.rectangle-7-92 {
+  position: absolute;
+  top: 96px;
+  left: 456px;
+  width: 1100px;
+  height: 5px;
+  object-fit: cover;
+  background-color: white;
+}
+.group-child15 {
+  position: absolute;
+  top: calc(50% - 27px);
+  left: calc(50% - 82px);
+  border-radius: var(--br-mini);
+  background-color: #ef9348;
+  width: 164px;
+  height: 54px;
+  border: none;
+  color: white;
+}
+.test2 {
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 18px);
+  display: inline-block;
+  width: 86.7px;
+  height: 28px;
+}
+.rectangle-group {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: 30%;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+  width: 164px;
+  height: 54px;
+  font-size: 18px;
+  font-family: var(--font-poppins);
+  background-color: transparent;
+}
+.logo-2-icon2,
+.microsoft-excel-icon1 {
+  position: absolute;
+  top: 37px;
+  left: 89px;
+  width: 115px;
+  height: 90px;
+  object-fit: cover;
+}
+.microsoft-excel-icon1 {
+  top: 241px;
+  left: 460px;
+  width: 40px;
+  height: 49px;
+}
+.ui2 {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 750px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
