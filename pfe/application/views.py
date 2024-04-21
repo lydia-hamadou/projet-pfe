@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import pandas as pd
-from .models import Fichier_mansuelle,Périmètre
-from .resources import Fichier_mansuelleResource
+from .models import Fichier_mansuelle , Périmètre
+import logging
+
+logging.basicConfig(filename='app.log', level=logging.ERROR)
 
 def essay1(request):
    return render(request,'page_acceuil.html')
@@ -18,9 +20,48 @@ def essay6(request):
    return render(request,'login.html')
 def essay7(request):
    return render(request,'creation_compt.html')
-from django.shortcuts import render
-from .resources import Fichier_mansuelleResource
 
+
+def upload_and_test_data(request):
+    if request.method == 'POST':
+        excel_file = request.FILES['excel_file']
+        df = pd.read_excel(excel_file)
+        if df.empty:
+            raise ValueError("Excel file is empty or contains no data")
+        print(df.columns)
+
+      
+        request.data = df.to_dict(orient='records')
+        all_rows_pass = True
+        for index, row in df.iterrows():
+            mois = row['Mois']
+            annee = row['Année']
+            stock_ini = row['Stock Initial']
+            apport_consommation = row['Apports pour Consommation']
+            produit = row['Production']
+            consomme = row['Consommations']
+            preleve = row['Prélèvements ou Production']
+            pertes = row['Pertes']
+            expedie = row['Expédition vers TRC']
+            livraison = row['Livraison']
+
+            
+            production = stock_ini + expedie + pertes + preleve + consomme - apport_consommation
+
+            
+            if production != produit:
+                all_rows_pass = False
+                break
+
+        
+        if all_rows_pass:
+            return render(request, 'page_resultat_verifier.html', {'data': request.data})
+        else:
+            
+            return render(request, 'page_resultat_non_verifier.html', {'data': request.data})
+
+   
+    return render(request, 'taritemnt_mansuel.html')
 
 def save_data(request):
     if request.method == 'POST':

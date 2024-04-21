@@ -21,9 +21,8 @@ class Prévision_perimetre(models.Model):
     périmètre = models.ForeignKey(Périmètre, on_delete=models.CASCADE)
 
 class Fichier_mansuelle(models.Model):
-
     id_fichier = models.AutoField(primary_key=True)
-    mois = models.IntegerField()
+    mois = models.CharField(max_length=20)  # Utilisation d'une chaîne pour le mois
     annee = models.IntegerField()
     stock_ini = models.DecimalField(max_digits=10, decimal_places=2)
     Apport_consommation = models.DecimalField(max_digits=10, decimal_places=2)
