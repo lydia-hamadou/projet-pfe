@@ -1,0 +1,141 @@
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in upload_and_test_data
+    logging.error(error_message)
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 80, in upload_and_test_data
+    logging.error(error_message)
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'
+"POST /upload-and-test/ HTTP/1.1" 500 96283
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: upload.html
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: traitemnt_mansuel.html
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: traitemnt_mansuel.html
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in upload_and_test
+    dataset = resource.load(request.FILES['file'].read())
+              ^^^^^^^^^^^^^
+AttributeError: 'Fichier_mansuelleResource' object has no attribute 'load'
+"POST /upload-and-test/ HTTP/1.1" 500 68919
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in upload_and_test
+    dataset_result = resource.import_data(request.FILES['file'], dry_run=True)  # Dry run to check validity
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 900, in import_data
+    result = self.import_data_inner(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 953, in import_data_inner
+    row = OrderedDict(zip(dataset.headers, data_row))
+                          ^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'headers'
+"POST /upload-and-test/ HTTP/1.1" 500 81169
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in upload_and_test
+    dataset_result = resource.import_data(request.FILES['file'], dry_run=True)  # Dry run to check validity
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 900, in import_data
+    result = self.import_data_inner(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 953, in import_data_inner
+    row = OrderedDict(zip(dataset.headers, data_row))
+                          ^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'headers'
+"POST /upload-and-test/ HTTP/1.1" 500 81169

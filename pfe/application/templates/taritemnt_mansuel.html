@@ -65,24 +65,23 @@
           <div class="frame-child26"></div>
         </div>
       </div>
-      <form class="vector-parent7" method="post" enctype="multipart/form-data">
+      <form class="vector-parent7" method="post" enctype="multipart/form-data" action="{% url 'application:upload_and_test' %}" >
+        {% csrf_token %}
         <div class="page2-inner">
           <label class=choose-file-label>choisir fichier</label>
          <input type="file" name="file" class="choose-file-button">
-       </div>
+        </div>
         <div class="actions-frame">
           <img class="icon1" alt="" src="{% static 'images/Actions-frame.png'%}" />
         </div>
-     </form>
+        <button class="rectangle-group">
+          <b class="test2" type="submit">TEST</b>
+        </button>
+      </form>
       <a class="acceuil18" href="acceuil">
         <b class="retour1">Retour</b>
         </a>
       <div class="rectangle-7-92" ></div>
-
-      <div class="rectangle-group">
-        <button class="group-child15"></button>
-        <b class="test2">TEST</b>
-      </div>
       <img class="logo-2-icon2" alt="" src="{% static 'images/logo.png'%}"/>
 
       <img

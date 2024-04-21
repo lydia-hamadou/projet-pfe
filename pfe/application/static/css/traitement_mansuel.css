@@ -291,8 +291,6 @@
   border-radius: 10px;
   font-family: var(--font-poppins);
   background-color: white;
-  display: flex;
-  justify-content: center;
 }
 .retour1 {
   position: relative;
@@ -337,21 +335,22 @@
 .test2 {
   position: absolute;
   top: calc(50% - 14px);
-  left: calc(50% - 18px);
+  left: 20%;
   display: inline-block;
   width: 86.7px;
   height: 28px;
+  font-size: 20px
 }
 .rectangle-group {
   position: absolute;
-  top: calc(50% - 35px);
-  left: 30%;
-  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+  top: 80px;
+  left:30;
+  border-radius: var(--br-mini);
+  background-color: #ef9348;
   width: 164px;
   height: 54px;
-  font-size: 18px;
-  font-family: var(--font-poppins);
-  background-color: transparent;
+  border: none;
+  color: white;
 }
 .logo-2-icon2,
 .microsoft-excel-icon1 {
