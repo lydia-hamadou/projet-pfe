@@ -16,8 +16,8 @@ def essay4(request):
    return render(request,'page_resultat_non_verifier.html')
 def essay5(request):
    return render(request,'dashboard.html')
-def essay6(request):
-   return render(request,'login.html')
+def login(request):
+   return render(request,'page-login.html')
 def essay7(request):
    return render(request,'creation_compt.html')
 
