@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
+  </head>
+  <style>
+    .error{
+    margin-top: -2px;
+    }
+  </style>
+  <body>
+    <div class="pagelogin">
+      <img
+        class="background-login-icon"
+        alt=""
+        src="{% static 'images/nv.png'%}"
+      />
+
+      <img class="logo-2-icon" alt="" src="{% static 'images/logo.png'%}" />
+
+      {% block content %}
+  <div class="pagelogin-inner">
+    <div class="group-parent">
+      <div class="line-parent">
+        <div class="group-child"></div>
+        <div class="group-item"></div>
+        <div class="connexion">Connexion</div>
+      </div>
+      <form id="loginForm" method="post" action="{% url 'application:login' %}" onsubmit="console.log('Form submitted'); return true;">
+        {% csrf_token %}
+        <div class="frame-child">
+          <input type="text" class="nom-dutilisateur" name="nom" placeholder="Nom d'utilisateur" required>
+          {% if nom_utilisateur_invalid %}
+            <p class="error">Nom d'utilisateur invalide</p>
+          {% endif %}
+        </div>
+        <div class="frame-item">
+          <input type="password" class="mot-de-passe" name="password" placeholder="Mot de passe" required>
+          {% if mot_de_passe_invalid %}
+            <p class="error">Mot de passe invalide</p>
+          {% endif %}
+        </div>
+        <div class="frame-inner">  
+          <button class="se-connecter" type="submit">Se connecter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+    </div>
+  </body>
+  <script>
+  $(document).ready(function(){
+    $('.toggle-password').click(function(){
+        $(this).toggleClass('active');
+        var input = $(this).prev('.mot-de-passe');
+        if (input.attr('type') === 'password') {
+            input.attr('type', 'text');
+            $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+        } else {
+            input.attr('type', 'password');
+            $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+  var nomInput = document.querySelector('.nom-dutilisateur');
+  var motDePasseInput = document.querySelector('.mot-de-passe');
+
+  // Hide the placeholder for the input field with an error message
+  if (document.querySelector('.error')) {
+    var errorElement = document.querySelector('.error');
+    if (errorElement.previousElementSibling.classList.contains('nom-dutilisateur')) {
+      nomInput.placeholder = '';
+    } else if (errorElement.previousElementSibling.classList.contains('mot-de-passe')) {
+      motDePasseInput.placeholder = '';
+    }
+    nomInput.value = '';
+    motDePasseInput.value = '';
+  }
+});
+document.addEventListener("DOMContentLoaded", function() {
+  var nomInput = document.querySelector('.nom-dutilisateur');
+  var motDePasseInput = document.querySelector('.mot-de-passe');
+
+  // Hide the placeholder for the input field with an error message
+  if (document.querySelector('.error')) {
+    var errorElement = document.querySelector('.error');
+    if (errorElement.previousElementSibling.classList.contains('nom-dutilisateur')) {
+      nomInput.placeholder = '';
+    } else if (errorElement.previousElementSibling.classList.contains('mot-de-passe')) {
+      motDePasseInput.placeholder = '';
+    }
+    nomInput.value = '';
+    motDePasseInput.value = '';
+
+    // Remove error message when input field is typed in
+    removeErrorMessage(nomInput, errorElement);
+    removeErrorMessage(motDePasseInput, errorElement);
+  }
+});
+
+function removeErrorMessage(inputField, errorMessage) {
+  inputField.addEventListener('input', function() {
+    errorMessage.style.display = 'none';
+  });
+}
+
+
+
+</script>
+</html>

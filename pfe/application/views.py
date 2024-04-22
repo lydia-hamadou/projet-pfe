@@ -1,11 +1,42 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 import pandas as pd
 from .models import Fichier_mansuelle , Périmètre
 import logging
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import Utilisateur
 
 logging.basicConfig(filename='app.log', level=logging.ERROR)
 
+from django.contrib.auth import authenticate
+
+from django.shortcuts import render
+from .models import Utilisateur
+
+def login(request):
+    nom_utilisateur_invalid = False
+    mot_de_passe_invalid = False
+
+    if request.method == 'POST':
+        nom = request.POST.get('nom')
+        password = request.POST.get('password')
+
+        try:
+            utilisateur = Utilisateur.objects.get(nom=nom)
+            if utilisateur.password == password:
+                # Si le nom d'utilisateur et le mot de passe correspondent, redirigez vers la page d'accueil
+                return render(request, 'page_acceuil.html')
+            else:
+                # Si le mot de passe est incorrect, définir mot_de_passe_invalid sur True
+                mot_de_passe_invalid = True
+        except Utilisateur.DoesNotExist:
+            # Si l'utilisateur n'existe pas, définir nom_utilisateur_invalid sur True
+            nom_utilisateur_invalid = True
+
+    return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
+
+
+    
 def essay1(request):
    return render(request,'page_acceuil.html')
 def essay2(request):
@@ -20,6 +51,7 @@ def essay6(request):
    return render(request,'login.html')
 def essay7(request):
    return render(request,'creation_compt.html')
+
 
 
 def upload_and_test_data(request):
