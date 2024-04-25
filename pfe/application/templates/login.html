@@ -4,81 +4,120 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <link rel="stylesheet" href="{% static 'css/global.css '%}" />
-    <link rel="stylesheet" href="{% static 'css/login.css '%}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
-    />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
   </head>
+  <style>
+    .error{
+    margin-top: -2px;
+    }
+  </style>
   <body>
-    <div class="login1">
-      <div class="login1-inner">
-        <div class="frame-parent">
-          <div class="line-group">
-            <div class="frame-child10"></div>
+    <div class="pagelogin">
+      <img
+        class="background-login-icon"
+        alt=""
+        src="{% static 'images/nv.png'%}"
+      />
 
-            <div class="frame-child11"></div>
+      <img class="logo-2-icon" alt="" src="{% static 'images/logo.png'%}" />
 
-            <div class="connexion1">Connexion</div>
-            <div class="utilisateur-container">
-                <lebel class="utilisateur1">Utilisateur</lebel>
-                <input autocomplete="off" type="text" id="username" name="username" required class="champ-utilisateur">
-            </div>
-            <div class="frame-wrapper2">
-                <label class="mot-de-pass1"> Mot de pass</label>
-                <input autocomplete="off" type="password" id="password" name="password" required>
-            </div>
-            <button class="se-connecter-container">
-              <div class="se-connecter1">Se connecter</div>
-            </button>
-            <button class="nouveau-compte-wrapper">
-              <div class="nouveau-compte">Nouveau compte</div>
-            </button>
-          </div>
-          <img
-            class="sonatrach-siege-2-icon"
-            alt=""
-            src="{% static 'images/sonatrach-siege.jpg '%}"
-          />
-        </div>
+      {% block content %}
+  <div class="pagelogin-inner">
+    <div class="group-parent">
+      <div class="line-parent">
+        <div class="group-child"></div>
+        <div class="group-item"></div>
+        <div class="connexion">Connexion</div>
       </div>
+      <form id="loginForm" method="post" action="{% url 'application:login' %}" onsubmit="console.log('Form submitted'); return true;">
+        {% csrf_token %}
+        <div class="frame-child">
+          <input type="text" class="nom-dutilisateur" name="nom" placeholder="Nom d'utilisateur" required>
+          {% if nom_utilisateur_invalid %}
+            <p class="error">Nom d'utilisateur invalide</p>
+          {% endif %}
+        </div>
+        <div class="frame-item">
+          <input type="password" class="mot-de-passe" name="password" placeholder="Mot de passe" required>
+          {% if mot_de_passe_invalid %}
+            <p class="error">Mot de passe invalide</p>
+          {% endif %}
+        </div>
+        <div class="frame-inner">  
+          <button class="se-connecter" type="submit">Se connecter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
     </div>
   </body>
   <script>
-  const usernameField = document.querySelector('.champ-utilisateur');
-const usernameLabel = document.querySelector('.utilisateur1');
-
-const passwordField = document.querySelector('.frame-wrapper2 input[type="password"]');
-const passwordLabel = document.querySelector('.mot-de-pass1');
-
-const showLabelsButton = document.getElementById('showLabelsButton');
-
-usernameField.addEventListener('input', () => {
-  toggleLabelVisibility(usernameLabel, usernameField.value);
+  $(document).ready(function(){
+    $('.toggle-password').click(function(){
+        $(this).toggleClass('active');
+        var input = $(this).prev('.mot-de-passe');
+        if (input.attr('type') === 'password') {
+            input.attr('type', 'text');
+            $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+        } else {
+            input.attr('type', 'password');
+            $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+        }
+    });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  var nomInput = document.querySelector('.nom-dutilisateur');
+  var motDePasseInput = document.querySelector('.mot-de-passe');
 
-passwordField.addEventListener('input', () => {
-  toggleLabelVisibility(passwordLabel, passwordField.value);
-});
-
-showLabelsButton.addEventListener('click', () => {
-  toggleLabelVisibility(usernameLabel);
-  toggleLabelVisibility(passwordLabel);
-});
-
-function toggleLabelVisibility(label, inputValue = '') {
-  if (inputValue.trim()) {
-    label.style.display = 'none';
-  } else {
-    label.style.display = 'block';
+  // Hide the placeholder for the input field with an error message
+  if (document.querySelector('.error')) {
+    var errorElement = document.querySelector('.error');
+    if (errorElement.previousElementSibling.classList.contains('nom-dutilisateur')) {
+      nomInput.placeholder = '';
+    } else if (errorElement.previousElementSibling.classList.contains('mot-de-passe')) {
+      motDePasseInput.placeholder = '';
+    }
+    nomInput.value = '';
+    motDePasseInput.value = '';
   }
+});
+document.addEventListener("DOMContentLoaded", function() {
+  var nomInput = document.querySelector('.nom-dutilisateur');
+  var motDePasseInput = document.querySelector('.mot-de-passe');
+
+  // Hide the placeholder for the input field with an error message
+  if (document.querySelector('.error')) {
+    var errorElement = document.querySelector('.error');
+    if (errorElement.previousElementSibling.classList.contains('nom-dutilisateur')) {
+      nomInput.placeholder = '';
+    } else if (errorElement.previousElementSibling.classList.contains('mot-de-passe')) {
+      motDePasseInput.placeholder = '';
+    }
+    nomInput.value = '';
+    motDePasseInput.value = '';
+
+    // Remove error message when input field is typed in
+    removeErrorMessage(nomInput, errorElement);
+    removeErrorMessage(motDePasseInput, errorElement);
+  }
+});
+
+function removeErrorMessage(inputField, errorMessage) {
+  inputField.addEventListener('input', function() {
+    errorMessage.style.display = 'none';
+  });
 }
 
-  </script>
+
+
+</script>
 </html>

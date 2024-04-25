@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import RegexValidator
+from django.contrib.auth.hashers import check_password , make_password
 
 
 class Region(models.Model):
@@ -21,9 +21,8 @@ class Prévision_perimetre(models.Model):
     périmètre = models.ForeignKey(Périmètre, on_delete=models.CASCADE)
 
 class Fichier_mansuelle(models.Model):
-
     id_fichier = models.AutoField(primary_key=True)
-    mois = models.IntegerField()
+    mois = models.CharField(max_length=20)  # Utilisation d'une chaîne pour le mois
     annee = models.IntegerField()
     stock_ini = models.DecimalField(max_digits=10, decimal_places=2)
     Apport_consommation = models.DecimalField(max_digits=10, decimal_places=2)
@@ -40,12 +39,13 @@ class Fichier_mansuelle(models.Model):
 class Utilisateur(models.Model):
     id_utilisateur = models.AutoField(primary_key=True)
     nom = models.CharField(max_length=255)
-    password = models.CharField(max_length=128, default='SONATRACH12', validators=[
-        RegexValidator(
-            regex='^(?=.*\d)(?=.*[a-zA-Z]).{8,}$',
-            message='Le mot de passe doit contenir au moins 8 caractères avec des lettres et des chiffres.'
-        )
-    ])
+    password = models.CharField(max_length=128, default='SONATRACH12')
+
+    def set_password(self, raw_password):
+        self.password = make_password(raw_password)
+
+    def check_password(self, raw_password):
+        return check_password(raw_password, self.password)
 
 class Visualisation(models.Model):
     id_visualisation = models.AutoField(primary_key=True)

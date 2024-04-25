@@ -1,0 +1,2139 @@
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in upload_and_test_data
+    logging.error(error_message)
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 80, in upload_and_test_data
+    logging.error(error_message)
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'
+"POST /upload-and-test/ HTTP/1.1" 500 96283
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: upload.html
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: traitemnt_mansuel.html
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: traitemnt_mansuel.html
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in upload_and_test
+    dataset = resource.load(request.FILES['file'].read())
+              ^^^^^^^^^^^^^
+AttributeError: 'Fichier_mansuelleResource' object has no attribute 'load'
+"POST /upload-and-test/ HTTP/1.1" 500 68919
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in upload_and_test
+    dataset_result = resource.import_data(request.FILES['file'], dry_run=True)  # Dry run to check validity
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 900, in import_data
+    result = self.import_data_inner(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 953, in import_data_inner
+    row = OrderedDict(zip(dataset.headers, data_row))
+                          ^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'headers'
+"POST /upload-and-test/ HTTP/1.1" 500 81169
+Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in upload_and_test
+    dataset_result = resource.import_data(request.FILES['file'], dry_run=True)  # Dry run to check validity
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 900, in import_data
+    result = self.import_data_inner(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\import_export\resources.py", line 953, in import_data_inner
+    row = OrderedDict(zip(dataset.headers, data_row))
+                          ^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'headers'
+"POST /upload-and-test/ HTTP/1.1" 500 81169
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\admin.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\admin.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /traitement_mansuel
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 12, in essay2
+    return render(request,'taritemnt_mansuel.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'upload_and_test_data' not found. 'upload_and_test_data' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: upload.html
+WARNING:django.request:Bad Request: /upload-and-test/
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:root:Row 1: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 2: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 3: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 4: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 5: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 6: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 7: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 8: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 9: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 10: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 11: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 12: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 13: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 14: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 15: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 16: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 17: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 18: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 19: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 20: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 21: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Row 22: Missing data in columns: stock_initial, Apport_consommation, produit, consomme, preleve, pertes, expedie, laivraison
+ERROR:root:Error reading Excel file: faux.html
+WARNING:django.request:Bad Request: /upload-and-test/
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:root:Error reading Excel file: faux.html
+WARNING:django.request:Bad Request: /upload-and-test/
+WARNING:django.request:Not Found: /
+ERROR:root:Error reading Excel file: faux.html
+WARNING:django.request:Bad Request: /upload-and-test/
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 27, in upload_and_test_data
+    excel_file = request.FILES['excel_file']
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 38, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 38, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 41, in upload_and_test_data
+    mois = row['mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'mois'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 41, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 41, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Année'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 41, in upload_and_test_data
+    annee = row['Année']
+            ~~~^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Année'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 27, in upload_and_test_data
+    excel_file = request.FILES['excel_file']
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 44, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 47, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 47, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 47, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 20, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 20, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 20, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'application/login' not found. 'application/login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 49, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'application/login' not found. 'application/login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 49, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'application/login' not found. 'application/login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 43, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 43, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 43, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 43, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 43, in login
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in login
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in login
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'application/login' not found. 'application/login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in login
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in login
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 45, in login
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 39, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'fonc_login' not found. 'fonc_login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 39, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 39, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'fonc_logi' not found. 'fonc_logi' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 39, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'fonc_login' not found. 'fonc_login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 39, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'fonc_login' not found. 'fonc_login' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\pfe\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 37, in essay6
+    return render(request,'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 20, in login
+    elif not user.check_password(password):
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Utilisateur' object has no attribute 'check_password'
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 20, in login
+    elif not user.check_password(password):
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Utilisateur' object has no attribute 'check_password'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 20, in login
+    elif not user.check_password(password):
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Utilisateur' object has no attribute 'check_password'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 23, in login
+    elif not user.check_password(password):
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Utilisateur' object has no attribute 'check_password'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /login/traitement_mansuel
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in login
+    utilisateur = Utilisateur.objects.get(nom=nom)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+application.models.Utilisateur.MultipleObjectsReturned: get() returned more than one Utilisateur -- it returned 2!
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 25, in login
+    utilisateur = Utilisateur.objects.get(nom=nom)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+application.models.Utilisateur.MultipleObjectsReturned: get() returned more than one Utilisateur -- it returned 2!
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /login/traitement_mansuel
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 69, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 69, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 69, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 69, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /login/traitement_mansuel
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 69, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 69, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 59, in upload_and_test_data
+    excel_file = request.FILES['excel_file']
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 59, in upload_and_test_data
+    excel_file = request.FILES['excel_file']
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+ERROR:django.request:Internal Server Error: /upload-and-test/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mois'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 69, in upload_and_test_data
+    mois = row['Mois']
+           ~~~^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mois'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /login/acceuil
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
