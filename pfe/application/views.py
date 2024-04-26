@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseBadRequest
 import pandas as pd
 from .models import Fichier_mansuelle , Périmètre
 import logging
@@ -52,48 +52,43 @@ def essay6(request):
 def essay7(request):
    return render(request,'creation_compt.html')
 
+## fonction juste
+from django.shortcuts import render, redirect
+import pandas as pd
 
+def index(request):
+    if request.method == "GET":
+        return render(request, 'application/page_acceuil.html', {})
+    else:
+        excel_file = request.FILES["excel_file"]
 
-def upload_and_test_data(request):
-    if request.method == 'POST':
-        excel_file = request.FILES['excel_file']
+        # Charger le fichier Excel dans un DataFrame Pandas
         df = pd.read_excel(excel_file)
-        if df.empty:
-            raise ValueError("Excel file is empty or contains no data")
-        print(df.columns)
 
-      
-        request.data = df.to_dict(orient='records')
-        all_rows_pass = True
-        for index, row in df.iterrows():
-            mois = row['Mois']
-            annee = row['Année']
-            stock_ini = row['Stock Initial']
-            apport_consommation = row['Apports pour Consommation']
-            produit = row['Production']
-            consomme = row['Consommations']
-            preleve = row['Prélèvements ou Production']
-            pertes = row['Pertes']
-            expedie = row['Expédition vers TRC']
-            livraison = row['Livraison']
+        # Convertir les colonnes nécessaires en nombres flottants
+        numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne', 'Production', 
+                           'Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres', 
+                           'Pertes', 'Expédition vers TRC', 'Livraison']
+        df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
 
-            
-            production = stock_ini + expedie + pertes + preleve + consomme - apport_consommation
-
-            
-            if production != produit:
-                all_rows_pass = False
+        # Effectuer le test sur chaque tuple, en commençant de la deuxième ligne
+        test_result = True
+        for index, row in df.iloc[1:-1].iterrows(): 
+            # Calculer la variable test selon la formule donnée
+            test = row['Stock Initial'] + row['Apports pour Consommation Interne'] + row['Production'] - row['Prélèvement ou consommation interne'] - row['Prélèvements pour la Consommation autres périmètres'] - row['Pertes'] - row['Expédition vers TRC'] - row['Livraison']
+            # Vérifier si la variable test est inférieure à 1
+            if test > 1:
+                test_result = False
                 break
 
-        
-        if all_rows_pass:
-            return render(request, 'page_resultat_verifier.html', {'data': request.data})
+        # Rediriger en fonction du résultat du test
+        if test_result:
+            return render(request, 'page_resultat_verifier.html', {'excel_data': df})
+            # Aller à la page page_resultat_verifier.html si le test est réussi
         else:
-            
-            return render(request, 'page_resultat_non_verifier.html', {'data': request.data})
+            return render(request, 'page_resultat_non_verifier.html', {'excel_data': df})
+            # Aller à la page page_resultat_non_verifier.html si le test échoue
 
-   
-    return render(request, 'taritemnt_mansuel.html')
 
 def save_data(request):
     if request.method == 'POST':
