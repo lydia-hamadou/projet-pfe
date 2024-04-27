@@ -65,7 +65,7 @@
           <div class="frame-child26"></div>
         </div>
       </div>
-      <form class="vector-parent7" method="post" enctype="multipart/form-data" action="{% url 'application:index' %}">
+      <form class="vector-parent7" method="post" enctype="multipart/form-data" action="{% url 'application:save_data' %}">
         {% csrf_token %}
         <div class="page2-inner">
             <label class="choose-file-label">Choisir fichier</label>
@@ -75,12 +75,12 @@
             <img class="icon1" alt="" src="{% static 'images/Actions-frame.png'%}" />
         </div>
         <button class="rectangle-group" type="submit">
-            <b class="test2">TEST</b>
+            <b class="test2">Sauvgarder</b>
         </button>
     </form>
       <a class="acceuil18" href="acceuil">
         <b class="retour1">Retour</b>
-        </a>
+      </a>
       <div class="rectangle-7-92" ></div>
       <img class="logo-2-icon2" alt="" src="{% static 'images/logo.png'%}"/>
 

@@ -3995,3 +3995,2275 @@ INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-p
 INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
 WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 73, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres'] not in index"
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 73, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres'] not in index"
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 73, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres'] not in index"
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 73, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvements pour la Consommation autres périmètres'] not in index"
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 73, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvements pour la Consommation autres périmètres'] not in index"
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 73, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvements ou consommation interne'] not in index"
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 74, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres'] not in index"
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 74, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Prélèvements pour la Consommation autres périmètres'] not in index"
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /traitement_mansuel
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 185, in save_data
+    region = excel_data.iloc[1, 12]  # Supposons que la région soit à la ligne 2, colonne 13
+             ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'iloc'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() missing 1 required positional argument: 'excel_data'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/             Périmètre  Stock Initial  Apports pour Consommation Interne  Production  ...  Expédition en m³  Region     Mois   Annee
+0                 Stah        819.920                                  0         NaN  ...        13 311 797    Stah  janvier  2023.0
+1                Alrar       1767.778                                  0         NaN  ...        29 330 413     NaN      NaN     NaN
+2             Mereksen       3310.353                                  0         NaN  ...        17 068 208     NaN      NaN     NaN
+3  Ifefane-Tehert Nord        985.731                                  0         NaN  ...        16 082 329     NaN      NaN     NaN
+4                 Hnia          0.000                                  0         0.0  ...             0.000     NaN      NaN     NaN
+5         Total Région            NaN                                  0         NaN  ...        75 792 746     NaN      NaN     NaN
+
+[6 rows x 15 columns]
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 184, in save_data
+    region = excel_data.iloc[1, 12]  # Supposons que la région soit à la ligne 2, colonne 13
+             ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'iloc'
+ERROR:django.request:Internal Server Error: /save_data/             Périmètre  Stock Initial  Apports pour Consommation Interne  Production  ...  Expédition en m³  Region     Mois   Annee
+0                 Stah        819.920                                  0         NaN  ...        13 311 797    Stah  janvier  2023.0
+1                Alrar       1767.778                                  0         NaN  ...        29 330 413     NaN      NaN     NaN
+2             Mereksen       3310.353                                  0         NaN  ...        17 068 208     NaN      NaN     NaN
+3  Ifefane-Tehert Nord        985.731                                  0         NaN  ...        16 082 329     NaN      NaN     NaN
+4                 Hnia          0.000                                  0         0.0  ...             0.000     NaN      NaN     NaN
+5         Total Région            NaN                                  0         NaN  ...        75 792 746     NaN      NaN     NaN
+
+[6 rows x 15 columns]
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 184, in save_data
+    region = excel_data.iloc[1, 12]  # Supposons que la région soit à la ligne 2, colonne 13
+             ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'iloc'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/             Périmètre  Stock Initial  Apports pour Consommation Interne  Production  ...  Expédition en m³  Region     Mois   Annee
+0                 Stah        819.920                                  0         NaN  ...        13 311 797    Stah  janvier  2023.0
+1                Alrar       1767.778                                  0         NaN  ...        29 330 413     NaN      NaN     NaN
+2             Mereksen       3310.353                                  0         NaN  ...        17 068 208     NaN      NaN     NaN
+3  Ifefane-Tehert Nord        985.731                                  0         NaN  ...        16 082 329     NaN      NaN     NaN
+4                 Hnia          0.000                                  0         0.0  ...             0.000     NaN      NaN     NaN
+5         Total Région            NaN                                  0         NaN  ...        75 792 746     NaN      NaN     NaN
+
+[6 rows x 15 columns]
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_data'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 87, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'save_data' with arguments '('',)' not found. 1 pattern(s) tried: ['save_data/(?P<excel_data>[^/]+)\\Z']
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 87, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'save_data' with arguments '('',)' not found. 1 pattern(s) tried: ['save_data/(?P<excel_data>[^/]+)\\Z']
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 87, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'save_data' with arguments '('',)' not found. 1 pattern(s) tried: ['save_data/(?P<excel_data>[^/]+)\\Z']
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 87, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'save_data' with arguments '('',)' not found. 1 pattern(s) tried: ['save_data/(?P<excel_data>[^/]+)\\Z']
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_data'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_data'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_data'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 87, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'save_data' with arguments '(<InMemoryUploadedFile: part-1.xlsx (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)>,)' not found. 1 pattern(s) tried: ['save_data\\Z']
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 96, in save_data
+    df = pd.read_excel(excel_file, decimal=',')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'part-1.xlsx'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 76, in index
+    file_path = excel_file.temporary_file_path()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'temporary_file_path'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 90, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'save_data' with arguments '(<InMemoryUploadedFile: part-1.xlsx (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)>,)' not found. 1 pattern(s) tried: ['save_data/\\Z']
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 97, in save_data
+    excel_file = request.FILES["excel_file"]
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 97, in save_data
+    excel_file = request.FILES["excel_file"]
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 97, in save_data
+    excel_file = request.FILES["excel_file"]
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 82, in index
+    df = pd.read_excel(temp_file.name, decimal=',')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Inspiron\\AppData\\Local\\Temp\\tmpy9vhu_b3'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /traitement_mansuel
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() missing 1 required positional argument: 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 138, in save_data
+    return render(request, 'application/page_acceuil.html', {'upload_form': upload_form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: application/page_acceuil.html
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view application.views.save_data didn't return an HttpResponse object. It returned None instead.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 143, in save_data
+    return render(request, 'application/page_acceuil.html', {'upload_form': upload_form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: application/page_acceuil.html
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\forms.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 143, in save_data
+    return render(request, 'application/page_acceuil.html', {'upload_form': upload_form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: application/page_acceuil.html
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() missing 1 required positional argument: 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() missing 1 required positional argument: 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 83, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'save_data' with arguments '(<InMemoryUploadedFile: part-1.xlsx (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)>,)' not found. 1 pattern(s) tried: ['save_data/\\Z']
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 83, in index
+    return redirect('application:show_verified_result', excel_file=excel_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'show_verified_result' not found. 'show_verified_result' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 83, in index
+    return redirect('application:show_verified_result', excel_file=excel_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'show_verified_result' with keyword arguments '{'excel_file': <InMemoryUploadedFile: part-1.xlsx (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)>}' not found. 1 pattern(s) tried: ['show_verified_result\\Z']
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 83, in index
+    return redirect('application:show_verified_result', excel_file=excel_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'show_verified_result' with keyword arguments '{'excel_file': <InMemoryUploadedFile: part-1.xlsx (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)>}' not found. 1 pattern(s) tried: ['show_verified_result/\\Z']
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 95, in save_data
+    df = pd.read_excel(excel_file, decimal=',')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'part-1.xlsx'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-2.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 95, in save_data
+    df = pd.read_excel(excel_file, decimal=',')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'part-2.xlsx'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-1.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 101, in save_data
+    df = pd.read_excel(file_path, decimal=',')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/save_data/part-1.xlsx/part-1.xlsx'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-3.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_file'
+ERROR:django.request:Internal Server Error: /save_data/part-2.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data/part-3.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save_data() got an unexpected keyword argument 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /show_verified_result/part-9.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 93, in show_verified_result
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'sauvegarder' not found. 'sauvegarder' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /show_verified_result/part-7.xlsx/
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 93, in show_verified_result
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'essay8' not found. 'essay8' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 86, in index
+    return render(request, 'page_resultat_verifier.html', {'excel_file': excel_file})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'essay8' not found. 'essay8' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 61, in index
+    return render(request, 'application/page_acceuil.html', {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: application/page_acceuil.html
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 61, in index
+    return render(request, 'application/page_acceuil.html', {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: application/page_acceuil.html
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 63, in index
+    excel_file = request.FILES["excel_file"]
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'excel_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 94, in save_data
+    excel_file = request.FILES["excel_file"]
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 101, in save_data
+    annee = df.iloc[1, 15]
+            ~~~~~~~^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexing.py", line 1183, in __getitem__
+    return self.obj._get_value(*key, takeable=self._takeable)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4211, in _get_value
+    series = self._ixs(col, axis=1)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4008, in _ixs
+    label = self.columns[i]
+            ~~~~~~~~~~~~^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 5389, in __getitem__
+    return getitem(key)
+           ^^^^^^^^^^^^
+IndexError: index 15 is out of bounds for axis 0 with size 15
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 114, in save_data
+    annee = df.iloc[1, 15]
+            ~~~~~~~^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexing.py", line 1183, in __getitem__
+    return self.obj._get_value(*key, takeable=self._takeable)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4211, in _get_value
+    series = self._ixs(col, axis=1)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4008, in _ixs
+    label = self.columns[i]
+            ~~~~~~~~~~~~^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 5389, in __getitem__
+    return getitem(key)
+           ^^^^^^^^^^^^
+IndexError: index 15 is out of bounds for axis 0 with size 15
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 948, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 117, in save_data
+    perimetre, created = Périmètre.objects.get_or_create(nom=region)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 955, in get_or_create
+    return self.create(**params), True
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 112, in save_data
+    region = df.iloc[1, 12]
+             ~~~~~~~^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexing.py", line 1183, in __getitem__
+    return self.obj._get_value(*key, takeable=self._takeable)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4211, in _get_value
+    series = self._ixs(col, axis=1)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4008, in _ixs
+    label = self.columns[i]
+            ~~~~~~~~~~~~^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 5389, in __getitem__
+    return getitem(key)
+           ^^^^^^^^^^^^
+IndexError: index 12 is out of bounds for axis 0 with size 12
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 948, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 117, in save_data
+    perimetre, created = Périmètre.objects.get_or_create(nom=region)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 955, in get_or_create
+    return self.create(**params), True
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Périmetre'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 117, in save_data
+    perimetre, created = Périmètre.objects.get_or_create(nom=row['Périmetre'])
+                                                             ~~~^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Périmetre'
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: cannot convert float NaN to integer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 133, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1013, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 2124, in get_db_prep_value
+    value = super().get_db_prep_value(value, connection, prepared)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1006, in get_db_prep_value
+    value = self.get_prep_value(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'annee' expected a number but got nan.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 110, in save_data
+    region =row['Region']
+            ^^^
+UnboundLocalError: cannot access local variable 'row' where it is not associated with a value
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 131, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1824, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1813, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“nan” value must be a decimal number.']
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 131, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1824, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1813, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“nan” value must be a decimal number.']
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 131, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1824, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1813, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“nan” value must be a decimal number.']
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 131, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1824, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1813, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“nan” value must be a decimal number.']
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 131, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1824, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1813, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“nan” value must be a decimal number.']
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 131, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1824, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1813, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“nan” value must be a decimal number.']
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 948, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 115, in save_data
+    perimetre, created = Périmètre.objects.get_or_create(nom=row['Périmètre'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 955, in get_or_create
+    return self.create(**params), True
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 948, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 114, in save_data
+    perimetre, created = Périmètre.objects.get_or_create(nom=row['Périmètre'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 955, in get_or_create
+    return self.create(**params), True
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: application_périmètre.region_id
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 948, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: application_périmètre.id_périmètre
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 118, in save_data
+    perimetre, created = Périmètre.objects.get_or_create(nom=perimetre_name, region=region)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 955, in get_or_create
+    return self.create(**params), True
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: application_périmètre.id_périmètre
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 133, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1824, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\fields\__init__.py", line 1813, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“nan” value must be a decimal number.']
