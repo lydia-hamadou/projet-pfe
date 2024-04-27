@@ -26,7 +26,7 @@ class Fichier_mansuelle(models.Model):
     annee = models.IntegerField()
     stock_ini = models.DecimalField(max_digits=10, decimal_places=2)
     Apport_consommation = models.DecimalField(max_digits=10, decimal_places=2)
-    produit = models.DecimalField(max_digits=10, decimal_places=2)
+    produit = models.DecimalField(max_digits=10, decimal_places=3)
     consomme = models.DecimalField(max_digits=10, decimal_places=2)
     preleve = models.DecimalField(max_digits=10, decimal_places=2)
     pertes = models.DecimalField(max_digits=10, decimal_places=2)
