@@ -339,16 +339,20 @@
   font-size: var(--font-size-mini);
   color: var(--color-black);
 }
-.frame-child46{
+.frame-child46,
+.frame-child47 {
   position: absolute;
   top: 4px;
-  left: 80px;
+  left: 128px;
   border-radius: var(--br-mini);
   /*background-color: var(--color-gainsboro-100);*/
   border: 1px solid var(--color-darkorange-300);
   /*box-sizing: border-box;*/
   width: 92px;
   height: 35px;
+}
+.frame-child47 {
+  left: 18px;
 }
 .frame-child48 {
   position: absolute;

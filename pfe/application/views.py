@@ -53,6 +53,10 @@ def essay7(request):
    return render(request,'creation_compt.html')
 def essay8(request):
    return render(request,'page_sauvgarde.html')
+def traitement_p1(request):
+   return render(request,'traitement_p1.html')
+def traitement_annuel(request):
+   return render(request,'traitement_annuel.html')
 
 
 #ymchiww

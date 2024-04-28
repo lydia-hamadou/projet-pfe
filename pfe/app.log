@@ -7244,3 +7244,959 @@ INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-p
 INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
 INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
 INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\models.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 150, in save_data
+    return render(request, 'application/page_acceuil.html', {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: application/page_acceuil.html
+WARNING:django.request:Not Found: /ladmin
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 116, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /sadmin
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 72, in index
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                          ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\pandas\core\indexes\base.py", line 6249, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['Stock Initial', 'Apports pour Consommation Interne', 'Production',\n       'Prélèvement ou consommation interne',\n       'Prélèvements pour la Consommation autres périmètres', 'Pertes',\n       'Expédition vers TRC', 'Livraison'],\n      dtype='object')] are in the [columns]"
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /login/traitement_p1
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/traitement_p1l
+WARNING:django.request:Not Found: /login/traitement_p1l
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/traitement_p1l
+WARNING:django.request:Not Found: /login/traitement_p1l
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/traitement_p1l
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/traitement_p1l
+WARNING:django.request:Not Found: /login/traitement_p1l
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconpdf-1@2x.png
+WARNING:django.request:Not Found: /login/public/iconexcel-1@2x.png
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /traitement_p1
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 120, in save_data
+    perimetre_id = Périmètre.objects.get(nom=perimetre_name).id_périmètre
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+application.models.Périmètre.DoesNotExist: Périmètre matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico

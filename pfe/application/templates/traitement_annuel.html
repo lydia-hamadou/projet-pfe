@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/newglobal.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/traitement_annuel.css'%}"  />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="page-p1">
+      <img class="group-28-13" alt="" src="{% static 'images/finale_img.png'%}"/>
+
+      <div class="page-p1-inner">
+        <div class="vector-parent16">
+
+          <a class="traitement-de-linformation-2-parent6" style="color:white;" href="traitement_mansuel">
+            <img
+              class="traitement-de-linformation-2-icon9"
+              alt=""
+              src="{% static 'images/traitement-de-linformation (1).png'%}"
+            />
+
+            <div class="traitement-mansuelle8">Traitement Mansuelle</div>
+          </a>
+          <a class="affichage-bilan-par-primetre-parent3"style="color:white;" href="traitement_p1">
+            <div class="affichage-bilan-par-container5">
+              <p class="affichage-bilan5">Affichage Bilan</p>
+              <p class="affichage-bilan5">par périmetre</p>
+            </div>
+            <img class="bilan-2-icon9" alt="" src="{% static 'images/bilan.png'%}" />
+           </a>
+          <a class="affichage-annuel-parent18" href="traitement_annuel">
+            <div class="affichage-annuel25">Affichage Annuel</div>
+            <img
+              class="traitement-de-linformation-1-icon17"
+              alt=""
+              src="{% static 'images/traitement-de-linformation.png'%}"
+            />
+          </a>
+          <a class="dashboard-parent15" href="">
+            <div class="dashboard21">Dashboard</div>
+            <img
+              class="tabelu-de-bord-211"
+              alt=""
+              src="{% static 'images/tabelu de bord.png'%}" 
+            />
+          </a>
+          <b class="menu29">Menu</b>
+          <div class="frame-child44"></div>
+
+          <div class="frame-child45"></div>
+        </div>
+      </div>
+      <a class="acceuil26" href="acceuil">
+        <b class="retour9">Retour</b>
+      </a>
+      <div class="rectangle-7-94" ></div>
+
+      <div class="page-p1-child"></div>
+      <div class="page-p1-item"></div>
+      <div class="vector-parent17">
+        <div class="group-child24" ></div>
+
+        <div class="pdf7">PDF</div>
+        <img class="icon-pdf-16" alt="" src="{% static 'images/icon-pdf 1.png'%}" />
+
+        <div class="group-child25" ></div>
+
+        <img class="icon-excel-16" alt="" src="{% static 'images/icon-excel .png' %}" />
+
+        <div class="excel13">
+          <p class="affichage-bilan5">EXCEL</p>
+        </div>
+      </div>
+      <div class="page-p1-inner1">
+        <div class="rectangle-parent2">
+          <select class="frame-child46">
+               <option class="anne11" value="">Année</option>
+               <option value="2022" class="option">2022</option>
+               <option value="2023" class="option">2023</option>
+               <option value="2024" class="option">2024</option>
+          </select>
+          <button class="frame-child48">
+             <img class="frame-child49" alt="" src="{% static 'images/téléchargement.png'%}" />
+          </button>
+        </div>
+      </div>
+      <img class="logo-3-icon" alt="" src="{% static 'images/logo.png'%}" />
+    </div>
+  </body>
+</html>

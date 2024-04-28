@@ -354,11 +354,18 @@
 }
 .logo-2-icon2,
 .microsoft-excel-icon1 {
+  /*
   position: absolute;
   top: 37px;
   left: 89px;
   width: 115px;
   height: 90px;
+  object-fit: cover;
+  */position: absolute;
+  top: 38px;
+  left: 30px;
+  width: 99px;
+  height: 77.4px;
   object-fit: cover;
 }
 .microsoft-excel-icon1 {
