@@ -5,6 +5,9 @@ import logging
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region
+from django.db.models import Sum, F, FloatField
+from django.db.models.functions import Coalesce
+from django.db import models
 
 logging.basicConfig(filename='app.log', level=logging.ERROR)
 
@@ -153,5 +156,110 @@ def save_data(request):
     else:
         return render(request, 'application/page_acceuil.html', {})
 
+"""
+juste aussi
+def tableau_regions(request, mois=None, annee=None):
+    somme_attributs_par_region = {}
+    
+    if request.method == 'POST':
+        mois = request.POST.get('mois')
+        annee = request.POST.get('annee')
+    
+    if mois and annee:
+        regions = Region.objects.all()
 
+        for region in regions:
+            # Obtenir les périmètres de cette région
+            perimetres = Périmètre.objects.filter(region=region)
+            
+            # Obtenir tous les fichiers pour ces périmètres pour le mois et l'année spécifiés
+            fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
+            
+            # Calculer la somme des attributs pour chaque région
+            somme_stock_ini = fichiers_par_region.aggregate(somme_stock_ini=Sum('stock_ini'))['somme_stock_ini'] or 0
+            somme_apport_consommation = fichiers_par_region.aggregate(somme_apport_consommation=Sum('Apport_consommation'))['somme_apport_consommation'] or 0
+            somme_produit = fichiers_par_region.aggregate(somme_produit=Sum('produit'))['somme_produit'] or 0
+            somme_consomme = fichiers_par_region.aggregate(somme_consomme=Sum('consomme'))['somme_consomme'] or 0
+            somme_preleve = fichiers_par_region.aggregate(somme_preleve=Sum('preleve'))['somme_preleve'] or 0
+            somme_pertes = fichiers_par_region.aggregate(somme_pertes=Sum('pertes'))['somme_pertes'] or 0
+            somme_expedie = fichiers_par_region.aggregate(somme_expedie=Sum('expedie'))['somme_expedie'] or 0
+            somme_laivraison = fichiers_par_region.aggregate(somme_laivraison=Sum('laivraison'))['somme_laivraison'] or 0
 
+            # Calcul des nouvelles colonnes
+            somme_exp_trc = fichiers_par_region.aggregate(somme_exp_trc=Sum(F('expedie') / F('densite')))['somme_exp_trc'] or 0
+            somme_stock_final = somme_produit - somme_preleve - somme_pertes - somme_expedie + somme_laivraison + somme_stock_ini - somme_apport_consommation
+
+            # Ajouter les sommes des attributs à la région
+            somme_attributs_par_region[region] = {
+                'somme_stock_ini': somme_stock_ini,
+                'somme_apport_consommation': somme_apport_consommation,
+                'somme_produit': somme_produit,
+                'somme_consomme': somme_consomme,
+                'somme_preleve': somme_preleve,
+                'somme_pertes': somme_pertes,
+                'somme_expedie': somme_expedie,
+                'somme_laivraison': somme_laivraison,
+                'somme_exp_trc': somme_exp_trc,
+                'somme_stock_final': somme_stock_final,
+            }
+
+    return render(request, 'traitement_p1.html', {'somme_attributs_par_region': somme_attributs_par_region, 'mois': mois})
+    """
+
+def tableau_regions(request, mois=None, annee=None):
+    somme_attributs_par_region = {}
+    
+    if request.method == 'POST':
+        mois = request.POST.get('mois')
+        annee = request.POST.get('annee')
+    
+    if mois and annee:
+        regions = Region.objects.all()
+
+        for region in regions:
+            perimetres = Périmètre.objects.filter(region=region)
+            fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
+            
+            # Calculer les sommes des attributs pour chaque région
+            somme_stock_ini = fichiers_par_region.aggregate(somme_stock_ini=Coalesce(Sum('stock_ini'), 0, output_field=FloatField()))['somme_stock_ini']
+            somme_apport_consommation = fichiers_par_region.aggregate(somme_apport_consommation=Coalesce(Sum('Apport_consommation'), 0, output_field=FloatField()))['somme_apport_consommation']
+            somme_produit = fichiers_par_region.aggregate(somme_produit=Coalesce(Sum('produit'), 0, output_field=FloatField()))['somme_produit']
+            somme_consomme = fichiers_par_region.aggregate(somme_consomme=Coalesce(Sum('consomme'), 0, output_field=FloatField()))['somme_consomme']
+            somme_preleve = fichiers_par_region.aggregate(somme_preleve=Coalesce(Sum('preleve'), 0, output_field=FloatField()))['somme_preleve']
+            somme_pertes = fichiers_par_region.aggregate(somme_pertes=Coalesce(Sum('pertes'), 0, output_field=FloatField()))['somme_pertes']
+            somme_expedie = fichiers_par_region.aggregate(somme_expedie=Coalesce(Sum('expedie'), 0, output_field=FloatField()))['somme_expedie']
+            somme_laivraison = fichiers_par_region.aggregate(somme_laivraison=Coalesce(Sum('laivraison'), 0, output_field=FloatField()))['somme_laivraison']
+
+            # Calculer somme_exp_trc avec Coalesce
+            somme_exp_trc = fichiers_par_region.aggregate(somme_exp_trc=Coalesce(Sum(F('expedie') / F('densite')), 0, output_field=FloatField()))['somme_exp_trc']
+
+            # Calculer somme_stock_final
+            somme_stock_final = somme_produit - somme_preleve - somme_pertes - somme_expedie + somme_laivraison + somme_stock_ini - somme_apport_consommation
+            
+            # Formater les valeurs pour n'afficher qu'un nombre fixe de décimales
+            somme_stock_ini = "{:.3f}".format(somme_stock_ini)
+            somme_apport_consommation = "{:.3f}".format(somme_apport_consommation)
+            somme_produit = "{:.3f}".format(somme_produit)
+            somme_consomme = "{:.3f}".format(somme_consomme)
+            somme_preleve = "{:.3f}".format(somme_preleve)
+            somme_pertes = "{:.3f}".format(somme_pertes)
+            somme_expedie = "{:.3f}".format(somme_expedie)
+            somme_laivraison = "{:.3f}".format(somme_laivraison)
+            somme_exp_trc = "{:.3f}".format(somme_exp_trc)
+            somme_stock_final = "{:.3f}".format(somme_stock_final)
+            
+            # Ajouter les sommes des attributs à la région
+            somme_attributs_par_region[region] = {
+                'somme_stock_ini': somme_stock_ini,
+                'somme_apport_consommation': somme_apport_consommation,
+                'somme_produit': somme_produit,
+                'somme_consomme': somme_consomme,
+                'somme_preleve': somme_preleve,
+                'somme_pertes': somme_pertes,
+                'somme_expedie': somme_expedie,
+                'somme_laivraison': somme_laivraison,
+                'somme_exp_trc': somme_exp_trc,
+                'somme_stock_final': somme_stock_final,
+            }
+
+    return render(request, 'traitement_p1.html', {'somme_attributs_par_region': somme_attributs_par_region, 'mois': mois})

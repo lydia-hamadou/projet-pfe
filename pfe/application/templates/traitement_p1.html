@@ -20,6 +20,80 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
     />
   </head>
+  <style>
+    
+   .table-region {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-region th,
+.table-region td {
+    border: 1px solid #ddd;
+    padding: 6px; 
+    font-size: 12px; 
+}
+
+.table-region th {
+  background-color: #ffc04d;
+}
+
+.table-region th a {
+    text-decoration: none;
+    color: #000;
+}
+
+.table-region th a:hover {
+    color: blue;
+}
+.header-row {
+    background-color: #ffc04d; 
+}
+.table-region th:not(:first-child),
+.table-region td {
+    background-color: rgba(240, 240, 240, 0.3); 
+}
+/*
+.table-container {
+    padding-left: 20px; 
+}
+
+
+.header-row {
+    background-color: #ffc04d; 
+}
+
+
+.table-region th:not(:first-child),
+.table-region td {
+    background-color: rgba(240, 240, 240, 0.3); 
+}
+
+
+.table-region th,
+.table-region td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    font-size: 12px;
+}
+
+
+.table-region th {
+    background-color: #f2f2f2;
+}
+
+
+.table-region th a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.table-region th a:hover {
+    color: blue;
+}
+*/
+  </style>
   <body>
     <div class="page-p1">
       <img class="group-28-13" alt="" src="{% static 'images/finale_img.png'%}" />
@@ -71,7 +145,44 @@
       <div class="rectangle-7-94" ></div>
 
       <div class="page-p1-child"></div>
-      <div class="page-p1-item"></div>
+      <div class="page-p1-item">
+        <table class="table-region">
+          <thead>
+              {% if somme_attributs_par_region %}
+                  <tr class="header-row">
+                      <th><a href="#">Région</a></th>
+                      <th><a href="#">Stock initial</a></th>
+                      <th><a href="#">Apport de consommation interne</a></th>
+                      <th><a href="#">Production</a></th>
+                      <th><a href="#">Consommation</a></th>
+                      <th><a href="#">Prélevé</a></th>
+                      <th><a href="#">Pertes</a></th>
+                      <th><a href="#">Expédition vers TRC</a></th>
+                      <th><a href="#">Livraison</a></th>
+                      <th><a href="#">Expédition vers TRC en m3</a></th>
+                      <th><a href="#">Stock final</a></th>
+                  </tr>
+              {% endif %}
+          </thead>
+          <tbody>
+              {% for region, attributs in somme_attributs_par_region.items %}
+                  <tr class="data-row">
+                      <td>{{ region.nom }}</td>
+                      <td>{{ attributs.somme_stock_ini }}</td>
+                      <td>{{ attributs.somme_apport_consommation }}</td>
+                      <td>{{ attributs.somme_produit }}</td>
+                      <td>{{ attributs.somme_consomme }}</td>
+                      <td>{{ attributs.somme_preleve }}</td>
+                      <td>{{ attributs.somme_pertes }}</td>
+                      <td>{{ attributs.somme_expedie }}</td>
+                      <td>{{ attributs.somme_laivraison }}</td>
+                      <td>{{ attributs.somme_exp_trc }}</td>
+                      <td>{{ attributs.somme_stock_final }}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>     
+    </div>
       <div class="vector-parent17">
         <div class="group-child24" ></div>
 
@@ -87,23 +198,22 @@
         </div>
       </div>
       <div class="page-p1-inner1">
-        <div class="rectangle-parent2">
-          <select class="frame-child46">
-               <option class="anne11" value="">Année</option>
-               <option value="2022" class="option">2022</option>
-               <option value="2023" class="option">2023</option>
-               <option value="2024" class="option">2024</option>
+        <form class="rectangle-parent2" method="post" action="{% url 'application:tableau_regions' %}">
+          {% csrf_token %}
+          <select class="frame-child46" name="annee">
+              <option class="anne11" value="">Année</option>
+              <option value="2022" class="option">2022</option>
+              <option value="2023" class="option">2023</option>
+              <option value="2024" class="option">2024</option>
           </select>
-          <select class="frame-child47">
-               <option class="mois3" value="">Mois</option>
-               <option value="janvier" class="option">janvier</option>
-               <option value="fevrier" class="option">février</option>
-               <option value="mars" class="option">Mars</option>
+          <select class="frame-child47" name="mois"> <!-- Ajoutez l'attribut name pour le mois -->
+              <option class="mois3" value="">Mois</option>
+              <option value="janvier" class="option">janvier</option>
+              <option value="fevrier" class="option">février</option>
+              <option value="mars" class="option">Mars</option>
           </select>
-          <button class="frame-child48">
-             <img class="frame-child49" alt="" src="C:\Users\Inspiron\Desktop\pfe images\téléchargement.png" />
-          </button>
-        </div>
+          <button type="submit" class="frame-child48">Submit</button>
+      </form>
       </div>
       <img class="logo-3-icon" alt="" src="{% static 'images/logo.png'%}" />
     </div>
