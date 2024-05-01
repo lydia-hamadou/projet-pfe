@@ -1,4 +1,4 @@
-from django.http import HttpResponse,HttpResponseBadRequest
+from django.http import HttpResponse
 import pandas as pd
 from .models import Fichier_mansuelle , Périmètre
 import logging
@@ -7,7 +7,18 @@ from django.contrib import messages
 from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region
 from django.db.models import Sum, F, FloatField
 from django.db.models.functions import Coalesce
-from django.db import models
+from io import BytesIO
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment, PatternFill
+from reportlab.lib.pagesizes import letter, landscape
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
+from reportlab.lib import colors
+from reportlab.lib.units import cm
+from django.db.models import Sum, F, FloatField
+from django.db.models.functions import Coalesce
+from .models import Region, Périmètre, Fichier_mansuelle
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+
 
 logging.basicConfig(filename='app.log', level=logging.ERROR)
 
@@ -263,16 +274,6 @@ def tableau_regions(request, mois=None, annee=None):
             }
 
     return render(request, 'traitement_p1.html', {'somme_attributs_par_region': somme_attributs_par_region, 'mois': mois, 'annee': annee})
-
-from django.http import HttpResponse
-from reportlab.lib.pagesizes import letter, landscape
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
-from reportlab.lib import colors
-from reportlab.lib.units import cm
-from django.db.models import Sum, F, FloatField
-from django.db.models.functions import Coalesce
-from .models import Region, Périmètre, Fichier_mansuelle
-
 def generate_pdf(request):
     if request.method == 'POST':
         mois = request.POST.get('mois')
@@ -358,5 +359,191 @@ def generate_pdf(request):
 
         # Add the table to the PDF document
         doc.build([table])
+
+        return response
+"""
+def generate_excel(request):
+    if request.method == 'POST':
+        mois = request.POST.get('mois')
+        annee = request.POST.get('annee')
+
+        regions = Region.objects.all()
+
+        # Créer un nouveau classeur Excel
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "Régions"
+
+        # Définir les styles
+        bold_font = Font(bold=True)
+        center_alignment = Alignment(horizontal='center')
+        orange_fill = PatternFill(start_color='FFA500', end_color='FFA500', fill_type='solid')
+        black_border = Border(left=Side(style='thin', color='000000'),
+                              right=Side(style='thin', color='000000'),
+                              top=Side(style='thin', color='000000'),
+                              bottom=Side(style='thin', color='000000'))
+
+        # Écrire les en-têtes avec style
+        headers = ['Région', 'Stock initial', 'Apport de consommation interne', 'Production', 'Consommation',
+                   'Prélevé', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition vers TRC en m3', 'Stock final']
+        for col_num, header in enumerate(headers, 1):
+            cell = ws.cell(row=1, column=col_num, value=header)
+            cell.font = bold_font
+            cell.alignment = center_alignment
+            cell.fill = orange_fill
+
+        # Écrire les données pour chaque région
+        for row_num, region in enumerate(regions, 2):
+            perimetres = Périmètre.objects.filter(region=region)
+            fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
+
+            # Calculer les attributs pour chaque région
+            attributs = [
+                region.nom,
+                fichiers_par_region.aggregate(somme_stock_ini=Coalesce(Sum('stock_ini'), 0, output_field=FloatField()))['somme_stock_ini'],
+                fichiers_par_region.aggregate(somme_apport_consommation=Coalesce(Sum('Apport_consommation'), 0, output_field=FloatField()))['somme_apport_consommation'],
+                fichiers_par_region.aggregate(somme_produit=Coalesce(Sum('produit'), 0, output_field=FloatField()))['somme_produit'],
+                fichiers_par_region.aggregate(somme_consomme=Coalesce(Sum('consomme'), 0, output_field=FloatField()))['somme_consomme'],
+                fichiers_par_region.aggregate(somme_preleve=Coalesce(Sum('preleve'), 0, output_field=FloatField()))['somme_preleve'],
+                fichiers_par_region.aggregate(somme_pertes=Coalesce(Sum('pertes'), 0, output_field=FloatField()))['somme_pertes'],
+                fichiers_par_region.aggregate(somme_expedie=Coalesce(Sum('expedie'), 0, output_field=FloatField()))['somme_expedie'],
+                fichiers_par_region.aggregate(somme_laivraison=Coalesce(Sum('laivraison'), 0, output_field=FloatField()))['somme_laivraison'],
+                fichiers_par_region.aggregate(somme_exp_trc=Coalesce(Sum(F('expedie') / F('densite')), 0, output_field=FloatField()))['somme_exp_trc'],
+                fichiers_par_region.aggregate(somme_stock_final=Coalesce(Sum(F('produit') - F('preleve') - F('pertes') - F('expedie') + F('laivraison') + F('stock_ini') - F('Apport_consommation')), 0, output_field=FloatField()))['somme_stock_final']
+            ]
+
+            # Écrire les données avec style
+            for col_num, value in enumerate(attributs, 1):
+                cell = ws.cell(row=row_num, column=col_num, value=value)
+                cell.alignment = center_alignment
+
+        # Ajuster la largeur des colonnes
+        for col in ws.columns:
+            max_length = 0
+            column = col[0].column_letter
+            for cell in col:
+                try:
+                    if len(str(cell.value)) > max_length:
+                        max_length = len(cell.value)
+                except:
+                    pass
+            adjusted_width = (max_length + 2) * 1.2
+            ws.column_dimensions[column].width = adjusted_width
+
+        # Appliquer les bordures à toutes les cellules
+        for row in ws.iter_rows():
+            for cell in row:
+                cell.border = black_border
+
+        # Générer le fichier Excel en mémoire
+        excel_data = BytesIO()
+        wb.save(excel_data)
+        excel_data.seek(0)
+
+        # Créer une réponse HTTP avec le fichier Excel
+        response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        response['Content-Disposition'] = 'attachment; filename=regions_summary.xlsx'
+
+        return response
+"""
+
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+from openpyxl.utils import get_column_letter
+from django.http import HttpResponse
+
+def generate_excel(request):
+    if request.method == 'POST':
+        mois = request.POST.get('mois')
+        annee = request.POST.get('annee')
+
+        regions = Region.objects.all()
+
+        # Créer un nouveau classeur Excel
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "Régions"
+
+        # Définir les styles
+        bold_font = Font(bold=True)
+        center_alignment = Alignment(horizontal='center')
+        orange_fill = PatternFill(start_color='FFA500', end_color='FFA500', fill_type='solid')
+        blue_fill = PatternFill(start_color='0000FF', end_color='0000FF', fill_type='solid')  # Bleu
+        white_fill = PatternFill(start_color='FFFFFF', end_color='FFFFFF', fill_type='solid')  # Blanc
+        black_border = Border(left=Side(style='thin', color='000000'),
+                              right=Side(style='thin', color='000000'),
+                              top=Side(style='thin', color='000000'),
+                              bottom=Side(style='thin', color='000000'))
+
+        # Écrire les en-têtes avec style
+        headers = ['Mois', 'Année', 'Région', 'Stock initial', 'Apport de consommation interne', 'Production', 'Consommation',
+                   'Prélevé', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition vers TRC en m3', 'Stock final']
+        for col_num, header in enumerate(headers[2:], 3):
+            cell = ws.cell(row=1, column=col_num, value=header)
+            cell.font = bold_font
+            cell.alignment = center_alignment
+            cell.fill = orange_fill
+
+        # Écrire les valeurs de mois et annee
+        ws['A1'] = 'Mois'
+        ws['A1'].fill = blue_fill  # Mettre la cellule "Mois" en bleu
+        ws['A2'] = mois
+        ws['A2'].fill = white_fill  # Mettre la valeur du mois en blanc
+        ws['B1'] = 'Année'
+        ws['B1'].fill = blue_fill  # Mettre la cellule "Année" en bleu
+        ws['B2'] = annee
+        ws['B2'].fill = white_fill  # Mettre la valeur de l'année en blanc
+
+        # Écrire les données pour chaque région
+        for row_num, region in enumerate(regions, 2):  # Commencer à partir de la ligne 3
+            perimetres = Périmètre.objects.filter(region=region)
+            fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
+
+            # Calculer les attributs pour chaque région
+            attributs = [
+                region.nom,
+                fichiers_par_region.aggregate(somme_stock_ini=Coalesce(Sum('stock_ini'), 0, output_field=FloatField()))['somme_stock_ini'],
+                fichiers_par_region.aggregate(somme_apport_consommation=Coalesce(Sum('Apport_consommation'), 0, output_field=FloatField()))['somme_apport_consommation'],
+                fichiers_par_region.aggregate(somme_produit=Coalesce(Sum('produit'), 0, output_field=FloatField()))['somme_produit'],
+                fichiers_par_region.aggregate(somme_consomme=Coalesce(Sum('consomme'), 0, output_field=FloatField()))['somme_consomme'],
+                fichiers_par_region.aggregate(somme_preleve=Coalesce(Sum('preleve'), 0, output_field=FloatField()))['somme_preleve'],
+                fichiers_par_region.aggregate(somme_pertes=Coalesce(Sum('pertes'), 0, output_field=FloatField()))['somme_pertes'],
+                fichiers_par_region.aggregate(somme_expedie=Coalesce(Sum('expedie'), 0, output_field=FloatField()))['somme_expedie'],
+                fichiers_par_region.aggregate(somme_laivraison=Coalesce(Sum('laivraison'), 0, output_field=FloatField()))['somme_laivraison'],
+                fichiers_par_region.aggregate(somme_exp_trc=Coalesce(Sum(F('expedie') / F('densite')), 0, output_field=FloatField()))['somme_exp_trc'],
+                fichiers_par_region.aggregate(somme_stock_final=Coalesce(Sum(F('produit') - F('preleve') - F('pertes') - F('expedie') + F('laivraison') + F('stock_ini') - F('Apport_consommation')), 0, output_field=FloatField()))['somme_stock_final']
+            ]
+
+            # Écrire les données avec style
+            for col_num, value in enumerate(attributs, 3):
+                cell = ws.cell(row=row_num, column=col_num, value=value)
+                cell.alignment = center_alignment
+
+        # Ajuster la largeur des colonnes
+        for col in ws.columns:
+            max_length = 0
+            column = col[0].column_letter
+            for cell in col:
+                try:
+                    if len(str(cell.value)) > max_length:
+                        max_length = len(cell.value)
+                except:
+                    pass
+            adjusted_width = (max_length + 2) * 1.2
+            ws.column_dimensions[column].width = adjusted_width
+
+        # Appliquer les bordures à toutes les cellules
+        for row in ws.iter_rows():
+            for cell in row:
+                cell.border = black_border
+
+        # Générer le fichier Excel en mémoire
+        excel_data = BytesIO()
+        wb.save(excel_data)
+        excel_data.seek(0)
+
+        # Créer une réponse HTTP avec le fichier Excel
+        response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        response['Content-Disposition'] = 'attachment; filename=regions_summary.xlsx'
 
         return response

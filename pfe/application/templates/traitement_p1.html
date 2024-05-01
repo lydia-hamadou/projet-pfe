@@ -142,7 +142,12 @@
       </table>     
     </div>
       <div class="vector-parent17">
-        <button class="group-child24" >EXCEL</button>
+        <form id="excelForm" action="{% url 'application:generate_excel' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="annee" id="excel_annee" value="{{ annee }}">
+          <input type="hidden" name="mois" id="excel_mois" value="{{ mois }}">
+          <button type="submit" class="group-child24">EXCEL</button>
+        </form>
         <img class="icon-pdf-16" alt="" src="{% static 'images/icon-excel .png' %}" />
         <form id="pdfForm" action="{% url 'application:generate_pdf' %}" method="post">
           {% csrf_token %}
@@ -155,13 +160,13 @@
       <div class="page-p1-inner1">
         <form class="rectangle-parent2" method="post" action="{% url 'application:tableau_regions' %}">
           {% csrf_token %}
-          <select class="frame-child46" name="annee">
+          <select class="frame-child46" name="annee" id="annee-select">
               <option class="anne11" value="">Année</option>
               <option value="2022" class="option">2022</option>
               <option value="2023" class="option">2023</option>
               <option value="2024" class="option">2024</option>
           </select>
-          <select class="frame-child47" name="mois"> <!-- Ajoutez l'attribut name pour le mois -->
+          <select class="frame-child47" name="mois" id="mois-select"> <!-- Ajoutez l'attribut name pour le mois -->
               <option class="mois3" value="">Mois</option>
               <option value="janvier" class="option">janvier</option>
               <option value="fevrier" class="option">février</option>
@@ -172,5 +177,39 @@
       </div>
       <img class="logo-3-icon" alt="" src="{% static 'images/logo.png'%}" />
     </div>
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    // Récupérer les éléments de sélection par leur attribut name
+    var anneeSelect = document.querySelector('select[name="annee"]');
+    var moisSelect = document.querySelector('select[name="mois"]');
+
+    // Restaurer les valeurs sélectionnées dans le stockage local
+    var selectedAnnee = localStorage.getItem('selectedAnnee');
+    var selectedMois = localStorage.getItem('selectedMois');
+
+    // Restaurer les valeurs sélectionnées dans les menus déroulants
+    if (selectedAnnee) {
+        anneeSelect.value = selectedAnnee;
+    }
+    if (selectedMois) {
+        moisSelect.value = selectedMois;
+    }
+
+    // Ajouter des gestionnaires d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
+    anneeSelect.addEventListener('change', function() {
+        localStorage.setItem('selectedAnnee', anneeSelect.value);
+    });
+    moisSelect.addEventListener('change', function() {
+        localStorage.setItem('selectedMois', moisSelect.value);
+    });
+
+    // Ajouter un gestionnaire d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
+    // avant la soumission du formulaire
+    document.querySelector('form').addEventListener('submit', function() {
+        localStorage.setItem('selectedAnnee', anneeSelect.value);
+        localStorage.setItem('selectedMois', moisSelect.value);
+    });
+});
+  </script>
   </body>
 </html>
