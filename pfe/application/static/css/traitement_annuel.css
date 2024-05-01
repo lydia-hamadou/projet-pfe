@@ -255,29 +255,6 @@
   width: 1150px;
   height: 526px;
 }
-.group-child24 {
-  position: absolute;
-  height: 100%;
-  width: 44.63%;
-  top: 0;
-  right: 55.37%;
-  bottom: 0;
-  left: 0;
-  border-radius: var(--br-mini);
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  background-color: white;
-}
-.pdf7 {
-  position: absolute;
-  height: 35.34%;
-  width: 15.82%;
-  top: 29.51%;
-  left: 22.29%;
-  font-weight: 500;
-  display: inline-block;
-}
 .group-child25,
 .icon-pdf-16 {
   position: absolute;
@@ -295,15 +272,6 @@
   left: 2.16%;
   object-fit: cover;
 }
-.group-child25 {
-  height: 100%;
-  width: 44.63%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-  left: 55.37%;
-}
 .excel13,
 .icon-excel-16 {
   position: absolute;
@@ -320,13 +288,6 @@
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
-}
-.excel13 {
-  width: 23.78%;
-  top: 29.51%;
-  left: 74.78%;
-  font-weight: 500;
-  display: inline-block;
 }
 .vector-parent17 {
   position: absolute;

@@ -20,6 +20,66 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
     />
   </head>
+  <style>
+    .table-region {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-region th,
+.table-region td {
+    border: 1px solid #ddd;
+    padding: 6px; 
+    font-size: 12px; 
+}
+
+.table-region th {
+  background-color: #ffc04d;
+}
+
+.table-region th a {
+    text-decoration: none;
+    color: #000;
+}
+
+.table-region th a:hover {
+    color: blue;
+}
+.header-row {
+    background-color: #ffc04d; 
+}
+.table-region th:not(:first-child),
+.table-region td {
+    background-color: rgba(240, 240, 240, 0.3); 
+}
+.group-child24 {
+  position: absolute;
+  height: 100%;
+  width: 44.63%;
+  top: 0;
+  right: 55.37%;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  background-color: white;
+  font-size:large;
+  text-align: right;
+}
+.group-child25 {
+  height: 100%;
+  width: 44.63%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  left: 55.37%;
+  font-size:large;
+  text-align: center; /* Align text to the center */
+  padding-left: 30px; 
+}
+  </style>
   <body>
     <div class="page-p1">
       <img class="group-28-13" alt="" src="{% static 'images/finale_img.png'%}"/>
@@ -71,33 +131,72 @@
       <div class="rectangle-7-94" ></div>
 
       <div class="page-p1-child"></div>
-      <div class="page-p1-item"></div>
+      <div class="page-p1-item">
+        <table class="table-region">
+          <thead>
+              {% if somme_attributs_par_region %}
+                  <tr class="header-row">
+                      <th><a href="#">Région</a></th>
+                      <th><a href="#">Stock initial</a></th>
+                      <th><a href="#">Apport de consommation interne</a></th>
+                      <th><a href="#">Production</a></th>
+                      <th><a href="#">Consommation</a></th>
+                      <th><a href="#">Prélevé</a></th>
+                      <th><a href="#">Pertes</a></th>
+                      <th><a href="#">Expédition vers TRC</a></th>
+                      <th><a href="#">Livraison</a></th>
+                      <th><a href="#">Expédition vers TRC en m3</a></th>
+                      <th><a href="#">Stock final</a></th>
+                  </tr>
+              {% endif %}
+          </thead>
+          <tbody>
+              {% for region, attributs in somme_attributs_par_region.items %}
+                  <tr class="data-row">
+                      <td>{{ region.nom }}</td>
+                      <td>{{ attributs.somme_stock_ini }}</td>
+                      <td>{{ attributs.somme_apport_consommation }}</td>
+                      <td>{{ attributs.somme_produit }}</td>
+                      <td>{{ attributs.somme_consomme }}</td>
+                      <td>{{ attributs.somme_preleve }}</td>
+                      <td>{{ attributs.somme_pertes }}</td>
+                      <td>{{ attributs.somme_expedie }}</td>
+                      <td>{{ attributs.somme_laivraison }}</td>
+                      <td>{{ attributs.somme_exp_trc }}</td>
+                      <td>{{ attributs.somme_stock_final }}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>     
+      </div>
       <div class="vector-parent17">
-        <div class="group-child24" ></div>
-
-        <div class="pdf7">PDF</div>
-        <img class="icon-pdf-16" alt="" src="{% static 'images/icon-pdf 1.png'%}" />
-
-        <div class="group-child25" ></div>
-
-        <img class="icon-excel-16" alt="" src="{% static 'images/icon-excel .png' %}" />
-
-        <div class="excel13">
-          <p class="affichage-bilan5">EXCEL</p>
-        </div>
+        <form id="excelForm" method="post" action="{% url 'application:generate_excel_annuele' %}" >
+          {% csrf_token %}
+          <input type="hidden" name="annee" id="excel_annee" value="{{ annee }}">
+          <button type="submit" class="group-child24">EXCEL</button>
+        </form>
+        <img class="icon-pdf-16" alt="" src="{% static 'images/icon-excel .png' %}" />
+        <form id="pdfForm" action="{% url 'application:generate_pdf_annuel' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="annee" id="pdf_annee" value="{{ annee }}">
+          <button type="submit" class="group-child25">PDF</button>
+        </form>
+        <img class="icon-excel-16" alt="" src="{% static 'images/icon-pdf 1.png'%}" />
+      </div>
       </div>
       <div class="page-p1-inner1">
-        <div class="rectangle-parent2">
-          <select class="frame-child46">
+        <form class="rectangle-parent2" method="post" action="{% url 'application:tableau_regions_annuel' %}">
+        {% csrf_token %}
+          <select class="frame-child46" name="annee">
                <option class="anne11" value="">Année</option>
                <option value="2022" class="option">2022</option>
                <option value="2023" class="option">2023</option>
                <option value="2024" class="option">2024</option>
           </select>
-          <button class="frame-child48">
+          <button class="frame-child48" type="submit">
              <img class="frame-child49" alt="" src="{% static 'images/téléchargement.png'%}" />
           </button>
-        </div>
+        </form>
       </div>
       <img class="logo-3-icon" alt="" src="{% static 'images/logo.png'%}" />
     </div>

@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import essay1,essay2,essay3,essay4,index,login,essay6,essay8,save_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel
+from .views import essay1,essay2,essay3,essay4,index,login,essay6,essay8,save_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel,tableau_regions_annuel,generate_pdf_annuel,generate_excel_annuele
+                    
 
 app_name = 'application'
 
@@ -11,6 +12,9 @@ urlpatterns = [
     path('generate_pdf', generate_pdf, name='generate_pdf'),
     path('generate_excel', generate_excel, name='generate_excel'),
     path('tableau_regions', tableau_regions, name='tableau_regions'),
+    path('tableau_regions_annuel', tableau_regions_annuel, name='tableau_regions_annuel'),
+    path('generate_pdf_annuel', generate_pdf_annuel, name='generate_pdf_annuel'),
+     path('generate_excel_annuele', generate_excel_annuele, name='generate_excel_annuele'),
     path('sauvgarder', essay8, name='sauvgarder'),
     path('login/acceuil', essay1, name='acceuil'),
     path('login/traitement_mansuel', essay2, name='traitement_mansuel'),
