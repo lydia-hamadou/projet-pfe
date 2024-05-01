@@ -1,3 +1,33 @@
+.table-region {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-region th,
+.table-region td {
+    border: 1px solid #ddd;
+    padding: 6px; 
+    font-size: 12px; 
+}
+
+.table-region th {
+  background-color: #ffc04d;
+}
+
+.table-region th a {
+    text-decoration: none;
+    color: #000;
+}
+
+.table-region th a:hover {
+    color: blue;
+}
+.header-row {
+    background-color: #ffc04d; 
+}
+.table-region th:not(:first-child),
+.table-region td {
+    background-color: rgba(240, 240, 240, 0.3); 
+}
 .frame-child43,
 .group-28-13 {
   position: absolute;
@@ -268,15 +298,8 @@
   overflow: hidden;
   max-height: 100%;
   background-color: white;
-}
-.pdf7 {
-  position: absolute;
-  height: 35.34%;
-  width: 15.82%;
-  top: 29.51%;
-  left: 22.29%;
-  font-weight: 500;
-  display: inline-block;
+  font-size:large;
+  text-align: right;
 }
 .group-child25,
 .icon-pdf-16 {
@@ -303,6 +326,9 @@
   bottom: 0;
   background-color: white;
   left: 55.37%;
+  font-size:large;
+  text-align: center; /* Align text to the center */
+  padding-left: 30px; 
 }
 .excel13,
 .icon-excel-16 {

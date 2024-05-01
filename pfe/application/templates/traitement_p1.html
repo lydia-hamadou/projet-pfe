@@ -21,12 +21,10 @@
     />
   </head>
   <style>
-    
-   .table-region {
-    width: 100%;
-    border-collapse: collapse;
+    .table-region {
+  width: 100%;
+  border-collapse: collapse;
 }
-
 .table-region th,
 .table-region td {
     border: 1px solid #ddd;
@@ -53,46 +51,6 @@
 .table-region td {
     background-color: rgba(240, 240, 240, 0.3); 
 }
-/*
-.table-container {
-    padding-left: 20px; 
-}
-
-
-.header-row {
-    background-color: #ffc04d; 
-}
-
-
-.table-region th:not(:first-child),
-.table-region td {
-    background-color: rgba(240, 240, 240, 0.3); 
-}
-
-
-.table-region th,
-.table-region td {
-    border: 1px solid #ddd;
-    padding: 6px;
-    font-size: 12px;
-}
-
-
-.table-region th {
-    background-color: #f2f2f2;
-}
-
-
-.table-region th a {
-    text-decoration: none;
-    color: #000;
-}
-
-
-.table-region th a:hover {
-    color: blue;
-}
-*/
   </style>
   <body>
     <div class="page-p1">
@@ -184,18 +142,15 @@
       </table>     
     </div>
       <div class="vector-parent17">
-        <div class="group-child24" ></div>
-
-        <div class="pdf7">PDF</div>
-        <img class="icon-pdf-16" alt="" src="{% static 'images/icon-pdf 1.png'%}" />
-
-        <div class="group-child25" ></div>
-
-        <img class="icon-excel-16" alt="" src="{% static 'images/icon-excel .png' %}" />
-
-        <div class="excel13">
-          <p class="affichage-bilan5">EXCEL</p>
-        </div>
+        <button class="group-child24" >EXCEL</button>
+        <img class="icon-pdf-16" alt="" src="{% static 'images/icon-excel .png' %}" />
+        <form id="pdfForm" action="{% url 'application:generate_pdf' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="annee" id="pdf_annee" value="{{ annee }}">
+          <input type="hidden" name="mois" id="pdf_mois" value="{{ mois }}">
+          <button type="submit" class="group-child25">PDF</button>
+        </form>
+        <img class="icon-excel-16" alt="" src="{% static 'images/icon-pdf 1.png'%}" />
       </div>
       <div class="page-p1-inner1">
         <form class="rectangle-parent2" method="post" action="{% url 'application:tableau_regions' %}">
