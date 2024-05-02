@@ -34,7 +34,8 @@ class Fichier_mansuelle(models.Model):
     laivraison = models.DecimalField(max_digits=10, decimal_places=2)
     densite = models.DecimalField(max_digits=3, decimal_places=1)
     périmètre = models.ForeignKey(Périmètre, on_delete=models.CASCADE)
-
+    class Meta:
+        unique_together = (("mois", "annee", "périmètre"),)
 
 class Utilisateur(models.Model):
     id_utilisateur = models.AutoField(primary_key=True)

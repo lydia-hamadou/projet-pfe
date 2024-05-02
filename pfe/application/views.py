@@ -170,7 +170,7 @@ def save_data(request):
                 )
                 fichier_mansuelle.save()
 
-            return HttpResponse('Data saved to database.')
+            return render(request, 'page_fichier_sauvgarder.html')
         else:
             return HttpResponse('No file uploaded.')
     else:
