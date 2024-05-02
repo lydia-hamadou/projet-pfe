@@ -8,6 +8,7 @@ urlpatterns = [
     path('', essay6, name='app'),
     path('login/',login, name='login'),
     path('index',index, name='index'),
+    path('index/traitement_mansuel',essay2, name='allez'),
     path('save_data', save_data, name='save_data'),
     path('generate_pdf', generate_pdf, name='generate_pdf'),
     path('generate_excel', generate_excel, name='generate_excel'),
