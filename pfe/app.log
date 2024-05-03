@@ -15863,3 +15863,195 @@ django.utils.datastructures.MultiValueDictKeyError: 'excel_file'
 INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
 WARNING:django.request:Not Found: /favicon.ico
 INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\urls.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /login/dashboard
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 79, in dashboard
+    return render(request,'dashboard.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/bilan-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-2@2x.png
+WARNING:django.request:Not Found: /login/public/tabelu-de-bord-2@2x.png
+WARNING:django.request:Not Found: /login/public/traitementdelinformation-1-2@2x.png
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /save_data
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: application_fichier_mansuelle.mois, application_fichier_mansuelle.annee, application_fichier_mansuelle.périmètre_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\pfe\application\views.py", line 167, in save_data
+    fichier_mansuelle.save()
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Inspiron\Desktop\projet_sonatrach\projet-pfe\env_app\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: application_fichier_mansuelle.mois, application_fichier_mansuelle.annee, application_fichier_mansuelle.périmètre_id

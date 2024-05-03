@@ -170,13 +170,7 @@
   left: 0;
   width: 265px;
   height: 343px;
-}
-.ui2-inner {
-  top: 226px;
-  left: 27px;
-  font-size: var(--font-size-sm);
-  color: var(--color-snow-100);
-  background-color: white;
+  background-color:white ;
   border-radius: var(--br-11xl);
 }
 .group-child14 {
@@ -352,6 +346,7 @@
   border: none;
   color: white;
 }
+/*
 .logo-2-icon2,
 .microsoft-excel-icon1 {
   /*
@@ -361,7 +356,16 @@
   width: 115px;
   height: 90px;
   object-fit: cover;
-  */position: absolute;
+  ///position: absolute;
+  top: 38px;
+  left: 30px;
+  width: 99px;
+  height: 77.4px;
+  object-fit: cover;
+}
+*/
+.logo-2-icon2{
+  position: absolute;
   top: 38px;
   left: 30px;
   width: 99px;

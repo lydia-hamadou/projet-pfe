@@ -169,15 +169,6 @@
   width: 265px;
   height: 343px;
 }
-.selectpage-afterselecting-file-inner {
-  top: 226px;
-  left: 27px;
-  font-size: var(--font-size-sm);
-  color: var(--color-snow-100);
-  font-family: var(--font-montserrat);
-  background-color: white;
-  border-radius: var(--br-11xl);
-}
 .retour2 {
   position: relative;
 }

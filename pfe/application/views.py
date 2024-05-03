@@ -24,11 +24,6 @@ from openpyxl.utils import get_column_letter
 from openpyxl.styles.borders import Border, Side
 from django.db.models import Q
 
-
-
-
-
-
 logging.basicConfig(filename='app.log', level=logging.ERROR)
 
 from django.contrib.auth import authenticate
@@ -80,7 +75,8 @@ def traitement_p1(request):
    return render(request,'traitement_p1.html')
 def traitement_annuel(request):
    return render(request,'traitement_annuel.html')
-
+def dashboard(request):
+   return render(request,'dashboard.html')
 
 #ymchiww
 def index(request):
