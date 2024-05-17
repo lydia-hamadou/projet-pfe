@@ -209,6 +209,7 @@
   width: 99px;
   height: 77.4px;
   object-fit: cover;
+  background-color: transparent;
 }
 .result {
   position: absolute;
@@ -245,6 +246,7 @@
   width: 45px;
   height: 45px;
   object-fit: cover;
+  background-color: transparent;
 }
 .rectangle-container {
   position: absolute;

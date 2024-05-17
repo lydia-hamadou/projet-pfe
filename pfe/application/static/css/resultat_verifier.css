@@ -238,14 +238,6 @@
   font-size: 40px;
   width: 400px;
 }
-.image-2-icon {
-  position: absolute;
-  top: 54px;
-  left: 400px;
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-}
 .rectangle-container {
   position: absolute;
   top: 258px;
@@ -266,26 +258,7 @@
   width: 380px;
   height: 54px;
 }
-.validate {
-  position:absolute;
-  top: calc(50% - 14px);
-  left: calc(50% - 40px);
-  display: inline-block;
-  font-size: large;
-  height: 28px;
-  color:white;
-}
-.rectangle-parent1 {
-  position: absolute;
-  border: none;
-  top: calc(50% + 100px);
-  left: 70%;
-  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background-color: #4bae4f;
-  width: 150px;
-  height: 54px;
-}
+
 .selectpage-afterselecting-file-child {
   position: absolute;
   top: 475px;

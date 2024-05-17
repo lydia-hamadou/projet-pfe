@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div class="dashboardd">
@@ -73,9 +75,15 @@
       <div class="dashboardd-child"></div>
       <div class="dashboardd-item"></div>
       <div class="dashboardd-child1"></div>
-      <div class="dashboardd-child2"></div>
-      <div class="dashboardd-child3"></div>
-      <div class="dashboardd-child4"></div>
+      <div class="dashboardd-child2">
+        <canvas id="pie-chart"></canvas>
+      </div>
+      <div class="dashboardd-child3">
+        <canvas id="bar-chart"></canvas>
+      </div>
+      <div class="dashboardd-child4">
+        <canvas id="line-chart"></canvas>
+      </div>
        <div  class="champ-commentaire-group">
           <img class="icon-user3" alt="" src="{% static 'images/icon-user.png'%}" />
           <label class="ajouter-votre-commentaire1">ajouter votre commentaire.....</label>
@@ -83,19 +91,19 @@
        </div>
       <div class="dashboardd-child5"></div>
       <b class="donnees1">Donnees</b>
-      <div class="rectangle-parent5">
-        <input class="frame-child64" type="date" id="dateDebut" name="dateDebut">
+      <form class="rectangle-parent5" id="chartForm" action="{% url 'application:get_chart_data' %}" method="POST">
+        {% csrf_token %}
+        <input class="frame-child64" type="date" id="dateFin" name="dateFin">
         <select class="frame-child65">
           <option class="rgion1" value="">Région</option>
-          <option value="janvier" class="option">janvier</option>
-          <option value="fevrier" class="option">février</option>
-          <option value="mars" class="option">Mars</option>
+          <option value="stah" class="option">Stah</option>
+          <option value="adrar" class="option">Adrar</option>
+          <option value="in amenass" class="option">In Amenass</option>
         </select>
-        <form >
          <input class="frame-child66" type="date" id="dateDebut" name="dateDebut">
          <b for="dateDebut"  class="date-dbut1">Date de début:</b>
          <b class="date-fin1">Date fin:</b>
-         <button class="frame-child67"></button>
+         <button class="frame-child67" type="submit"></button>
       </form>
       </div>
     </div>
@@ -120,5 +128,109 @@
             }
         });
     });
+
+    function drawPieChart(data) {
+      const ctx = document.getElementById('pie-chart').getContext('2d');
+      new Chart(ctx, {
+          type: 'pie',
+          data: {
+              labels: data.map(item => item.perimetre),
+              datasets: [{
+                  data: data.map(item => item.percentage),
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.7)',
+                      'rgba(54, 162, 235, 0.7)',
+                      'rgba(255, 206, 86, 0.7)',
+                      'rgba(75, 192, 192, 0.7)',
+                      'rgba(153, 102, 255, 0.7)',
+                      'rgba(255, 159, 64, 0.7)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              title: {
+                  display: true,
+                  text: 'Production par périmètre'
+              }
+          }
+      });
+  }
+
+  function drawBarChart(data) {
+      const ctx = document.getElementById('bar-chart').getContext('2d');
+      new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: data.map(item => item.mois),
+              datasets: [{
+                  label: 'Production',
+                  data: data.map(item => item.production_mensuelle),
+                  backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+              }, {
+                  label: 'Prévision',
+                  data: data.map(item => item.prevision),
+                  backgroundColor: 'rgba(255, 206, 86, 0.7)',
+                  borderColor: 'rgba(255, 206, 86, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              title: {
+                  display: true,
+                  text: 'Production par périmètre et mois'
+              },
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  }
+
+  function drawLineChart(data) {
+      const ctx = document.getElementById('line-chart').getContext('2d');
+      new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: data.map(item => item.mois),
+              datasets: [{
+                  label: 'Production',
+                  data: data.map(item => item.production_mensuelle),
+                  backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 1
+              }, {
+                  label: 'Prévision',
+                  data: data.map(item => item.prevision),
+                  backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              title: {
+                  display: true,
+                  text: 'Évolution de la production et prévision'
+              },
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  }
 </script>
 </html>

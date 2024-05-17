@@ -32,6 +32,37 @@
   background-color: white;
   border-radius: var(--br-11xl);
 }
+.rectangle-parent1 {
+  position: absolute;
+  border: none;
+  top: calc(50% + 100px);
+  left: 70%;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: green;
+  width: 150px;
+  height: 50px;
+  display: flex; /* Utilisation de flexbox pour le centrage */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+.validate {
+  display: inline-block;
+  font-size: large;
+  left: 15%;
+  height: 30px;
+  color: white;
+  background-color: green; /* Couleur de fond verte */
+  border: none;          /* Enlève la bordure par défaut du bouton */
+}
+.image-2-icon {
+  position: absolute;
+  top: 54px;
+  left: 450px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
   </style>
   <body>
 
@@ -88,12 +119,14 @@
       <b class="result">result</b>
       <div class="rectangle-container">
         <div class="group-child16"></div>
-        <div class="file-verified">File verified</div>
+        <div class="file-verified">Fichier vérifier</div>
         <img class="image-2-icon" alt="" src="{% static 'images/téléchargement.png'%}" />
       </div>
-      <a class="rectangle-parent1" href="sauvgarder">
-        <b class="validate">Valider</b>
-      </a>
+      <form class="rectangle-parent1" method="POST" action="{% url 'application:save_data' %}">
+        {% csrf_token %}
+        <input type="hidden" name="excel_file_path" value="{{ excel_file_path }}">
+        <button class="validate" type="submit">Sauvgarder</button>
+     </form>
       <div class="selectpage-afterselecting-file-child">
          <b class="r">R</b>
       </div>

@@ -32,6 +32,22 @@
     background-color: white;
     border-radius: var(--br-11xl);
   }
+  .image-2-icon {
+  position: absolute;
+  top: 80px;
+  left: 450px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.file-verified {
+  width: max-content;
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  font-size: 40px;
+  width: 400px;
+}
 </style>
   <body>
 
@@ -88,13 +104,35 @@
       <b class="result">result</b>
       <div class="rectangle-container">
         <div class="group-child16"></div>
-        <div class="file-verified">Fichier Sauvgarder</div>
-        <img class="image-2-icon" alt="" src="{% static 'images/téléchargement.png'%}" />
+        <div class="file-verified" id="message-container"></div>
+        <img id="message-icon" class="image-2-icon" style="display: none;">
       </div>
       <div class="selectpage-afterselecting-file-child">
          <b class="r">R</b>
       </div>
     </div>
+    <script>
+      const messageContainer = document.getElementById('message-container');
+      const messageIcon = document.getElementById('message-icon');
+      const message = "{{ message }}";
+      const error = "{{ error }}";
+      
+      if (message) {
+          const messageElement = document.createElement('p');
+          messageElement.textContent = message;
+      
+          messageContainer.appendChild(messageElement);
+
+          messageIcon.style.display = 'block';
+          if (error === 'True') {
+              messageElement.classList.add('error-message');
+              messageIcon.src = "{% static 'images/fichier_sauv.png' %}"; 
+          } else {
+              messageElement.classList.add('success-message');
+              messageIcon.src = "{% static 'images/erreur.png' %}"; 
+          }
+      }
+      </script>
   </body>
 </html>
 

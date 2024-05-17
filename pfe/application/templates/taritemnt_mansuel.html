@@ -28,6 +28,31 @@
   display: flex;
   justify-content: space-between;
 }
+.logo-2-icon2{
+  position: absolute;
+  top: 38px;
+  left: 30px;
+  width: 99px;
+  height: 77.4px;
+  object-fit: cover;
+}
+.choose-file-label {
+  position: absolute;
+  font-size: 50px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
   </style>
   <body>
     <div class="ui2">
@@ -77,13 +102,13 @@
       <form class="vector-parent7" method="post" enctype="multipart/form-data" action="{% url 'application:index' %}">
         {% csrf_token %}
         <div class="page2-inner">
-            <label class="choose-file-label">Choisir fichier</label>
+            <label class="choose-file-label">Veuillez sélectionner le bilan mensuel à vérifier </label>
             <input type="file" name="excel_file" class="choose-file-button">
         </div>
         <div class="actions-frame">
             <img class="icon1" alt="" src="{% static 'images/Actions-frame.png'%}" />
         </div>
-        <button class="rectangle-group" type="submit">
+        <button class="rectangle-group" type="submit" id="submitBtn">
             <b class="test2">TEST</b>
         </button>
     </form>
@@ -117,5 +142,14 @@
        chooseFileInput.classList.add('invalid');
      }
    });
+
+   document.getElementById('submitBtn').addEventListener('click', function(event) {
+    const fileInput = document.querySelector('input[name="excel_file"]');
+
+    if (!fileInput.files.length) {
+        event.preventDefault(); // Empêche l'envoi du formulaire
+        alert("Veuillez ajouter un fichier avant de soumettre le formulaire.");
+    }
+});
      </script>
 </html>

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import essay1,essay2,essay3,essay4,index,login,essay6,essay8,save_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel,tableau_regions_annuel,generate_pdf_annuel,generate_excel_annuele,dashboard,dashboard
+from .views import acceuil,essay2,essay3,essay4,index,login,essay6,page_resultat_verifier,essay8,save_data,get_chart_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel,tableau_regions_annuel,generate_pdf_annuel,generate_excel_annuele,dashboard,dashboard
                     
 
 app_name = 'application'
@@ -8,8 +8,6 @@ urlpatterns = [
     path('', essay6, name='app'),
     path('login/',login, name='login'),
     path('index',index, name='index'),
-    path('index/traitement_mansuel',essay2, name='allez'),
-    path('save_data', save_data, name='save_data'),
     path('generate_pdf', generate_pdf, name='generate_pdf'),
     path('generate_excel', generate_excel, name='generate_excel'),
     path('tableau_regions', tableau_regions, name='tableau_regions'),
@@ -17,8 +15,24 @@ urlpatterns = [
     path('generate_pdf_annuel', generate_pdf_annuel, name='generate_pdf_annuel'),
     path('generate_excel_annuele', generate_excel_annuele, name='generate_excel_annuele'),
     path('sauvgarder', essay8, name='sauvgarder'),
-    path('login/acceuil', essay1, name='acceuil'),
-     path('acceuil', essay1, name='acceuil'),
+    path('login/acceuil', acceuil, name='acceuil'),
+    path('acceuil', acceuil, name='acceuil'),
+    path('save_data/acceuil', acceuil, name='acceuil'),
+    path('page_resultat_non_verifier/acceuil',acceuil, name='acceuil'),
+    path('page_resultat_verifier/acceuil',acceuil, name='acceuil'),
+    path('save_data/traitement_mansuel',essay2, name='traitement_mansuel'),
+    path('save_data/traitement_p1',traitement_p1, name='traitement_p1'),
+    path('save_data/traitement_annuel',traitement_annuel, name='traitement_annuel'),
+    path('save_data/dashboard',dashboard, name='dashboard'),
+    path('page_resultat_verifier/traitement_mansuel', essay2, name='traitement_mansuel'),
+    path('page_resultat_verifier/traitement_p1', traitement_p1, name='traitement_p1'),
+    path('page_resultat_verifier/traitement_annuel', traitement_annuel, name='traitement_annuel'),
+    path('page_resultat_verifier/dashboard', dashboard, name='dashboard'),
+    path('page_resultat_non_verifier/traitement_mansuel',essay2, name='traitement_mansuel'),
+    path('page_resultat_non_verifier/traitement_p1',traitement_p1, name='traitement_p1'),
+    path('page_resultat_non_verifier/traitement_annuel',traitement_annuel, name='traitement_annuel'),
+    path('page_resultat_non_verifier/dashboard',dashboard, name='dashboard'),
+    path('page_resultat_non_verifier/traitement_mansuel',essay2, name='traitement_mansuel'),
     path('login/traitement_mansuel', essay2, name='traitement_mansuel'),
     path('traitement_mansuel', essay2, name='traitement_mansuel'),
     path('affichage_resutat_valide', essay3, name='affichage_resutat_valide'),
@@ -29,4 +43,7 @@ urlpatterns = [
     path('traitement_p1',traitement_p1, name='traitement_p1'),
     path('login/dashboard',dashboard, name='dashboard'),
     path('dashboard',dashboard, name='dashboard'),
+    path('get_chart_data/', get_chart_data, name='get_chart_data'),
+    path('save_data/', save_data, name='save_data'),
+    path('page_resultat_verifier/', page_resultat_verifier, name='page_resultat_verifier'),
 ]

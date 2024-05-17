@@ -380,16 +380,8 @@
 .frame-child47 {
   left: 18px;
 }
-.frame-child48 {
-  position: absolute;
-  top: 7px;
-  left: 238px;
-  width: 29px;
-  height: 29px;
-  overflow: hidden;
-  object-fit: cover;
-  display: flex;
-  justify-content:center;
+.frame-child48:hover {
+  background-color: #45a049; /* Vert plus foncé au survol */
 }
 .frame-child49{
   position: absolute;

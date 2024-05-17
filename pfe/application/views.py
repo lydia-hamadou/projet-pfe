@@ -4,7 +4,7 @@ from .models import Fichier_mansuelle , Périmètre
 import logging
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region
+from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region,Prévision_perimetre
 from django.db.models import Sum, F, FloatField
 from django.db.models.functions import Coalesce
 from io import BytesIO
@@ -23,6 +23,9 @@ from django.db.models.functions import Coalesce
 from openpyxl.utils import get_column_letter
 from openpyxl.styles.borders import Border, Side
 from django.db.models import Q
+from django.http import JsonResponse
+from django.db.models import Count
+from django.contrib.auth.decorators import login_required
 
 logging.basicConfig(filename='app.log', level=logging.ERROR)
 
@@ -30,7 +33,8 @@ from django.contrib.auth import authenticate
 
 from django.shortcuts import render
 from .models import Utilisateur
-
+"""
+@login_required(login_url='application:acceuil') 
 def login(request):
     nom_utilisateur_invalid = False
     mot_de_passe_invalid = False
@@ -53,9 +57,36 @@ def login(request):
 
     return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
 
+"""
+from django.contrib.auth import authenticate, login
 
-    
-def essay1(request):
+from django.contrib.auth import authenticate, login
+
+@login_required(login_url='application:acceuil')
+def login(request):
+    if request.user.is_authenticated:
+        request.session.flush()
+        return redirect('application:acceuil')
+
+    nom_utilisateur_invalid = False
+    mot_de_passe_invalid = False
+
+    if request.method == 'POST':
+        nom = request.POST.get('nom')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=nom, password=password)  # Authentification avec Django
+
+        if user is not None:
+            login(request, user)  # Connexion de l'utilisateur
+            return redirect('application:acceuil')
+        else:
+            mot_de_passe_invalid = True  # Mot de passe incorrect
+
+    return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
+
+
+def acceuil(request):
    return render(request,'page_acceuil.html')
 def essay2(request):
    return render(request,'taritemnt_mansuel.html')
@@ -78,7 +109,7 @@ def traitement_annuel(request):
 def dashboard(request):
    return render(request,'dashboard.html')
 
-#ymchiww
+""" entrain de modifier elle est juste 
 def index(request):
     if request.method == "GET":
         return render(request, 'application/page_acceuil.html', {})
@@ -111,6 +142,51 @@ def index(request):
         else:
             return render(request, 'page_resultat_non_verifier.html')
             # Aller à la page page_resultat_non_verifier.html si le test échoue
+"""
+"""
+#probléme de pas de fichier est régler 
+import pandas as pd
+from django.shortcuts import render
+
+def index(request):
+    if request.method == "POST":
+        if "excel_file" in request.FILES:
+            excel_file = request.FILES["excel_file"]
+
+            # Charger le fichier Excel dans un DataFrame Pandas
+            df = pd.read_excel(excel_file, decimal=',')
+
+            # Convertir les colonnes nécessaires en nombres flottants
+            numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne', 'Production', 
+                               'Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres', 
+                               'Pertes', 'Expédition vers TRC', 'Livraison']
+            df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+
+            # Effectuer le test sur chaque tuple, en commençant de la deuxième ligne
+            test_result = True
+            for index, row in df.iloc[1:-1].iterrows(): 
+                # Calculer la variable test selon la formule donnée
+                test = row['Stock Initial'] + row['Apports pour Consommation Interne'] + row['Production'] - row['Prélèvement ou consommation interne'] - row['Prélèvements pour la Consommation autres périmètres'] - row['Pertes'] - row['Expédition vers TRC'] - row['Livraison']
+                # Vérifier si la variable test est inférieure à 1
+                if test > 1:
+                    test_result = False
+                    break
+
+            # Rediriger en fonction du résultat du test
+            if test_result:
+                return render(request, 'page_resultat_verifier.html')
+            else:
+                return render(request, 'page_resultat_non_verifier.html')
+
+        else:  # Gérer le cas où aucun fichier n'est sélectionné
+            return render(request, 'page_acceuil.html', {'error': "Veuillez sélectionner un fichier."})
+
+    else:
+        return render(request, 'page_acceuil.html')
+
+
+
+
 
 def save_data(request):
     if request.method == 'POST':
@@ -173,72 +249,165 @@ def save_data(request):
         return render(request, 'application/page_acceuil.html', {})
 
 """
-juste aussi
-def tableau_regions(request, mois=None, annee=None):
+def page_resultat_verifier(request):
+    if request.method == 'POST':
+        return save_data(request)  # Appeler save_data si le formulaire est soumis
+    else:
+        excel_file_path = request.session.get('excel_file_path')
+        if not excel_file_path:
+            return redirect('index')  # Rediriger si aucun fichier n'est trouvé
+        return render(request, 'page_resultat_verifier.html', {'excel_file_path': excel_file_path})
+
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+import os
+
+def index(request):
+    if request.method == "POST":
+        if "excel_file" in request.FILES:
+            excel_file = request.FILES["excel_file"]
+            
+            fs = FileSystemStorage()
+            filename = fs.save(excel_file.name, excel_file)
+            file_path = os.path.join(settings.MEDIA_ROOT, filename)  # Construisez le chemin complet
+            request.session['excel_file_path'] = file_path  
+
+            # Charger le fichier Excel dans un DataFrame Pandas
+            df = pd.read_excel(excel_file, decimal=',')
+
+            # Convertir les colonnes nécessaires en nombres flottants
+            numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne', 'Production', 
+                               'Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres', 
+                               'Pertes', 'Expédition vers TRC', 'Livraison']
+            df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+
+            # Effectuer le test sur chaque tuple, en commençant de la deuxième ligne
+            test_result = True
+            for index, row in df.iloc[1:-1].iterrows(): 
+                # Calculer la variable test selon la formule donnée
+                test = row['Stock Initial'] + row['Apports pour Consommation Interne'] + row['Production'] - row['Prélèvement ou consommation interne'] - row['Prélèvements pour la Consommation autres périmètres'] - row['Pertes'] - row['Expédition vers TRC'] - row['Livraison']
+                # Vérifier si la variable test est inférieure à 1
+                if test > 1:
+                    test_result = False
+                    break
+
+            # Rediriger en fonction du résultat du test
+            if test_result:
+               request.session['excel_file_path'] = file_path
+               return redirect('application:page_resultat_verifier')
+            else:
+                return render(request, 'page_resultat_non_verifier.html')
+
+        else:  # Gérer le cas où aucun fichier n'est sélectionné
+            return render(request, 'page_acceuil.html', {'error': "Veuillez sélectionner un fichier."})
+
+    else:
+        return render(request, 'page_acceuil.html')
+
+
+from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
+import pandas as pd
+from .models import Périmètre, Fichier_mansuelle
+from django.db import IntegrityError
+
+
+def save_data(request):
+    excel_file_path = request.session.get('excel_file_path')
+
+    if not excel_file_path:
+        return render(request, 'page_acceuil.html', {'error': "Aucun fichier sélectionné."})
+
+    try:
+        df = pd.read_excel(excel_file_path, decimal=',')
+
+        # Convertir les colonnes nécessaires en nombres flottants
+        numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne',
+                           'Prélèvement ou consommation interne',
+                           'Prélèvements pour la Consommation autres périmètres',
+                           'Pertes', 'Expédition vers TRC', 'Livraison',
+                           'Stock final']
+        for col in numeric_columns:
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+        df.fillna(0, inplace=True)
+
+        # Extraction des valeurs de mois et année pour la première ligne
+        mois = df.iloc[0, 13]
+        annee = df.iloc[0, 14]
+
+        # Liste pour stocker les périmètres inexistants
+        perimetres_inexistants = []
+
+        for index, row in df.iloc[1:-1].iterrows():
+            perimetre_name = row['Périmètre']
+
+            try:
+                perimetre = Périmètre.objects.get(nom=perimetre_name)
+
+                # Vérification de l'existence de l'entrée
+                if Fichier_mansuelle.objects.filter(mois=mois, annee=annee, périmètre=perimetre).exists():
+                                        return render(request, 'page_réponce.html', {'message': "Fichier existe" , 'error': False} )
+                # Calcul de la production en utilisant la formule
+                production = (
+                    row['Prélèvement ou consommation interne'] +
+                    row['Prélèvements pour la Consommation autres périmètres'] +
+                    row['Pertes'] +
+                    row['Expédition vers TRC'] -
+                    row['Livraison'] +
+                    df.iloc[index]['Stock final'] - 
+                    row['Stock Initial'] -
+                    row['Apports pour Consommation Interne']
+                )
+
+                fichier_mansuelle = Fichier_mansuelle(
+                    mois=mois,
+                    annee=annee,
+                    stock_ini=row['Stock Initial'],
+                    Apport_consommation=row['Apports pour Consommation Interne'],
+                    produit=production,
+                    consomme=row['Prélèvement ou consommation interne'],
+                    preleve=row['Prélèvements pour la Consommation autres périmètres'],
+                    pertes=row['Pertes'],
+                    expedie=row['Expédition vers TRC'],
+                    laivraison=row['Livraison'],
+                    densite=row['Densite'],
+                    périmètre=perimetre, 
+                )
+                fichier_mansuelle.save()
+
+            except Périmètre.DoesNotExist:
+                perimetres_inexistants.append(perimetre_name)
+
+        if perimetres_inexistants:
+            return render(request, 'page_réponce.html', {'message': "Périmètres inexistants"}) 
+        else:
+            return render(request, 'page_réponce.html', {'message': "Fichier sauvegardé" ,'error': True})
+
+
+    except FileNotFoundError:
+        return render(request, 'page_acceuil.html', {'error': "Le fichier sélectionné n'a pas été trouvé."})
+
+from django.db.models import Sum, F
+from django.db.models.functions import Coalesce 
+from django.shortcuts import render
+from .models import Region, Périmètre, Fichier_mansuelle
+
+def tableau_regions(request):
     somme_attributs_par_region = {}
-    
+
     if request.method == 'POST':
         mois = request.POST.get('mois')
         annee = request.POST.get('annee')
-    
-    if mois and annee:
-        regions = Region.objects.all()
 
-        for region in regions:
-            # Obtenir les périmètres de cette région
-            perimetres = Périmètre.objects.filter(region=region)
-            
-            # Obtenir tous les fichiers pour ces périmètres pour le mois et l'année spécifiés
-            fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
-            
-            # Calculer la somme des attributs pour chaque région
-            somme_stock_ini = fichiers_par_region.aggregate(somme_stock_ini=Sum('stock_ini'))['somme_stock_ini'] or 0
-            somme_apport_consommation = fichiers_par_region.aggregate(somme_apport_consommation=Sum('Apport_consommation'))['somme_apport_consommation'] or 0
-            somme_produit = fichiers_par_region.aggregate(somme_produit=Sum('produit'))['somme_produit'] or 0
-            somme_consomme = fichiers_par_region.aggregate(somme_consomme=Sum('consomme'))['somme_consomme'] or 0
-            somme_preleve = fichiers_par_region.aggregate(somme_preleve=Sum('preleve'))['somme_preleve'] or 0
-            somme_pertes = fichiers_par_region.aggregate(somme_pertes=Sum('pertes'))['somme_pertes'] or 0
-            somme_expedie = fichiers_par_region.aggregate(somme_expedie=Sum('expedie'))['somme_expedie'] or 0
-            somme_laivraison = fichiers_par_region.aggregate(somme_laivraison=Sum('laivraison'))['somme_laivraison'] or 0
+        if not mois or not annee:  # Vérifier si mois ou année est None
+            return render(request, 'traitement_p1.html', {'mois': mois, 'annee': annee})
 
-            # Calcul des nouvelles colonnes
-            somme_exp_trc = fichiers_par_region.aggregate(somme_exp_trc=Sum(F('expedie') / F('densite')))['somme_exp_trc'] or 0
-            somme_stock_final = somme_produit - somme_preleve - somme_pertes - somme_expedie + somme_laivraison + somme_stock_ini - somme_apport_consommation
-
-            # Ajouter les sommes des attributs à la région
-            somme_attributs_par_region[region] = {
-                'somme_stock_ini': somme_stock_ini,
-                'somme_apport_consommation': somme_apport_consommation,
-                'somme_produit': somme_produit,
-                'somme_consomme': somme_consomme,
-                'somme_preleve': somme_preleve,
-                'somme_pertes': somme_pertes,
-                'somme_expedie': somme_expedie,
-                'somme_laivraison': somme_laivraison,
-                'somme_exp_trc': somme_exp_trc,
-                'somme_stock_final': somme_stock_final,
-            }
-
-    return render(request, 'traitement_p1.html', {'somme_attributs_par_region': somme_attributs_par_region, 'mois': mois})
-   """
-
-#justee****************
-from django.db.models import Sum, F, FloatField
-
-def tableau_regions(request, mois=None, annee=None):
-    somme_attributs_par_region = {}
-    
-    if request.method == 'POST':
-        mois = request.POST.get('mois')
-        annee = request.POST.get('annee')
-    
-    if mois and annee:
         regions = Region.objects.all()
 
         for region in regions:
             perimetres = Périmètre.objects.filter(region=region)
             fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
-            
+
             # Calculer les sommes des attributs pour chaque région
             somme_stock_ini = fichiers_par_region.aggregate(somme_stock_ini=Sum('stock_ini', default=0, output_field=FloatField()))['somme_stock_ini']
             somme_apport_consommation = fichiers_par_region.aggregate(somme_apport_consommation=Sum('Apport_consommation', default=0, output_field=FloatField()))['somme_apport_consommation']
@@ -254,7 +423,7 @@ def tableau_regions(request, mois=None, annee=None):
 
             # Calculer somme_stock_final
             somme_stock_final = somme_produit - somme_preleve - somme_pertes - somme_expedie + somme_laivraison + somme_stock_ini - somme_apport_consommation
-            
+
             # Formater les valeurs pour n'afficher qu'un nombre fixe de décimales
             somme_stock_ini = "{:.3f}".format(somme_stock_ini or 0)
             somme_apport_consommation = "{:.3f}".format(somme_apport_consommation or 0)
@@ -266,7 +435,7 @@ def tableau_regions(request, mois=None, annee=None):
             somme_laivraison = "{:.3f}".format(somme_laivraison or 0)
             somme_exp_trc = "{:.3f}".format(somme_exp_trc or 0)
             somme_stock_final = "{:.3f}".format(somme_stock_final or 0)
-            
+
             # Ajouter les sommes des attributs à la région
             somme_attributs_par_region[region] = {
                 'somme_stock_ini': somme_stock_ini,
@@ -289,7 +458,9 @@ def generate_pdf(request):
     if request.method == 'POST':
         mois = request.POST.get('mois')
         annee = request.POST.get('annee')
-
+        
+        if not mois or not annee:  # Vérification si mois ou année est None
+            return render(request, 'traitement_p1.html', {'mois': mois, 'annee': annee})
         # Fetch data as in the generate_excel function
         somme_attributs_par_region = {}
         regions = Region.objects.all()
@@ -384,7 +555,10 @@ def generate_excel(request):
     if request.method == 'POST':
         mois = request.POST.get('mois')
         annee = request.POST.get('annee')
-
+        
+        if not mois or not annee:  # Vérification si mois ou année est None
+            return render(request, 'traitement_p1.html', {'mois': mois, 'annee': annee})
+        
         regions = Region.objects.all()
 
         # Créer un nouveau classeur Excel
@@ -501,7 +675,8 @@ def tableau_regions_annuel(request, annee=None):
     
     if request.method == 'POST':
         annee = request.POST.get('annee')
-    
+    if not annee:  # Vérifier si l'année est None
+            return render(request, 'traitement_annuel.html', {'annee': annee})
     if annee:
         regions = Region.objects.all()
 
@@ -558,6 +733,9 @@ def tableau_regions_annuel(request, annee=None):
 def generate_pdf_annuel(request):
     if request.method == 'POST':
         annee = request.POST.get('annee')
+
+        if not annee:  # Vérifier si l'année est None
+            return render(request, 'traitement_annuel.html', {'annee': annee})
 
         # Fetch data for the selected year
         somme_attributs_par_region = {}
@@ -634,8 +812,8 @@ def generate_pdf_annuel(request):
             ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  # Center align all cells
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  # Header font
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  # Header padding
-             ('FONTSIZE', (0, 1), (-1, -1), 7),
-              ('FONTSIZE', (0, 0), (-1, 0), 6),  # Smaller font size
+            ('FONTSIZE', (0, 1), (-1, -1), 7),
+            ('FONTSIZE', (0, 0), (-1, 0), 6),  # Smaller font size
             ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  # Row background color
             ('GRID', (0, 0), (-1, -1), 1, colors.black)  # Grid lines
         ])
@@ -654,6 +832,9 @@ def generate_pdf_annuel(request):
 def generate_excel_annuele(request):
     if request.method == 'POST':
         annee = request.POST.get('annee')
+
+        if not annee:  # Vérifier si l'année est None
+            return render(request, 'traitement_annuel.html', {'annee': annee})
 
         regions = Region.objects.all()
 
@@ -761,3 +942,85 @@ def generate_excel_annuele(request):
         response['Content-Disposition'] = 'attachment; filename=bilan_annuel.xlsx'
 
         return response
+
+
+
+
+
+from datetime import datetime
+from django.db.models import Sum, Count
+from .models import Fichier_mansuelle, Prévision_perimetre
+from django.http import JsonResponse
+
+def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
+    """
+    Extract data for visualization.
+
+    Args:
+    - date_debut (str): Start date in 'YYYY-MM-DD' format.
+    - date_fin (str): End date in 'YYYY-MM-DD' format.
+    - region (str): Region name.
+
+    Returns:
+    - dict: Data for visualization.
+    """
+    # Convert date strings to datetime objects
+    date_debut = datetime.strptime(date_debut, '%Y-%m-%d').date()
+    date_fin = datetime.strptime(date_fin, '%Y-%m-%d').date()
+
+    # Filter data by period and region
+    fichiers = Fichier_mansuelle.objects.filter(
+        mois__gte=date_debut.month,
+        mois__lte=date_fin.month,
+        annee=date_debut.year,
+        périmètre__region__nom=region
+    )
+
+    # Calculate production sum for each perimeter
+    production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
+
+    # Calculate total production for the specified period
+    total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
+
+    # Calculate percentages of production for each perimeter
+    data_pie_chart = [
+        {'perimetre': item['périmètre__nom'], 'percentage': (item['production'] / total_production) * 100 if total_production!= 0 else 0}
+        for item in production_par_perimetre
+    ]
+
+    # Calculate average production for each month
+    moyenne_production_mensuelle = fichiers.values('mois').annotate(moyenne_production=Sum('produit') / Count('périmètre'))
+
+    # Calculate predictions for each perimeter
+    previsions = Prévision_perimetre.objects.filter(
+        mois__gte=date_debut.month,
+        mois__lte=date_fin.month,
+        annee=date_debut.year,
+        périmètre__region__nom=region
+    )
+
+    # Calculate real production and prediction for each month
+    production_previsions = [
+        {
+            'mois': item['mois'],
+            'production_mensuelle': item['moyenne_production'],
+            'prevision': previsions.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
+        }
+        for item in moyenne_production_mensuelle
+    ]
+
+    return {'data_pie_chart': data_pie_chart, 'production_previsions': production_previsions}
+
+def get_chart_data(request):
+    if request.method == 'POST':
+        date_debut = request.POST.get('dateDebut')
+        date_fin = request.POST.get('dateFin')
+        region = request.POST.get('region')
+
+        data = extract_data_for_visualization(date_debut, date_fin, region)
+
+        return JsonResponse(data)
+
+    return JsonResponse({"error": "Invalid request method"}, status_code=400)
+
+
