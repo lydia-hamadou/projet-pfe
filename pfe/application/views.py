@@ -3,6 +3,7 @@ import pandas as pd
 from .models import Fichier_mansuelle , Périmètre
 import logging
 from django.shortcuts import render, redirect
+from reportlab.lib.pagesizes import A4, landscape
 from django.contrib import messages
 from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region,Prévision_perimetre
 from django.db.models import Sum, F, FloatField
@@ -26,15 +27,22 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.db.models import Count
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
+import pandas as pd
+from .models import Périmètre, Fichier_mansuelle
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+import os
 
-logging.basicConfig(filename='app.log', level=logging.ERROR)
+
 
 from django.contrib.auth import authenticate
 
 from django.shortcuts import render
 from .models import Utilisateur
-"""
-@login_required(login_url='application:acceuil') 
+
+ 
 def login(request):
     nom_utilisateur_invalid = False
     mot_de_passe_invalid = False
@@ -56,8 +64,8 @@ def login(request):
             nom_utilisateur_invalid = True
 
     return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
-
 """
+
 from django.contrib.auth import authenticate, login
 
 from django.contrib.auth import authenticate, login
@@ -85,7 +93,7 @@ def login(request):
 
     return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
 
-
+"""
 def acceuil(request):
    return render(request,'page_acceuil.html')
 def essay2(request):
@@ -258,9 +266,6 @@ def page_resultat_verifier(request):
             return redirect('index')  # Rediriger si aucun fichier n'est trouvé
         return render(request, 'page_resultat_verifier.html', {'excel_file_path': excel_file_path})
 
-from django.core.files.storage import FileSystemStorage
-from django.conf import settings
-import os
 
 def index(request):
     if request.method == "POST":
@@ -303,14 +308,6 @@ def index(request):
 
     else:
         return render(request, 'page_acceuil.html')
-
-
-from django.shortcuts import render
-from django.core.files.storage import FileSystemStorage
-import pandas as pd
-from .models import Périmètre, Fichier_mansuelle
-from django.db import IntegrityError
-
 
 def save_data(request):
     excel_file_path = request.session.get('excel_file_path')
@@ -503,14 +500,16 @@ def generate_pdf(request):
         # Create PDF response and document
         response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'filename="regions_summary.pdf"'
-        doc = SimpleDocTemplate(response, pagesize=landscape(letter), leftMargin=1*cm, rightMargin=1*cm, topMargin=1*cm, bottomMargin=1*cm)
+        doc = SimpleDocTemplate(response, pagesize=landscape(A4),  # Use A4 landscape for more space
+                           leftMargin=0.1*cm, rightMargin=0.1*cm, 
+                           topMargin=0.1*cm, bottomMargin=0.1*cm)
 
         # Define table headers
-        headers = ['Région', 'Périmètre', 'Stock initial', 'Apport pour Consommation interne', 'Production', 'Consommation interne',
-                   'Prélévement pour la consommation autres périmétres', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition TRC en m3', 'Stock final']
+        headers = ['Région', 'Périmètre', 'Stock initial', 'Consommation I', 'Production', 'Prélévement CI',
+                   'Prélévement CP', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition TRC en m3', 'Stock final']
 
         # Define larger column widths
-        col_widths = [3.5 * cm, 3.5 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm]
+        col_widths = [3.4 * cm, 3.7 * cm, 2 * cm,2.3 * cm,2 * cm, 2.5 * cm,2.5 * cm, 1.5 * cm, 3.1 * cm, 1.5 * cm, 3.1 * cm, 2 * cm]
 
         # Create a list to hold table data
         table_data = [headers]
@@ -533,12 +532,12 @@ def generate_pdf(request):
         # Add style for table
         style = TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.orange),  # Header background color
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),  # Header text color
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),  # Header text color
             ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  # Center align all cells
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  # Header font
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  # Header padding
              ('FONTSIZE', (0, 1), (-1, -1), 7),
-              ('FONTSIZE', (0, 0), (-1, 0), 6),  # Smaller font size
+              ('FONTSIZE', (0, 0), (-1, 0), 8),  # Smaller font size
             ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  # Row background color
             ('GRID', (0, 0), (-1, -1), 1, colors.black)  # Grid lines
         ])
@@ -776,16 +775,18 @@ def generate_pdf_annuel(request):
 
             somme_attributs_par_region[region] = somme_perimetre_attributs
 
-        # Create PDF response
-        pdf_buffer = BytesIO()
-        doc = SimpleDocTemplate(pdf_buffer, pagesize=landscape(letter), leftMargin=1*cm, rightMargin=1*cm, topMargin=1*cm, bottomMargin=1*cm)
-
-        # Define table headers
-        headers = ['Région', 'Périmètre', 'Stock initial', 'Apport de consommation interne', 'Production', 'Consommation',
-                   'Prélevé', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition vers TRC en m3', 'Stock final']
+             # Create PDF response
+        response = HttpResponse(content_type='application/pdf')
+        response['Content-Disposition'] = 'filename="regions_summary.pdf"'
+        doc = SimpleDocTemplate(response, pagesize=landscape(A4),  # Use A4 landscape for more space
+                           leftMargin=0.1*cm, rightMargin=0.1*cm, 
+                           topMargin=0.1*cm, bottomMargin=0.1*cm)
+        
+        headers = ['Région', 'Périmètre', 'Stock initial', 'Consommation I', 'Production', 'Prélévement CI',
+                   'Prélévement CP', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition TRC en m3', 'Stock final']
 
         # Define larger column widths
-        col_widths = [3.5 * cm, 3.5 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm, 2 * cm]
+        col_widths = [3.4 * cm, 3.7 * cm, 2 * cm,2.3 * cm,2 * cm, 2.5 * cm,2.5 * cm, 1.5 * cm, 3.1 * cm, 1.5 * cm, 3.1 * cm, 2 * cm]
 
         # Create a list to hold table data
         table_data = [headers]
@@ -808,12 +809,12 @@ def generate_pdf_annuel(request):
         # Add style for table
         style = TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.orange),  # Header background color
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),  # Header text color
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),  # Header text color
             ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  # Center align all cells
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  # Header font
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  # Header padding
             ('FONTSIZE', (0, 1), (-1, -1), 7),
-            ('FONTSIZE', (0, 0), (-1, 0), 6),  # Smaller font size
+            ('FONTSIZE', (0, 0), (-1, 0), 8),  # Smaller font size
             ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  # Row background color
             ('GRID', (0, 0), (-1, -1), 1, colors.black)  # Grid lines
         ])
@@ -823,11 +824,13 @@ def generate_pdf_annuel(request):
         # Add table to document
         doc.build([table])
 
-        # Set up response
-        pdf_buffer.seek(0)
-        response = HttpResponse(pdf_buffer, content_type='application/pdf')
-        response['Content-Disposition'] = 'filename="regions_summary.pdf"'
+        table.setStyle(style)
+
+        # Add table to document
+        doc.build([table])
+
         return response
+
 
 def generate_excel_annuele(request):
     if request.method == 'POST':

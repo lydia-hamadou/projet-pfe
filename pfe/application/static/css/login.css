@@ -67,15 +67,7 @@ body {
     font-size: 30px;
     color: var(--color-darkorange);
   }
-  .frame-child {
-    position: absolute;
-    top: 118px;
-    left: 53px;
-    border-bottom: 1px solid var(--color-darkorange);
-    box-sizing: border-box;
-    width: 327px;
-    height: 26px;
-  }
+
   .frame-child input,
   .frame-item input{
     border: none; /* Modification ici */
@@ -92,14 +84,6 @@ body {
     position: absolute;
     top: 2px;
     left: 2px;
-  }
-  .frame-item {
-    top: 169px;
-    left: 51px;
-    border-bottom: 1px solid var(--color-darkorange);
-    box-sizing: border-box;
-    width: 327px;
-    height: 26px;
   }
   .frame-inner,
   .mot-de-passe {

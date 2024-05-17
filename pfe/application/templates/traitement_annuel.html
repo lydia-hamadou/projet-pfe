@@ -243,7 +243,7 @@ document.getElementById('excelForm').addEventListener('submit', function(event) 
     const anneeInput = document.getElementById('excel_annee');
     if (!anneeInput.value) { 
         event.preventDefault();
-        alert("Veuillez sélectionner l'année avant de générer le fichier Excel.");
+        alert("Veuillez sélectionner l'année pour afficher le bilan à l'écran avant de télécharger le fichier Excel");
     }
 });
 
@@ -252,7 +252,7 @@ document.getElementById('pdfForm').addEventListener('submit', function(event) {
     const anneeInput = document.getElementById('pdf_annee');
     if (!anneeInput.value) { 
         event.preventDefault();
-        alert("Veuillez sélectionner l'année avant de générer le PDF.");
+        alert("Veuillez sélectionner l'année pour afficher le bilan à l'écran avant de générer le PDF");
     }
 });
 

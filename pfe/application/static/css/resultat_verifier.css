@@ -230,14 +230,6 @@
   width:600px;
   height: 200px;
 }
-.file-verified {
-  width: max-content;
-  position: absolute;
-  top: 50px;
-  left: 150px;
-  font-size: 40px;
-  width: 400px;
-}
 .rectangle-container {
   position: absolute;
   top: 258px;

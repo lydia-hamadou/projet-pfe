@@ -262,7 +262,7 @@ document.getElementById('pdfForm').addEventListener('submit', function(event) {
     // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
     if (!anneeInput.value || !moisInput.value) {
         event.preventDefault(); // Empêcher la soumission du formulaire
-        alert("Veuillez sélectionner l'année et le mois avant de générer le PDF.");
+        alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de générer le PDF.");
     }
 });
 document.getElementById('excelForm').addEventListener('submit', function(event) {
@@ -272,7 +272,7 @@ document.getElementById('excelForm').addEventListener('submit', function(event) 
     // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
     if (!anneeInput.value || !moisInput.value) {
         event.preventDefault(); // Empêcher la soumission du formulaire
-        alert("Veuillez sélectionner l'année et le mois avant de générer le fichier Excel.");
+        alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de télécharger le fichier Excel.");
     }
 });
   </script>

@@ -16,6 +16,7 @@ urlpatterns = [
     path('generate_excel_annuele', generate_excel_annuele, name='generate_excel_annuele'),
     path('sauvgarder', essay8, name='sauvgarder'),
     path('login/acceuil', acceuil, name='acceuil'),
+    path('acceuil/login', acceuil, name='acceuil'),
     path('acceuil', acceuil, name='acceuil'),
     path('save_data/acceuil', acceuil, name='acceuil'),
     path('page_resultat_non_verifier/acceuil',acceuil, name='acceuil'),
