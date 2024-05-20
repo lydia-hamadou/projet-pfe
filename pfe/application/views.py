@@ -17,7 +17,6 @@ from reportlab.lib import colors
 from reportlab.lib.units import cm
 from django.db.models import Sum, F, FloatField,Value
 from django.db.models.functions import Coalesce
-from io import BytesIO
 from django.http import HttpResponse
 from django.db.models import Sum, F, Value, FloatField
 from django.db.models.functions import Coalesce
@@ -116,6 +115,9 @@ def traitement_annuel(request):
    return render(request,'traitement_annuel.html')
 def dashboard(request):
    return render(request,'dashboard.html')
+def page_reponce(request):
+   return render(request,'page_réponce.html')
+
 
 """ entrain de modifier elle est juste 
 def index(request):
@@ -946,84 +948,5 @@ def generate_excel_annuele(request):
 
         return response
 
-
-
-
-
-from datetime import datetime
-from django.db.models import Sum, Count
-from .models import Fichier_mansuelle, Prévision_perimetre
-from django.http import JsonResponse
-
-def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
-    """
-    Extract data for visualization.
-
-    Args:
-    - date_debut (str): Start date in 'YYYY-MM-DD' format.
-    - date_fin (str): End date in 'YYYY-MM-DD' format.
-    - region (str): Region name.
-
-    Returns:
-    - dict: Data for visualization.
-    """
-    # Convert date strings to datetime objects
-    date_debut = datetime.strptime(date_debut, '%Y-%m-%d').date()
-    date_fin = datetime.strptime(date_fin, '%Y-%m-%d').date()
-
-    # Filter data by period and region
-    fichiers = Fichier_mansuelle.objects.filter(
-        mois__gte=date_debut.month,
-        mois__lte=date_fin.month,
-        annee=date_debut.year,
-        périmètre__region__nom=region
-    )
-
-    # Calculate production sum for each perimeter
-    production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
-
-    # Calculate total production for the specified period
-    total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
-
-    # Calculate percentages of production for each perimeter
-    data_pie_chart = [
-        {'perimetre': item['périmètre__nom'], 'percentage': (item['production'] / total_production) * 100 if total_production!= 0 else 0}
-        for item in production_par_perimetre
-    ]
-
-    # Calculate average production for each month
-    moyenne_production_mensuelle = fichiers.values('mois').annotate(moyenne_production=Sum('produit') / Count('périmètre'))
-
-    # Calculate predictions for each perimeter
-    previsions = Prévision_perimetre.objects.filter(
-        mois__gte=date_debut.month,
-        mois__lte=date_fin.month,
-        annee=date_debut.year,
-        périmètre__region__nom=region
-    )
-
-    # Calculate real production and prediction for each month
-    production_previsions = [
-        {
-            'mois': item['mois'],
-            'production_mensuelle': item['moyenne_production'],
-            'prevision': previsions.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
-        }
-        for item in moyenne_production_mensuelle
-    ]
-
-    return {'data_pie_chart': data_pie_chart, 'production_previsions': production_previsions}
-
-def get_chart_data(request):
-    if request.method == 'POST':
-        date_debut = request.POST.get('dateDebut')
-        date_fin = request.POST.get('dateFin')
-        region = request.POST.get('region')
-
-        data = extract_data_for_visualization(date_debut, date_fin, region)
-
-        return JsonResponse(data)
-
-    return JsonResponse({"error": "Invalid request method"}, status_code=400)
 
 

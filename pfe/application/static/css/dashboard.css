@@ -230,17 +230,6 @@
   width: 734px;
   height: 492px;
 }
-.dashboardd-child1,
-.dashboardd-child2,
-.dashboardd-child3,
-.dashboardd-child4 {
-  position: absolute;
-  top: 197px;
-  left: 344px;
-  background-color: var(--color-gainsboro-100);
-  width: 350px;
-  height: 222px;
-}
 .dashboardd-child2 {
   left: 720px;
   width: 350px;

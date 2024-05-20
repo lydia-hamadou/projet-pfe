@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="{% static 'css/newglobal.css' %}" />
     <link rel="stylesheet" href="{% static 'css/traitement_p1.css'%}"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
@@ -53,16 +53,23 @@
     background-color: rgba(240, 240, 240, 0.3); 
 }
 .frame-child48 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px; /* Ajustez selon vos préférences */
+  position: absolute;
+  top: 7px;
+  left: 238px;
+  width: 29px;
+  height: 29px;
+  overflow: hidden;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px; /* Ajustez selon vos préférences */
     /*background-color: #4CAF50; /* Vert */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Ajoute une transition sur le hover */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Ajoute une transition sur le hover */
 }
 
 .frame-child48 i {
@@ -183,14 +190,14 @@
       <div class="page-p1-inner1">
         <form class="rectangle-parent2" method="post" action="{% url 'application:tableau_regions' %}">
           {% csrf_token %}
-          <select class="frame-child46" name="annee" id="annee-select" required> 
-              <option value="">Année</option>
+          <select class="frame-child46" name="annee" id="annee-select">
+              <option class="anne11" value="">Année</option>
               <option value="2022" class="option">2022</option>
               <option value="2023" class="option">2023</option>
               <option value="2024" class="option">2024</option>
           </select>
-          <select class="frame-child47" name="mois" id="mois-select" required> 
-              <option value="">Mois</option>
+          <select class="frame-child47" name="mois" id="mois-select"> <!-- Ajoutez l'attribut name pour le mois -->
+              <option class="mois3" value="">Mois</option>
               <option value="janvier" class="option">janvier</option>
               <option value="fevrier" class="option">février</option>
               <option value="mars" class="option">Mars</option>
@@ -207,74 +214,73 @@
           <button type="submit" class="frame-child48" id="submitBtn">
             <i class="fa-solid fa-check" style="color: #2ec52b;"></i>  
           </button>
-        </form>
-      
+      </form>
       </div>
       <img class="logo-3-icon" alt="" src="{% static 'images/logo.png'%}" />
     </div>
     <script>
-     document.addEventListener("DOMContentLoaded", function() {
-    // Récupérer les éléments de sélection par leur attribut name
-    var anneeSelect = document.querySelector('select[name="annee"]');
-    var moisSelect = document.querySelector('select[name="mois"]');
-
-    // Restaurer les valeurs sélectionnées dans le stockage local
-    var selectedAnnee = localStorage.getItem('selectedAnnee');
-    var selectedMois = localStorage.getItem('selectedMois');
-
-    // Restaurer les valeurs sélectionnées dans les menus déroulants
-    if (selectedAnnee) {
-        anneeSelect.value = selectedAnnee;
-    }
-    if (selectedMois) {
-        moisSelect.value = selectedMois;
-    }
-
-    // Ajouter des gestionnaires d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
-    anneeSelect.addEventListener('change', function() {
-        localStorage.setItem('selectedAnnee', anneeSelect.value);
-    });
-    moisSelect.addEventListener('change', function() {
-        localStorage.setItem('selectedMois', moisSelect.value);
-    });
-
-    // Ajouter un gestionnaire d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
-    // avant la soumission du formulaire
-    document.querySelector('form').addEventListener('submit', function() {
-        localStorage.setItem('selectedAnnee', anneeSelect.value);
-        localStorage.setItem('selectedMois', moisSelect.value);
-    });
-});
-
-document.getElementById('submitBtn').addEventListener('click', function(event) {
-    const anneeSelect = document.getElementById('annee-select');
-    const moisSelect = document.getElementById('mois-select');
-
-    if (anneeSelect.value === "" || moisSelect.value === "") {
-        event.preventDefault(); // Empêcher la soumission du formulaire
-        alert("Veuillez sélectionner l'année et le mois."); // Afficher une alerte
-    }
-});
-document.getElementById('pdfForm').addEventListener('submit', function(event) {
-    const anneeInput = document.getElementById('pdf_annee');
-    const moisInput = document.getElementById('pdf_mois');
-
-    // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
-    if (!anneeInput.value || !moisInput.value) {
-        event.preventDefault(); // Empêcher la soumission du formulaire
-        alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de générer le PDF.");
-    }
-});
-document.getElementById('excelForm').addEventListener('submit', function(event) {
-    const anneeInput = document.getElementById('excel_annee');
-    const moisInput = document.getElementById('excel_mois');
-
-    // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
-    if (!anneeInput.value || !moisInput.value) {
-        event.preventDefault(); // Empêcher la soumission du formulaire
-        alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de télécharger le fichier Excel.");
-    }
-});
-  </script>
+      document.addEventListener("DOMContentLoaded", function() {
+     // Récupérer les éléments de sélection par leur attribut name
+     var anneeSelect = document.querySelector('select[name="annee"]');
+     var moisSelect = document.querySelector('select[name="mois"]');
+ 
+     // Restaurer les valeurs sélectionnées dans le stockage local
+     var selectedAnnee = localStorage.getItem('selectedAnnee');
+     var selectedMois = localStorage.getItem('selectedMois');
+ 
+     // Restaurer les valeurs sélectionnées dans les menus déroulants
+     if (selectedAnnee) {
+         anneeSelect.value = selectedAnnee;
+     }
+     if (selectedMois) {
+         moisSelect.value = selectedMois;
+     }
+ 
+     // Ajouter des gestionnaires d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
+     anneeSelect.addEventListener('change', function() {
+         localStorage.setItem('selectedAnnee', anneeSelect.value);
+     });
+     moisSelect.addEventListener('change', function() {
+         localStorage.setItem('selectedMois', moisSelect.value);
+     });
+ 
+     // Ajouter un gestionnaire d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
+     // avant la soumission du formulaire
+     document.querySelector('form').addEventListener('submit', function() {
+         localStorage.setItem('selectedAnnee', anneeSelect.value);
+         localStorage.setItem('selectedMois', moisSelect.value);
+     });
+ });
+ 
+ document.getElementById('submitBtn').addEventListener('click', function(event) {
+     const anneeSelect = document.getElementById('annee-select');
+     const moisSelect = document.getElementById('mois-select');
+ 
+     if (anneeSelect.value === "" || moisSelect.value === "") {
+         event.preventDefault(); // Empêcher la soumission du formulaire
+         alert("Veuillez sélectionner l'année et le mois."); // Afficher une alerte
+     }
+ });
+ document.getElementById('pdfForm').addEventListener('submit', function(event) {
+     const anneeInput = document.getElementById('pdf_annee');
+     const moisInput = document.getElementById('pdf_mois');
+ 
+     // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
+     if (!anneeInput.value || !moisInput.value) {
+         event.preventDefault(); // Empêcher la soumission du formulaire
+         alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de générer le PDF.");
+     }
+ });
+ document.getElementById('excelForm').addEventListener('submit', function(event) {
+     const anneeInput = document.getElementById('excel_annee');
+     const moisInput = document.getElementById('excel_mois');
+ 
+     // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
+     if (!anneeInput.value || !moisInput.value) {
+         event.preventDefault(); // Empêcher la soumission du formulaire
+         alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de télécharger le fichier Excel.");
+     }
+ });
+   </script>
   </body>
 </html>

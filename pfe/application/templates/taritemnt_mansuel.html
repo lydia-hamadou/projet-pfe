@@ -102,7 +102,7 @@
       <form class="vector-parent7" method="post" enctype="multipart/form-data" action="{% url 'application:index' %}">
         {% csrf_token %}
         <div class="page2-inner">
-            <label class="choose-file-label">Veuillez sélectionner le bilan mensuel à vérifier </label>
+            <label class="choose-file-label">Veuillez sélectionner le fichier Excel à vérifier </label>
             <input type="file" name="excel_file" class="choose-file-button">
         </div>
         <div class="actions-frame">
@@ -147,7 +147,7 @@
     const fileInput = document.querySelector('input[name="excel_file"]');
 
     if (!fileInput.files.length) {
-        event.preventDefault(); // Empêche l'envoi du formulaire
+        event.preventDefault();
         alert("Veuillez ajouter un fichier avant de soumettre le formulaire.");
     }
 });
