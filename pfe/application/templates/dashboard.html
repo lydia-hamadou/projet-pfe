@@ -23,10 +23,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <div class="dashboardd">
-      <img class="group-28-16" alt="" src="{% static 'images/finale_img.png'%}" />
+    <div class="dashboard">
+      <img class="background" alt="" src="{% static 'images/finale_img.png'%}" />
 
-      <div class="dashboardd-inner">
+      <div class="dashboard-inner">
         <div class="vector-parent21">
           <a class="traitement-de-linformation-2-parent9" style="color:white;" href="traitement_mansuel">
             <img
@@ -68,39 +68,33 @@
       <div class="acceuil29">
         <b class="retour12">Retour</b>
       </div>
-      <div class="rectangle-7-97" ></div>
+      <div class="rectangle-blanc" ></div>
 
-      <img class="logo-2-icon7" style="background-color: transparent;" alt="" src="{% static 'images/logo.png'%}" />
-
-      <div class="dashboardd-child"></div>
-      <div class="dashboardd-item"></div>
-      <div class="dashboardd-child1"></div>
-      <div class="dashboardd-child2">
+      <img class="logo" style="background-color: transparent;" alt="" src="{% static 'images/logo.png'%}" />
+    
+      <div class="dashboard-pie">
         <canvas id="pie-chart"></canvas>
       </div>
-      <div class="dashboardd-child3">
+      <div class="dashboard-bar">
         <canvas id="bar-chart"></canvas>
       </div>
-      <div class="dashboardd-child4">
+      <div class="dashboard-line">
         <canvas id="line-chart"></canvas>
       </div>
-       <div  class="champ-commentaire-group">
-          <img class="icon-user3" alt="" src="{% static 'images/icon-user.png'%}" />
-          <label class="ajouter-votre-commentaire1">ajouter votre commentaire.....</label>
-          <input type="text" id="commentaire" name="commentaire" required  class="champ-commentaire">
-       </div>
-      <div class="dashboardd-child5"></div>
+      <div class="dashboard-child5"></div>
       <b class="donnees1">Donnees</b>
       <form class="rectangle-parent5" id="chartForm" action="{% url 'application:get_chart_data' %}" method="POST">
         {% csrf_token %}
-        <input class="frame-child64" type="date" id="dateFin" name="dateFin">
-        <select class="frame-child65">
-          <option class="rgion1" value="">Région</option>
-          <option value="stah" class="option">Stah</option>
-          <option value="adrar" class="option">Adrar</option>
-          <option value="in amenass" class="option">In Amenass</option>
+        <input class="frame-child64" value="{{ dateFin }}" type="month" id="dateFin" name="dateFin">
+        <select name="region" id="region" class="frame-child65">
+            <option class="rgion1" value="">Région</option>
+            <option value="Stah" class="option" {% if region == "Stah" %}selected{% endif %}>Stah</option>
+            <option value="Adrar" class="option" {% if region == "Adrar" %}selected{% endif %}>Adrar</option>
+            <option value="In Amenas" class="option" {% if region == "In Amenas" %}selected{% endif %}>In Amenass</option>
+            <option value="Hassi Messaoud" class="option" {% if region == "Hassi Messaoud" %}selected{% endif %}>Hassi Messaoud</option>
         </select>
-         <input class="frame-child66" type="date" id="dateDebut" name="dateDebut">
+
+         <input class="frame-child66" value="{{dateDeb}}" type="month" id="dateDebut" name="dateDebut">
          <b for="dateDebut"  class="date-dbut1">Date de début:</b>
          <b class="date-fin1">Date fin:</b>
          <button class="frame-child67" type="submit"></button>
@@ -109,49 +103,40 @@
     </div>
   </body>
   <script>
-    const commentaireLabels = document.querySelectorAll('.champ-commentaire-group .ajouter-votre-commentaire1');
-    const commentaireFields = document.querySelectorAll('.champ-commentaire-group .champ-commentaire');
+    var data = {{data_pie_chart | safe}}
+var labels = data.map(function(item) { return item.perimetre; });
+var percentages = data.map(function(item) { return parseFloat(item.percentage); });
+    var data2 = {{productionPrev | safe}}
+var labels2 = data2.map(function(item) { return item.perimetre; });
 
-    // Itérer sur tous les champs de commentaire
-    commentaireFields.forEach((commentaireField, index) => {
-        const commentaireLabel = commentaireLabels[index];
+var Production = data2.map(function(item) { return (item.production_mensuelle); });
+var Prévision = data2.map(function(item) { return (item.prevision); });
 
-        // Événement lorsque le champ de commentaire reçoit le focus
-        commentaireField.addEventListener('focus', () => {
-            commentaireLabel.style.display = 'none';
-        });
-
-        // Événement lorsque le champ de commentaire perd le focus
-        commentaireField.addEventListener('blur', () => {
-            if (!commentaireField.value.trim()) {
-                commentaireLabel.style.display = 'block';
-            }
-        });
-    });
-
-    function drawPieChart(data) {
-      const ctx = document.getElementById('pie-chart').getContext('2d');
-      new Chart(ctx, {
+  var data3 = {{production_previsions_mois | safe}}
+var labels3 = data3.map(function(item) { return item.mois; });
+var Production3 = data3.map(function(item) { return (item.production_mensuelle); });
+var Prévision3 = data3.map(function(item) { return (item.prevision); });
+      new Chart("pie-chart", {
           type: 'pie',
           data: {
-              labels: data.map(item => item.perimetre),
+              labels: labels,
               datasets: [{
-                  data: data.map(item => item.percentage),
+                  data:percentages,
                   backgroundColor: [
-                      'rgba(255, 99, 132, 0.7)',
-                      'rgba(54, 162, 235, 0.7)',
-                      'rgba(255, 206, 86, 0.7)',
-                      'rgba(75, 192, 192, 0.7)',
-                      'rgba(153, 102, 255, 0.7)',
-                      'rgba(255, 159, 64, 0.7)'
+                      'rgba(196, 196, 196,1)',
+                      'rgba(250, 140, 0, 1)',
+                      'rgba(21, 96, 122,1)',
+                      'rgba(143, 27, 17, 1)',
+                      'rgba(255, 213, 45, 1)',
+                      'rgba(255, 202, 118, 1)',
                   ],
                   borderColor: [
-                      'rgba(255, 99, 132, 1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(255, 206, 86, 1)',
-                      'rgba(75, 192, 192, 1)',
-                      'rgba(153, 102, 255, 1)',
-                      'rgba(255, 159, 64, 1)'
+                      'rgba(196, 196, 196,1)',
+                      'rgba(250, 140, 0, 1)',
+                      'rgba(21, 96, 122,1)',
+                      'rgba(143, 27, 17, 1)',
+                      'rgba(255, 213, 45, 1)',
+                      'rgba(255, 202, 118, 1)',
                   ],
                   borderWidth: 1
               }]
@@ -163,25 +148,24 @@
               }
           }
       });
-  }
+  
 
-  function drawBarChart(data) {
-      const ctx = document.getElementById('bar-chart').getContext('2d');
-      new Chart(ctx, {
+
+      new Chart("bar-chart", {
           type: 'bar',
           data: {
-              labels: data.map(item => item.mois),
+              labels: labels2,
               datasets: [{
-                  label: 'Production',
-                  data: data.map(item => item.production_mensuelle),
-                  backgroundColor: 'rgba(54, 162, 235, 0.7)',
-                  borderColor: 'rgba(54, 162, 235, 1)',
+                  label: "Production",
+                  data: Production,
+                  backgroundColor: 'rgba(250, 140, 0, 1)',
+                  borderColor: 'rgba(250, 140, 0, 1)',
                   borderWidth: 1
               }, {
-                  label: 'Prévision',
-                  data: data.map(item => item.prevision),
-                  backgroundColor: 'rgba(255, 206, 86, 0.7)',
-                  borderColor: 'rgba(255, 206, 86, 1)',
+                  label: "Prevision",
+                  data: Prévision,
+                  backgroundColor: 'rgba(21, 96, 122, 1)',
+                  borderColor: 'rgba(21, 96, 122, 1)',
                   borderWidth: 1
               }]
           },
@@ -197,25 +181,24 @@
               }
           }
       });
-  }
+  
 
-  function drawLineChart(data) {
-      const ctx = document.getElementById('line-chart').getContext('2d');
-      new Chart(ctx, {
+
+      new Chart("line-chart", {
           type: 'line',
           data: {
-              labels: data.map(item => item.mois),
+              labels:labels3,
               datasets: [{
                   label: 'Production',
-                  data: data.map(item => item.production_mensuelle),
-                  backgroundColor: 'rgba(255, 99, 132, 0.7)',
-                  borderColor: 'rgba(255, 99, 132, 1)',
+                  data: Production3,
+                  backgroundColor: 'rgba(21, 96, 122, 1)',
+                  borderColor: 'rgba(21, 96, 122, 1)',
                   borderWidth: 1
               }, {
                   label: 'Prévision',
-                  data: data.map(item => item.prevision),
-                  backgroundColor: 'rgba(54, 162, 235, 0.7)',
-                  borderColor: 'rgba(54, 162, 235, 1)',
+                  data: Prévision3,
+                  backgroundColor: 'rgba(250, 140, 0, 1)',
+                  borderColor: 'rgba(250, 140, 0, 1)',
                   borderWidth: 1
               }]
           },
@@ -231,6 +214,6 @@
               }
           }
       });
-  }
+  
 </script>
 </html>
