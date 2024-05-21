@@ -6,7 +6,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="{% static 'css/newglobal.css' %}" />
-    <link rel="stylesheet" href="{% static 'css//dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
@@ -19,30 +19,76 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <style>
-    .chart-container {
-        width: 400px;
-        height: 300px; /* Adjust the height as needed */
-        margin: 20px auto; /* Center the container */
-    }
-    .dashboardd-child1,
-.dashboardd-child2,
-.dashboardd-child3,
-.dashboardd-child4 {
+.dashboard-child1,
+.dashboard-pie,
+.dashboard-bar,
+.dashboard-line {
   position: absolute;
   top: 197px;
   left: 344px;
-  background-color: transparent;
+  background-color: var(--color-gainsboro-100);
   width: 350px;
   height: 222px;
 }
-</style>
+.dashboard-pie {
+  width: 350px;
+  height: 225px;
+}
+.dashboard-line {
+  left: 791px;
+}
+.dashboard-bar{
+  left:48%;
+  width:730px;
+}
+.dashboard-line {
+  top: 438px;
+  left: 344px;
+  width: 1100px;
+  height: 235px;
+}
+.dashboard {
+  width: 100%;
+  position: relative;
+  height: 750px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-snow-100);
+  font-family: var(--font-montserrat);
+}
+.group-28-16 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1490px;
+    height: 990px;
+    object-fit: cover;
+}
+.dashboard-inner,
+.vector-parent21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 265px;
+  height: 343px;
+  background-color: white;
+  border-radius: var(--br-11xl);
+}
+.dashboard-inner {
+  top: 301px;
+  left: 45px;
+  font-size: var(--font-size-sm);
+}
+  </style>
   <body>
     <div class="dashboardd">
-      <img class="group-28-16" alt="" src="{% static 'images/finale_img.png'%}" />
+      <img class="group-28-16" style="height: 990px; width: 1490px;" alt="" src="{% static 'images/finale_img.png'%}" />
 
-      <div class="dashboardd-inner">
+      <div class="dashboard-inner">
         <div class="vector-parent21">
           <a class="traitement-de-linformation-2-parent9" style="color:white;" href="traitement_mansuel">
             <img
@@ -84,74 +130,152 @@
       <div class="acceuil29">
         <b class="retour12">Retour</b>
       </div>
-      <div class="rectangle-7-97" ></div>
+      <div class="rectangle-blanc" ></div>
 
       <img class="logo-2-icon7" style="background-color: transparent;" alt="" src="{% static 'images/logo.png'%}" />
-
-      <div class="dashboardd-child"></div>
-      <div class="dashboardd-item"></div>
-      <div class="dashboardd-child1"></div>
-      <div class="dashboardd-child2">
+    
+      <div class="dashboard-pie">
         <canvas id="pie-chart"></canvas>
       </div>
-      <div class="dashboardd-child3">
+      <div class="dashboard-bar">
         <canvas id="bar-chart"></canvas>
       </div>
-      <div class="dashboardd-child4">
+      <div class="dashboard-line">
         <canvas id="line-chart"></canvas>
       </div>
-       <div  class="champ-commentaire-group">
-          <img class="icon-user3" alt="" src="{% static 'images/icon-user.png'%}" />
-          <label class="ajouter-votre-commentaire1">ajouter votre commentaire.....</label>
-          <input type="text" id="commentaire" name="commentaire" required  class="champ-commentaire">
-       </div>
-      <div class="dashboardd-child5"></div>
+      <div class="dashboard-child5"></div>
       <b class="donnees1">Donnees</b>
-      <form class="rectangle-parent5" id="chartForm" method="POST"> 
+      <form class="rectangle-parent5" id="chartForm" action="{% url 'application:get_chart_data' %}" method="POST">
         {% csrf_token %}
-        <label for="dateDebut" class="date-dbut1">Date de début:</label>
-        <input class="frame-child66" type="date" id="dateDebut" name="dateDebut" required>
-        
-        <label for="dateFin" class="date-fin1">Date fin:</label> 
-        <input class="frame-child64" type="date" id="dateFin" name="dateFin" required>
-        
-        <label for="region" class="region1"></label>
-        <select class="frame-child65" id="region" name="region" required>
-            <option value="">Région</option>
-            {% for region in regions %}
-                <option value="{{ region.nom }}">{{ region.nom }}</option>
-            {% endfor %}
+        <input class="frame-child64" value="{{ dateFin }}" type="month" id="dateFin" name="dateFin">
+        <select name="region" id="region" class="frame-child65">
+            <option class="rgion1" value="">Région</option>
+            <option value="Stah" class="option" {% if region == "Stah" %}selected{% endif %}>Stah</option>
+            <option value="Adrar" class="option" {% if region == "Adrar" %}selected{% endif %}>Adrar</option>
+            <option value="In Amenas" class="option" {% if region == "In Amenas" %}selected{% endif %}>In Amenass</option>
+            <option value="Hassi Messaoud" class="option" {% if region == "Hassi Messaoud" %}selected{% endif %}>Hassi Messaoud</option>
         </select>
-        
-        <button class="frame-child67" type="submit">Afficher</button>
-    </form>
-    
+
+         <input class="frame-child66" value="{{dateDeb}}" type="month" id="dateDebut" name="dateDebut">
+         <b for="dateDebut"  class="date-dbut1">Date de début:</b>
+         <b class="date-fin1">Date fin:</b>
+         <button class="frame-child67" type="submit"></button>
+      </form>
       </div>
     </div>
-  
+  </body>
   <script>
-    const commentaireLabels = document.querySelectorAll('.champ-commentaire-group .ajouter-votre-commentaire1');
-    const commentaireFields = document.querySelectorAll('.champ-commentaire-group .champ-commentaire');
+    var data = {{data_pie_chart | safe}}
+var labels = data.map(function(item) { return item.perimetre; });
+var percentages = data.map(function(item) { return parseFloat(item.percentage); });
+    var data2 = {{productionPrev | safe}}
+var labels2 = data2.map(function(item) { return item.perimetre; });
 
-    // Itérer sur tous les champs de commentaire
-    commentaireFields.forEach((commentaireField, index) => {
-        const commentaireLabel = commentaireLabels[index];
+var Production = data2.map(function(item) { return (item.production_mensuelle); });
+var Prévision = data2.map(function(item) { return (item.prevision); });
 
-        // Événement lorsque le champ de commentaire reçoit le focus
-        commentaireField.addEventListener('focus', () => {
-            commentaireLabel.style.display = 'none';
-        });
+  var data3 = {{production_previsions_mois | safe}}
+var labels3 = data3.map(function(item) { return item.mois; });
+var Production3 = data3.map(function(item) { return (item.production_mensuelle); });
+var Prévision3 = data3.map(function(item) { return (item.prevision); });
+      new Chart("pie-chart", {
+          type: 'pie',
+          data: {
+              labels: labels,
+              datasets: [{
+                  data:percentages,
+                  backgroundColor: [
+                      'rgba(196, 196, 196,1)',
+                      'rgba(250, 140, 0, 1)',
+                      'rgba(21, 96, 122,1)',
+                      'rgba(143, 27, 17, 1)',
+                      'rgba(255, 213, 45, 1)',
+                      'rgba(255, 202, 118, 1)',
+                  ],
+                  borderColor: [
+                      'rgba(196, 196, 196,1)',
+                      'rgba(250, 140, 0, 1)',
+                      'rgba(21, 96, 122,1)',
+                      'rgba(143, 27, 17, 1)',
+                      'rgba(255, 213, 45, 1)',
+                      'rgba(255, 202, 118, 1)',
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              title: {
+                  display: true,
+                  text: 'Production par périmètre'
+              }
+          }
+      });
+  
 
-        // Événement lorsque le champ de commentaire perd le focus
-        commentaireField.addEventListener('blur', () => {
-            if (!commentaireField.value.trim()) {
-                commentaireLabel.style.display = 'block';
-            }
-        });
-    });
 
-    
+      new Chart("bar-chart", {
+          type: 'bar',
+          data: {
+              labels: labels2,
+              datasets: [{
+                  label: "Production",
+                  data: Production,
+                  backgroundColor: 'rgba(250, 140, 0, 1)',
+                  borderColor: 'rgba(250, 140, 0, 1)',
+                  borderWidth: 1
+              }, {
+                  label: "Prevision",
+                  data: Prévision,
+                  backgroundColor: 'rgba(21, 96, 122, 1)',
+                  borderColor: 'rgba(21, 96, 122, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              title: {
+                  display: true,
+                  text: 'Production par périmètre et mois'
+              },
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  
+
+
+      new Chart("line-chart", {
+          type: 'line',
+          data: {
+              labels:labels3,
+              datasets: [{
+                  label: 'Production',
+                  data: Production3,
+                  backgroundColor: 'rgba(21, 96, 122, 1)',
+                  borderColor: 'rgba(21, 96, 122, 1)',
+                  borderWidth: 1
+              }, {
+                  label: 'Prévision',
+                  data: Prévision3,
+                  backgroundColor: 'rgba(250, 140, 0, 1)',
+                  borderColor: 'rgba(250, 140, 0, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              title: {
+                  display: true,
+                  text: 'Évolution de la production et prévision'
+              },
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  
 </script>
-</body>
 </html>
-

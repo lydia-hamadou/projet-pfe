@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import acceuil,essay2,essay3,essay4,index,page_reponce,login,essay6,page_resultat_verifier,essay8,save_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel,tableau_regions_annuel,generate_pdf_annuel,generate_excel_annuele,dashboard,dashboard
+from .views import acceuil,essay2,essay3,essay4,index,get_chart_data,page_reponce,login,essay6,page_resultat_verifier,essay8,save_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel,tableau_regions_annuel,generate_pdf_annuel,generate_excel_annuele,dashboard,dashboard
                     
 
 app_name = 'application'
@@ -43,6 +43,9 @@ urlpatterns = [
     path('traitement_annuel',traitement_annuel, name='traitement_annuel'),
     path('traitement_p1',traitement_p1, name='traitement_p1'),
     path('login/dashboard',dashboard, name='dashboard'),
+    path('get_chart_data/dashboard',get_chart_data, name='dashboard2'),
+    path('dashboard',get_chart_data, name='dashboard'),
+    path('get_chart_data/', get_chart_data, name='get_chart_data'),
     path('save_data/', save_data, name='save_data'),
     path('page_resultat_verifier/', page_resultat_verifier, name='page_resultat_verifier'),
     path('page_reponce/', page_reponce, name='page_reponce'),

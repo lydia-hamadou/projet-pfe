@@ -1,16 +1,8 @@
 .frame-child61,
-.group-28-16 {
+.background {
   position: absolute;
   top: 0;
   left: 0;
-}
-.group-28-16 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1490px;
-    height: 990px;
-    object-fit: cover;
 }
 .frame-child61 {
   height: 100%;
@@ -161,7 +153,7 @@
   right: 68.11%;
   left: 15.06%;
 }
-.dashboardd-inner,
+.dashboard-inner,
 .vector-parent21 {
   position: absolute;
   top: 0;
@@ -171,7 +163,7 @@
   background-color: white;
   border-radius: var(--br-11xl);
 }
-.dashboardd-inner {
+.dashboard-inner {
   top: 301px;
   left: 45px;
   font-size: var(--font-size-sm);
@@ -196,8 +188,8 @@
   color: var(--color-white);
   text-decoration: none;
 }
-.logo-2-icon7,
-.rectangle-7-97 {
+.logo,
+.rectangle-blanc {
   position: absolute;
   top: 96px;
   left: 456px;
@@ -206,7 +198,7 @@
   object-fit: cover;
   background-color: white;
 }
-.logo-2-icon7 {
+.logo {
   position: absolute;
   top: 38px;
   left: 30px;
@@ -214,7 +206,7 @@
   height: 77.4px;
   object-fit: cover;
 }
-.dashboardd-child {
+.dashboard-child {
   position: absolute;
   top: 511px;
   left: 534px;
@@ -222,7 +214,7 @@
   height: 100px;
   overflow: hidden;
 }
-.dashboardd-item {
+.dashboard-item {
   position: absolute;
   top: 173px;
   left: 326px;
@@ -230,18 +222,29 @@
   width: 734px;
   height: 492px;
 }
-.dashboardd-child2 {
-  left: 720px;
+.dashboard-child1,
+.dashboard-pie,
+.dashboard-bar,
+.dashboard-line {
+  position: absolute;
+  top: 197px;
+  left: 344px;
+  background-color: var(--color-gainsboro-100);
+  width: 350px;
+  height: 222px;
+}
+.dashboard-pie {
   width: 350px;
   height: 225px;
 }
-.dashboardd-child4 {
+.dashboard-line {
   left: 791px;
 }
-.dashboardd-child3{
-  left:73%;
+.dashboard-bar{
+  left:48%;
+  width:730px;
 }
-.dashboardd-child4 {
+.dashboard-line {
   top: 438px;
   left: 344px;
   width: 1100px;
@@ -297,7 +300,7 @@
   outline: none; 
   box-shadow: none; 
 }
-.dashboardd-child5 {
+.dashboard-child5 {
   position: absolute;
   top: 681px;
   left: 326px;
@@ -364,7 +367,7 @@ left:50%;
   width: 51px;
   height: 35px;
 }
-.dashboardd,
+.dashboard,
 .rectangle-parent5 {
   background-color: var(--color-white);
   /*background-color: transparent;*/
@@ -380,7 +383,7 @@ left:50%;
   color: var(--color-darkorange-300);
   font-size: large;
 }
-.dashboardd {
+.dashboard {
   width: 100%;
   position: relative;
   height: 750px;
