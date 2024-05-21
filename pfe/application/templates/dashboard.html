@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
@@ -83,9 +84,40 @@
   left: 45px;
   font-size: var(--font-size-sm);
 }
+.donnees1 {
+  position: absolute;
+  top: 681px;
+  left: 80%;
+  border-radius: var(--br-11xl);
+  background-color: white;
+  font-size: 20px;
+  width: 190px;
+  height: 48px;
+}
+.frame-child67 {
+  top: 4px;
+  /*left: 660px;*/
+  left:90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro-200);
+  border: 1px solid var(--color-darkorange-300);
+  box-sizing: border-box;
+  width: 51px;
+  height: 35px;
+}
+.frame-child67 i {
+  font-size: 24px; /* Espacement entre l'icône et le texte */
+}
+.frame-child67:hover {
+    background-color: #45a049; /* Vert plus foncé au survol */
+}
+
   </style>
   <body>
-    <div class="dashboardd">
+    <div class="dashboard">
       <img class="group-28-16" style="height: 990px; width: 1490px;" alt="" src="{% static 'images/finale_img.png'%}" />
 
       <div class="dashboard-inner">
@@ -127,9 +159,9 @@
           <div class="frame-child63"></div>
         </div>
       </div>
-      <div class="acceuil29">
+      <a class="acceuil29" href="acceuil">
         <b class="retour12">Retour</b>
-      </div>
+      </a>
       <div class="rectangle-blanc" ></div>
 
       <img class="logo-2-icon7" style="background-color: transparent;" alt="" src="{% static 'images/logo.png'%}" />
@@ -143,24 +175,37 @@
       <div class="dashboard-line">
         <canvas id="line-chart"></canvas>
       </div>
-      <div class="dashboard-child5"></div>
-      <b class="donnees1">Donnees</b>
+      <form id="excelForm"  action="{% url 'application:generate_excel_from_extract' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="dateDebut" id="excelDateDebut">
+        <input type="hidden" name="dateFin" id="excelDateFin">
+        <input type="hidden" name="region" id="excelRegion">
+        <input type="hidden" name="error" id="excelError" value="{% if error %}{{ error }}{% endif %}">  
+        <button class="donnees1" type="submit">Donnees</button>
+    </form>    
       <form class="rectangle-parent5" id="chartForm" action="{% url 'application:get_chart_data' %}" method="POST">
         {% csrf_token %}
-        <input class="frame-child64" value="{{ dateFin }}" type="month" id="dateFin" name="dateFin">
-        <select name="region" id="region" class="frame-child65">
+        
+        <input class="frame-child64" value="{{ dateFin }}" type="month" id="dateFin" name="dateFin" required>
+        
+        <select name="region" id="region" class="frame-child65" required>
             <option class="rgion1" value="">Région</option>
             <option value="Stah" class="option" {% if region == "Stah" %}selected{% endif %}>Stah</option>
             <option value="Adrar" class="option" {% if region == "Adrar" %}selected{% endif %}>Adrar</option>
             <option value="In Amenas" class="option" {% if region == "In Amenas" %}selected{% endif %}>In Amenass</option>
             <option value="Hassi Messaoud" class="option" {% if region == "Hassi Messaoud" %}selected{% endif %}>Hassi Messaoud</option>
         </select>
-
-         <input class="frame-child66" value="{{dateDeb}}" type="month" id="dateDebut" name="dateDebut">
-         <b for="dateDebut"  class="date-dbut1">Date de début:</b>
-         <b class="date-fin1">Date fin:</b>
-         <button class="frame-child67" type="submit"></button>
-      </form>
+    
+        <input class="frame-child66" value="{{dateDeb}}" type="month" id="dateDebut" name="dateDebut" required>
+        <b for="dateDebut" class="date-dbut1">Date de début:</b>
+        <b class="date-fin1">Date fin:</b>
+        <button class="frame-child67" type="submit" id="submitBtn"> 
+          <i class="fa-solid fa-check" style="color: #2ec52b;"></i>
+        </button>
+    </form>
+    
+    <div id="error-message" style="color: red; display: none;"></div> 
+    
       </div>
     </div>
   </body>
@@ -243,9 +288,6 @@ var Prévision3 = data3.map(function(item) { return (item.prevision); });
               }
           }
       });
-  
-
-
       new Chart("line-chart", {
           type: 'line',
           data: {
@@ -276,6 +318,58 @@ var Prévision3 = data3.map(function(item) { return (item.prevision); });
               }
           }
       });
-  
+      
+    document.getElementById('submitBtn').addEventListener('click', function(event) {
+        const dateDebutInput = document.getElementById('dateDebut');
+        const dateFinInput = document.getElementById('dateFin');
+        const regionSelect = document.getElementById('region');
+
+        if (dateDebutInput.value === "" || dateFinInput.value === "" || regionSelect.value === "") {
+            event.preventDefault(); // Empêcher la soumission du formulaire
+            alert("Veuillez sélectionner une date de début, une date de fin et une région."); // Afficher une alerte
+        }
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    const chartForm = document.getElementById("chartForm");
+    const excelForm = document.getElementById("excelForm");
+    const excelButton = document.querySelector("#excelForm button[type='submit']");
+    const errorInput = document.getElementById("excelError"); // Récupérer le champ caché
+
+    if (chartForm && excelForm && excelButton) {
+        excelButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            // Récupérer les valeurs du formulaire "chartForm"
+            const chartDateDebut = chartForm.querySelector("#dateDebut").value;
+            const chartDateFin = chartForm.querySelector("#dateFin").value;
+            const chartRegion = chartForm.querySelector("#region").value;
+
+            // Vérification des champs requis (date de début, date de fin, région)
+            if (!chartDateDebut || !chartDateFin || chartRegion === "") {
+                alert("Veuillez sélectionner une date de début, une date de fin et une région.");
+                return;
+            }
+
+            // Mettre à jour les champs cachés du formulaire "excelForm"
+            excelForm.querySelector("#excelDateDebut").value = chartDateDebut;
+            excelForm.querySelector("#excelDateFin").value = chartDateFin;
+            excelForm.querySelector("#excelRegion").value = chartRegion;
+
+            // Soumettre le formulaire "excelForm" directement
+            excelForm.submit(); 
+        });
+
+        // Vérification du message d'erreur (après la soumission du formulaire)
+        if (errorInput && errorInput.value) {
+            alert(errorInput.value);
+            errorInput.value = ""; // Effacer le message d'erreur après l'avoir affiché
+        }
+    } else {
+        console.error("Un ou plusieurs formulaires requis sont manquants.");
+    }
+});
+
+
+
 </script>
 </html>

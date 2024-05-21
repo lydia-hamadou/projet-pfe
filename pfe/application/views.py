@@ -95,7 +95,7 @@ def login(request):
 """
 def acceuil(request):
    return render(request,'page_acceuil.html')
-def essay2(request):
+def taritemnt_mansuel(request):
    return render(request,'taritemnt_mansuel.html')
 def essay3(request):
    return render(request,'page_resultat_verifier.html')
@@ -1068,7 +1068,7 @@ def get_chart_data(request):
         date_debut = request.POST.get('dateDebut')
         date_fin = request.POST.get('dateFin')
         region = request.POST.get('region')
-
+    
         data = extract_data_for_visualization(date_debut, date_fin, region)
 
         context = {
@@ -1091,3 +1091,157 @@ def get_chart_data(request):
         }
     return render(request, 'dashboard.html',context=context)
 
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+from openpyxl.utils import get_column_letter
+from django.http import HttpResponse
+from io import BytesIO
+from .models import Region, Fichier_mansuelle, Prévision_perimetre
+from django.db.models import Sum, Count, Q, Value, F, FloatField
+from django.db.models.functions import Coalesce
+from django.db.models import Case, When
+from datetime import datetime
+
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+from openpyxl.utils import get_column_letter
+from django.http import HttpResponse
+from io import BytesIO
+from .models import Region, Fichier_mansuelle, Prévision_perimetre
+from django.db.models import Sum, Count, Q, Value, F
+from django.db.models import Case, When
+from datetime import datetime
+
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+from openpyxl.utils import get_column_letter
+from django.http import HttpResponse
+from io import BytesIO
+from .models import Region, Fichier_mansuelle, Prévision_perimetre
+from django.db.models import Sum, Count, Q, Value, F, FloatField
+from django.db.models.functions import Coalesce
+from django.db.models import Case, When
+from datetime import datetime
+
+def generate_excel_from_extract(request):
+    if request.method == 'POST':
+        date_debut_str = request.POST.get('dateDebut')
+        date_fin_str = request.POST.get('dateFin')
+        region_nom = request.POST.get('region')
+        error_message = request.POST.get('error', '')
+
+        try:
+            date_debut = datetime.strptime(date_debut_str, "%Y-%m")
+            date_fin = datetime.strptime(date_fin_str, "%Y-%m")
+            region = Region.objects.get(nom=region_nom)
+        except ValueError:
+            error_message = "Format de date incorrect. Utilisez YYYY-MM."
+        except Region.DoesNotExist:
+            error_message = "Région introuvable."
+
+        if error_message:
+            request.POST._mutable = True
+            request.POST['error'] = error_message
+            return render(request, 'dashboard.html', request.POST)
+        mois_francais = {
+            'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04',
+            'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08',
+            'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
+        }
+
+        # Mise à jour des mois en français vers leur équivalent numérique
+        Fichier_mansuelle.objects.filter(mois__in=mois_francais.keys()).update(
+            mois=Case(
+                *[When(mois=k, then=Value(v)) for k, v in mois_francais.items()],
+                default=F('mois')
+            )
+        )
+
+        fichiers = Fichier_mansuelle.objects.filter(
+            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
+            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
+            Q(périmètre__region=region)
+        )
+
+        production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
+        total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
+
+        moyenne_production_mensuelle = fichiers.values('mois', 'périmètre__nom').annotate(moyenne_production=Sum('produit') / Count('périmètre'))
+
+        previsions = Prévision_perimetre.objects.filter(
+            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
+            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
+            Q(périmètre__region=region)
+        )
+
+        production_previsions = [
+            {
+                'perimetre': item['périmètre__nom'],
+                'production_mensuelle': item['moyenne_production'],
+                'prevision': previsions.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
+            }
+            for item in moyenne_production_mensuelle
+        ]
+
+        # --- Création du fichier Excel ---
+        wb = Workbook()
+        ws = wb.active
+        ws.title = f"Données de {region_nom}"
+
+        # Styles
+        bold_font = Font(bold=True)
+        center_alignment = Alignment(horizontal='center')
+        orange_fill = PatternFill(start_color="FFA500", end_color="FFA500", fill_type="solid")
+        thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
+
+        # Date et région en première ligne
+        ws.merge_cells('A1:C1')
+        ws['A1'] = f"Région: {region_nom} - Période: {date_debut_str} à {date_fin_str}"
+        ws['A1'].font = bold_font
+        ws['A1'].alignment = center_alignment
+
+        # En-têtes
+        headers = ['Périmètre', 'Production', 'Prévision']
+        for col_num, header in enumerate(headers, 1):
+            cell = ws.cell(row=3, column=col_num, value=header)  # Ligne 3 pour les en-têtes
+            cell.font = bold_font
+            cell.alignment = center_alignment
+            cell.fill = orange_fill
+            cell.border = thin_border
+
+        # Écriture des données
+        row_num = 4  # Commencer à la ligne 4 (après les en-têtes)
+        for data in production_previsions:
+            ws.cell(row=row_num, column=1, value=data['perimetre']).border = thin_border
+            ws.cell(row=row_num, column=2, value=data['production_mensuelle']).border = thin_border
+            ws.cell(row=row_num, column=3, value=data['prevision']).border = thin_border
+            row_num += 1
+
+        # Total (ligne après les données)
+        ws.cell(row=row_num, column=1, value="Total").font = bold_font
+        ws.cell(row=row_num, column=1).border = thin_border
+        ws.cell(row=row_num, column=2, value=total_production).font = bold_font
+        ws.cell(row=row_num, column=2).border = thin_border
+
+        # Ajustement des colonnes
+        for col_idx in range(1, ws.max_column + 1):  # Itérer sur les indices de colonnes
+           max_length = 0
+           column_letter = get_column_letter(col_idx)  # Obtenir la lettre de la colonne à partir de l'index
+
+           for row_idx in range(1, ws.max_row + 1):  # Itérer sur les indices de lignes
+             cell = ws.cell(row=row_idx, column=col_idx)
+             if cell.value:
+                max_length = max(max_length, len(str(cell.value)))
+    
+             adjusted_width = max_length + 2  # padding
+             ws.column_dimensions[column_letter].width = adjusted_width
+
+        # Générer le fichier Excel
+        excel_data = BytesIO()
+        wb.save(excel_data)
+        excel_data.seek(0)
+
+        response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        response['Content-Disposition'] = f'attachment; filename=donnees_{region_nom}_{date_debut_str}_{date_fin_str}.xlsx'
+
+        return response
