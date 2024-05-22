@@ -952,6 +952,7 @@ from datetime import datetime
 from django.db.models import Sum, Count
 from .models import Fichier_mansuelle, Prévision_perimetre
 from django.http import JsonResponse
+from django.db.utils import IntegrityError
 
 def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
     """
@@ -985,9 +986,10 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
     for fichier in Fichier_mansuelle.objects.all():
         if fichier.mois in mois_francais:
             fichier.mois = mois_francais[fichier.mois]
-            fichier.save()
-
-
+            try:
+                fichier.save()
+            except IntegrityError:
+                pass
     date_debut = datetime.strptime(date_debut, "%Y-%m")
     date_fin = datetime.strptime(date_fin, "%Y-%m")
     print(date_debut.year)
@@ -1148,14 +1150,16 @@ def generate_excel_from_extract(request):
             'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08',
             'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
         }
-
+        try:
         # Mise à jour des mois en français vers leur équivalent numérique
-        Fichier_mansuelle.objects.filter(mois__in=mois_francais.keys()).update(
+         Fichier_mansuelle.objects.filter(mois__in=mois_francais.keys()).update(
             mois=Case(
                 *[When(mois=k, then=Value(v)) for k, v in mois_francais.items()],
                 default=F('mois')
             )
-        )
+         )
+        except IntegrityError:
+         pass
 
         fichiers = Fichier_mansuelle.objects.filter(
             Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
