@@ -277,3 +277,54 @@
   font-family: var(--font-poppins);
   background-color: white;
 }
+
+.selectpage-afterselecting-file-inner {
+  top: 301px;
+  left: 45px;
+  font-size: var(--font-size-sm);
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-snow-100);
+  font-family: var(--font-montserrat);
+  background-color: white;
+  border-radius: var(--br-11xl);
+}
+.rectangle-parent1 {
+  position: absolute;
+  border: none;
+  top: calc(50% + 100px);
+  left: 70%;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: green;
+  width: 150px;
+  height: 50px;
+  display: flex; /* Utilisation de flexbox pour le centrage */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+.validate {
+  display: inline-block;
+  font-size: large;
+  left: 15%;
+  height: 30px;
+  color: white;
+  background-color: green; /* Couleur de fond verte */
+  border: none;          /* Enlève la bordure par défaut du bouton */
+}
+.image-2-icon {
+  position: absolute;
+  top: 54px;
+  left: 450px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.file-verified {
+  width: max-content;
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  font-size: 40px;
+  width: 400px;
+}

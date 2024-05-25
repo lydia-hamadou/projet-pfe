@@ -158,4 +158,23 @@ body {
     width: 100vw;
     height: 100vh;
   }
-  
+    .error{
+    margin-top: -2px;
+    }
+    .frame-child {
+    position: absolute;
+    top: 118px;
+    left: 50px;
+    border-bottom: 1px solid var(--color-darkorange);
+    box-sizing: border-box;
+    width: 440px;
+    height: 26px;
+  }
+  .frame-item {
+    top: 169px;
+    left: 50px;
+    border-bottom: 1px solid var(--color-darkorange);
+    box-sizing: border-box;
+    width: 440px;
+    height: 26px;
+  }

@@ -318,3 +318,23 @@
   font-family: var(--font-poppins);
   background-color: white;
 }
+.selectpage-afterselecting-file-inner {
+  top: 301px;
+  left: 45px;
+  font-size: var(--font-size-sm);
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-snow-100);
+  font-family: var(--font-montserrat);
+  background-color: white;
+  border-radius: var(--br-11xl);
+}
+.logo-2-icon3 {
+  position: absolute;
+  top: 38px;
+  left: 30px;
+  width: 99px;
+  height: 77.4px;
+  object-fit: cover;
+  background-color: transparent;
+}

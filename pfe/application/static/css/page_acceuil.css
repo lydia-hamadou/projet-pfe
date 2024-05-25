@@ -251,4 +251,10 @@
     color: var(--color-snow-100);
     font-family: var(--font-montserrat);
   }
-  
+  .frame-wrapper4{ 
+    top: 301px;
+    left: 45px;
+    font-size: var(--font-size-sm);
+    display: flex;
+    justify-content: space-between;
+ }

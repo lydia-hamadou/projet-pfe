@@ -1104,27 +1104,6 @@ from django.db.models.functions import Coalesce
 from django.db.models import Case, When
 from datetime import datetime
 
-from openpyxl import Workbook
-from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
-from openpyxl.utils import get_column_letter
-from django.http import HttpResponse
-from io import BytesIO
-from .models import Region, Fichier_mansuelle, Prévision_perimetre
-from django.db.models import Sum, Count, Q, Value, F
-from django.db.models import Case, When
-from datetime import datetime
-
-from openpyxl import Workbook
-from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
-from openpyxl.utils import get_column_letter
-from django.http import HttpResponse
-from io import BytesIO
-from .models import Region, Fichier_mansuelle, Prévision_perimetre
-from django.db.models import Sum, Count, Q, Value, F, FloatField
-from django.db.models.functions import Coalesce
-from django.db.models import Case, When
-from datetime import datetime
-
 def generate_excel_from_extract(request):
     if request.method == 'POST':
         date_debut_str = request.POST.get('dateDebut')
