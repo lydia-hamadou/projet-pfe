@@ -267,7 +267,7 @@ def page_resultat_verifier(request):
         if not excel_file_path:
             return redirect('index')  # Rediriger si aucun fichier n'est trouvé
         return render(request, 'page_resultat_verifier.html', {'excel_file_path': excel_file_path})
-
+"""
 
 def index(request):
     if request.method == "POST":
@@ -310,7 +310,7 @@ def index(request):
 
     else:
         return render(request, 'page_acceuil.html')
-
+"""
 def save_data(request):
     excel_file_path = request.session.get('excel_file_path')
 
@@ -955,17 +955,7 @@ from django.http import JsonResponse
 from django.db.utils import IntegrityError
 
 def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
-    """
-    Extract data for visualization.
-
-    Args:
-    - date_debut (str): Start date in 'YYYY-MM-DD' format.
-    - date_fin (str): End date in 'YYYY-MM-DD' format.
-    - region (str): Region name.
-
-    Returns:
-    - dict: Data for visualization.
-    """
+   
     # Convert date strings to datetime objects
    
     date_format = "%m"  # adjust this format according to your data
@@ -1064,6 +1054,8 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
 
     # return {'data_pie_chart': data_pie_chart, 'production_previsions': production_previsions, 'total':total_production}
     return {'data_pie_chart': data_pie_chart,'total':total_production,'production_previsions': production_previsions, 'production_previsions_mois': production_previsions_mois}
+
+
 
 def get_chart_data(request):
     if request.method == 'POST':
@@ -1228,3 +1220,61 @@ def generate_excel_from_extract(request):
         response['Content-Disposition'] = f'attachment; filename=donnees_{region_nom}_{date_debut_str}_{date_fin_str}.xlsx'
 
         return response
+
+
+def index(request):
+    if request.method == "POST":
+        if "excel_file" in request.FILES:
+            excel_file = request.FILES["excel_file"]
+            try:
+                # Lecture du fichier Excel avec la virgule comme séparateur décimal
+                df = pd.read_excel(excel_file, decimal=',', engine='openpyxl')
+
+                # Colonnes numériques à vérifier
+                numeric_columns = [
+                    "Stock Initial", "Apports pour Consommation Interne", "Production",
+                    "Prélèvement ou consommation interne", 
+                    "Prélèvements pour la Consommation autres périmètres", "Pertes", 
+                    "Expédition vers TRC", "Livraison"
+                ]
+
+                # Conversion en numérique avec gestion des valeurs non numériques
+                for col in numeric_columns:
+                    df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+
+                # Effectuer le test sur chaque ligne (à partir de la deuxième ligne, en excluant la dernière)
+                test_result = True
+                for index, row in df.iloc[1:-1].iterrows():  
+                    test = row['Stock Initial'] + row['Apports pour Consommation Interne'] + row['Production'] - \
+                           row['Prélèvement ou consommation interne'] - row['Prélèvements pour la Consommation autres périmètres'] - \
+                           row['Pertes'] - row['Expédition vers TRC'] - row['Livraison']
+                    if test < 1:  # Test corrigé : échec si le résultat est inférieur à 1
+                        test_result = False
+                        break  # Arrêter la boucle dès qu'une ligne échoue au test
+
+                # Rediriger en fonction du résultat du test
+                if test_result:
+                    # Sauvegarde du fichier (si nécessaire)
+                    fs = FileSystemStorage()
+                    filename = fs.save(excel_file.name, excel_file)
+                    file_path = os.path.join(settings.MEDIA_ROOT, filename)
+                    request.session['excel_file_path'] = file_path
+
+                    return redirect('application:page_resultat_verifier')  # Rediriger vers la page de succès
+                else:
+                    return render(request, 'page_resultat_non_verifier.html')  # Rediriger vers la page d'échec
+
+            except pd.errors.EmptyDataError:
+                return render(request, "page_acceuil.html", {"error": "Le fichier Excel est vide."})
+            except pd.errors.ParserError:
+                return render(request, "page_acceuil.html", {"error": "Erreur lors de la lecture du fichier Excel. Vérifiez le format."})
+            except KeyError as e:
+                return render(request, "page_acceuil.html", {"error": f"Colonne manquante dans le fichier Excel : {e}"})
+            except Exception as e: 
+                return render(request, "page_acceuil.html", {"error": f"Une erreur inattendue s'est produite : {e}"})
+
+        else:
+            return render(request, "page_acceuil.html", {"error": "Veuillez sélectionner un fichier."})
+
+    else:
+        return render(request, "page_acceuil.html") 

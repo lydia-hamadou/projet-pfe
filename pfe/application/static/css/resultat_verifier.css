@@ -171,15 +171,16 @@
 }
 .retour2 {
   position: relative;
+  font-size: 17px;
 }
 .acceuil19 {
   position: absolute;
   top: 35px;
-  left: 85%;
   border-radius: var(--br-11xl);
   border: 1px solid var(--color-white);
   box-sizing: border-box;
-  width: 137px;
+  left: 85%;
+  width: 175px;
   height: 47px;
   display: flex;
   flex-direction: row;

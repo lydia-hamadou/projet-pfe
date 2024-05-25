@@ -170,15 +170,16 @@
 }
 .retour12 {
   position: relative;
+  font-size: 17px;
 }
 .acceuil29 {
   position: absolute;
   top: 35px;
-  left: 90%;
   border-radius: var(--br-11xl);
   border: 1px solid var(--color-white);
   box-sizing: border-box;
-  width: 137px;
+  left: 85%;
+  width: 175px;
   height: 47px;
   display: flex;
   flex-direction: row;
@@ -386,4 +387,117 @@ left:50%;
   font-size: var(--font-size-xl);
   color: var(--color-snow-100);
   font-family: var(--font-montserrat);
+}
+.dashboard-child1,
+.dashboard-pie,
+.dashboard-bar,
+.dashboard-line {
+  position: absolute;
+  top: 197px;
+  left: 344px;
+  background-color: var(--color-gainsboro-100);
+  width: 350px;
+  height: 222px;
+}
+.dashboard-pie {
+  width: 350px;
+  height: 225px;
+}
+.dashboard-line {
+  left: 791px;
+}
+.dashboard-bar{
+  left:48%;
+  width:730px;
+}
+.dashboard-line {
+  top: 438px;
+  left: 344px;
+  width: 1100px;
+  height: 235px;
+}
+.dashboard {
+  width: 100%;
+  position: relative;
+  height: 750px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-snow-100);
+  font-family: var(--font-montserrat);
+}
+.group-28-16 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1490px;
+    height: 990px;
+    object-fit: cover;
+}
+.dashboard-inner,
+.vector-parent21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 265px;
+  height: 343px;
+  background-color: white;
+  border-radius: var(--br-11xl);
+}
+.dashboard-inner {
+  top: 301px;
+  left: 45px;
+  font-size: var(--font-size-sm);
+}
+.frame-child67 {
+  top: 4px;
+  /*left: 660px;*/
+  left:90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro-200);
+  border: 1px solid var(--color-darkorange-300);
+  box-sizing: border-box;
+  width: 51px;
+  height: 35px;
+}
+.frame-child67 i {
+  font-size: 24px; /* Espacement entre l'icône et le texte */
+}
+.frame-child67:hover {
+    background-color:  #ffc04d;; /* Vert plus foncé au survol */
+}
+/*
+.icon-excel-16 {
+  width: 17.26%;
+  top: 14.76%;
+  right: 25.22%;
+  bottom: 14.56%;
+  left: 57.53%;
+  border-radius: var(--br-mini);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+*/
+.donnees1 {
+  position: absolute; /* Keep if you need absolute positioning */
+  top: 681px;
+  left: 80%;
+  border-radius: var(--br-11xl); 
+  background-color: white;
+  font-size: 25px;
+  width: 200px; 
+  height: 48px;
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Vertically center icon and text */
+  padding: 0 10px; /* Add padding around content */
+}
+
+.icon-excel-16 {
+  width: 24px; /* Fixed size for the icon */
+  height: 24px;
+  margin-right: 10px; /* Add space between icon and text */
 }

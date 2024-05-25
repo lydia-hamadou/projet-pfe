@@ -23,99 +23,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-  <style>
-.dashboard-child1,
-.dashboard-pie,
-.dashboard-bar,
-.dashboard-line {
-  position: absolute;
-  top: 197px;
-  left: 344px;
-  background-color: var(--color-gainsboro-100);
-  width: 350px;
-  height: 222px;
-}
-.dashboard-pie {
-  width: 350px;
-  height: 225px;
-}
-.dashboard-line {
-  left: 791px;
-}
-.dashboard-bar{
-  left:48%;
-  width:730px;
-}
-.dashboard-line {
-  top: 438px;
-  left: 344px;
-  width: 1100px;
-  height: 235px;
-}
-.dashboard {
-  width: 100%;
-  position: relative;
-  height: 750px;
-  text-align: left;
-  font-size: var(--font-size-xl);
-  color: var(--color-snow-100);
-  font-family: var(--font-montserrat);
-}
-.group-28-16 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1490px;
-    height: 990px;
-    object-fit: cover;
-}
-.dashboard-inner,
-.vector-parent21 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 265px;
-  height: 343px;
-  background-color: white;
-  border-radius: var(--br-11xl);
-}
-.dashboard-inner {
-  top: 301px;
-  left: 45px;
-  font-size: var(--font-size-sm);
-}
-.donnees1 {
-  position: absolute;
-  top: 681px;
-  left: 80%;
-  border-radius: var(--br-11xl);
-  background-color: white;
-  font-size: 20px;
-  width: 190px;
-  height: 48px;
-}
-.frame-child67 {
-  top: 4px;
-  /*left: 660px;*/
-  left:90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--br-mini);
-  background-color: var(--color-gainsboro-200);
-  border: 1px solid var(--color-darkorange-300);
-  box-sizing: border-box;
-  width: 51px;
-  height: 35px;
-}
-.frame-child67 i {
-  font-size: 24px; /* Espacement entre l'icône et le texte */
-}
-.frame-child67:hover {
-    background-color: #45a049; /* Vert plus foncé au survol */
-}
-
-  </style>
   <body>
     <div class="dashboard">
       <img class="group-28-16" style="height: 990px; width: 1490px;" alt="" src="{% static 'images/finale_img.png'%}" />
@@ -160,11 +67,11 @@
         </div>
       </div>
       <a class="acceuil29" href="acceuil">
-        <b class="retour12">Retour</b>
+        <b class="retour12">se déconnecter</b>
       </a>
       <div class="rectangle-blanc" ></div>
 
-      <img class="logo-2-icon7" style="background-color: transparent;" alt="" src="{% static 'images/logo.png'%}" />
+      <img class="logo" style="background-color: transparent;"src="{% static 'images/logo.png'%}" />
     
       <div class="dashboard-pie">
         <canvas id="pie-chart"></canvas>
@@ -181,8 +88,11 @@
         <input type="hidden" name="dateFin" id="excelDateFin">
         <input type="hidden" name="region" id="excelRegion">
         <input type="hidden" name="error" id="excelError" value="{% if error %}{{ error }}{% endif %}">  
-        <button class="donnees1" type="submit">Donnees</button>
-    </form>    
+        <button class="donnees1" type="submit">
+          <img class="icon-pdf-16" alt="" src="{% static 'images/icon-excel .png' %}" />
+          <span>EXCEL</span> 
+        </button>
+      </form>    
       <form class="rectangle-parent5" id="chartForm" action="{% url 'application:get_chart_data' %}" method="POST">
         {% csrf_token %}
         
@@ -200,7 +110,7 @@
         <b for="dateDebut" class="date-dbut1">Date de début:</b>
         <b class="date-fin1">Date fin:</b>
         <button class="frame-child67" type="submit" id="submitBtn"> 
-          <i class="fa-solid fa-check" style="color: #2ec52b;"></i>
+          <i class="fa-solid fa-check" style="color:gray"></i>
         </button>
     </form>
     

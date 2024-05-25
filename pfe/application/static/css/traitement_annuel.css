@@ -212,15 +212,16 @@
   }
 .retour9 {
   position: relative;
+  font-size: 17px;
 }
 .acceuil26 {
   position: absolute;
   top: 35px;
-  left: 90%;
   border-radius: var(--br-11xl);
   border: 1px solid var(--color-white);
   box-sizing: border-box;
-  width: 137px;
+  left: 85%;
+  width: 175px;
   height: 47px;
   display: flex;
   flex-direction: row;
@@ -457,5 +458,5 @@
 
 /* Style lors du survol (hover) */
 .frame-child48:hover {
-    background-color: #45a049; /* Vert plus foncé au survol */
+    background-color:  #ffc04d;; /* Vert plus foncé au survol */
 }
