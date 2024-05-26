@@ -419,6 +419,7 @@
   left: 26px;
   color: var(--color-darkorange-300);
 }
+/*
 .logo-3-icon {
   position: absolute;
   top: 38px;
@@ -426,6 +427,24 @@
   width: 99px;
   height: 77.4px;
   object-fit: cover;
+}
+*/
+.logo-3-icon {
+  position: absolute;
+  top: 38px;
+  left: 30px;
+  width: 99px;
+  height: 77.4px;
+  object-fit: cover;
+  /* Styles supplémentaires pour l'apparence du lien */
+  display: block; /* Assure que l'image remplit toute la zone cliquable */
+  transition: transform 0.3s ease; /* Ajoute un effet de transition fluide */
+}
+
+/* Style au survol de la souris */
+.logo-3-icon:hover {
+  transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+  /* Autres styles possibles au survol : opacité, ombre, etc. */
 }
 .page-p1 {
   width: 100%;

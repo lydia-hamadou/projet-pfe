@@ -7,6 +7,16 @@ app_name = 'application'
 urlpatterns = [
     path('', essay6, name='app'),
     path('login/',login, name='login'),
+    path('save_data/login',login, name='login'),
+    path('page_resultat_non_verifier/login',login, name='login'),
+    path('tableau_regions/login',login, name='login'),
+    path('page_resultat_verifier/login',login, name='login'),
+    path('tableau_regions_annuel/login',login, name='login'),
+    path('get_chart_data/login',login, name='login'),
+
+
+
+
     path('index',index, name='index'),
     path('generate_pdf', generate_pdf, name='generate_pdf'),
     path('generate_excel', generate_excel, name='generate_excel'),
