@@ -33,6 +33,13 @@ from .models import Périmètre, Fichier_mansuelle
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 import os
+from django.shortcuts import render, redirect
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+import os
+import pandas as pd
+from django.views.decorators.http import require_http_methods
+from django.http import HttpResponseBadRequest, HttpResponseServerError, HttpResponse
 
 
 
@@ -267,8 +274,8 @@ def page_resultat_verifier(request):
         if not excel_file_path:
             return redirect('index')  # Rediriger si aucun fichier n'est trouvé
         return render(request, 'page_resultat_verifier.html', {'excel_file_path': excel_file_path})
-"""
 
+"""
 def index(request):
     if request.method == "POST":
         if "excel_file" in request.FILES:
@@ -1222,59 +1229,71 @@ def generate_excel_from_extract(request):
         return response
 
 
+@require_http_methods(["GET", "POST"])
 def index(request):
     if request.method == "POST":
         if "excel_file" in request.FILES:
             excel_file = request.FILES["excel_file"]
             try:
-                # Lecture du fichier Excel avec la virgule comme séparateur décimal
                 df = pd.read_excel(excel_file, decimal=',', engine='openpyxl')
 
-                # Colonnes numériques à vérifier
-                numeric_columns = [
-                    "Stock Initial", "Apports pour Consommation Interne", "Production",
-                    "Prélèvement ou consommation interne", 
-                    "Prélèvements pour la Consommation autres périmètres", "Pertes", 
-                    "Expédition vers TRC", "Livraison"
-                ]
+                # Colonnes numériques à vérifier (sans "Production")
+                numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne', 
+                                   'Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres',
+                                   'Pertes', 'Expédition vers TRC', 'Livraison']
 
-                # Conversion en numérique avec gestion des valeurs non numériques
+                # Vérifier si les colonnes requises sont présentes
+                missing_columns = [col for col in numeric_columns if col not in df.columns]
+                if missing_columns:
+                    return HttpResponseBadRequest(f"Colonnes manquantes dans le fichier Excel : {', '.join(missing_columns)}")
+
+                # Nettoyage des données : supprimer les espaces et les points dans les colonnes numériques
                 for col in numeric_columns:
-                    df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+                    df[col] = df[col].astype(str).str.replace(r'[ .]', '', regex=True)
 
+                # Remplacer les points par des virgules dans la colonne "Production"
+                df['Production'] = df['Production'].astype(str).str.replace('.', ',', regex=False)
+
+                # Conversion en numérique avec gestion des valeurs non numériques (sauf "Production")
+                df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                df['Production'] = pd.to_numeric(df['Production'], errors='coerce')  # Convertir "Production" séparément
+
+                # Identifier les colonnes avec des valeurs non valides (NaN), excluant "Production"
+               
                 # Effectuer le test sur chaque ligne (à partir de la deuxième ligne, en excluant la dernière)
                 test_result = True
-                for index, row in df.iloc[1:-1].iterrows():  
+                for index, row in df.iloc[1:-1].iterrows():
                     test = row['Stock Initial'] + row['Apports pour Consommation Interne'] + row['Production'] - \
                            row['Prélèvement ou consommation interne'] - row['Prélèvements pour la Consommation autres périmètres'] - \
                            row['Pertes'] - row['Expédition vers TRC'] - row['Livraison']
-                    if test < 1:  # Test corrigé : échec si le résultat est inférieur à 1
+                    if abs(test) > 0.1:  # Test avec une tolérance de 1
                         test_result = False
-                        break  # Arrêter la boucle dès qu'une ligne échoue au test
+                        failed_row_index = index + 2  # Pour afficher le numéro de ligne correct dans Excel (en commençant à 1)
+                        break
 
                 # Rediriger en fonction du résultat du test
                 if test_result:
-                    # Sauvegarde du fichier (si nécessaire)
                     fs = FileSystemStorage()
                     filename = fs.save(excel_file.name, excel_file)
                     file_path = os.path.join(settings.MEDIA_ROOT, filename)
                     request.session['excel_file_path'] = file_path
-
-                    return redirect('application:page_resultat_verifier')  # Rediriger vers la page de succès
+                    return redirect('application:page_resultat_verifier')
                 else:
-                    return render(request, 'page_resultat_non_verifier.html')  # Rediriger vers la page d'échec
+                    return render(request, 'page_resultat_non_verifier.html', {'failed_row_index': failed_row_index})
 
             except pd.errors.EmptyDataError:
-                return render(request, "page_acceuil.html", {"error": "Le fichier Excel est vide."})
+                return HttpResponseBadRequest("Le fichier Excel est vide.")  # Renvoyer une réponse 400 Bad Request
             except pd.errors.ParserError:
-                return render(request, "page_acceuil.html", {"error": "Erreur lors de la lecture du fichier Excel. Vérifiez le format."})
+                return HttpResponseBadRequest("Erreur lors de la lecture du fichier Excel. Vérifiez le format.")  # Renvoyer une réponse 400 Bad Request
             except KeyError as e:
-                return render(request, "page_acceuil.html", {"error": f"Colonne manquante dans le fichier Excel : {e}"})
-            except Exception as e: 
-                return render(request, "page_acceuil.html", {"error": f"Une erreur inattendue s'est produite : {e}"})
-
+                return HttpResponseBadRequest(f"Colonne manquante dans le fichier Excel : {e}")  # Renvoyer une réponse 400 Bad Request
+            except ValueError as e:
+                return HttpResponseBadRequest(str(e))  # Renvoyer une réponse 400 Bad Request avec le message d'erreur spécifique
+            except Exception as e:  
+                return HttpResponseServerError(f"Une erreur inattendue s'est produite : {e}")  # Renvoyer une réponse 500 Internal Server Error
         else:
-            return render(request, "page_acceuil.html", {"error": "Veuillez sélectionner un fichier."})
+            return HttpResponseBadRequest("Veuillez sélectionner un fichier.")  # Renvoyer une réponse 400 Bad Request
 
     else:
         return render(request, "page_acceuil.html") 
+
