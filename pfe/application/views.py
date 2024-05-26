@@ -5,7 +5,7 @@ import logging
 from django.shortcuts import render, redirect
 from reportlab.lib.pagesizes import A4, landscape
 from django.contrib import messages
-from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region,Prévision_perimetre
+from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region,Prévision_perimetre,Visualisation
 from django.db.models import Sum, F, FloatField
 from django.db.models.functions import Coalesce
 from io import BytesIO
@@ -40,6 +40,7 @@ import os
 import pandas as pd
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponseBadRequest, HttpResponseServerError, HttpResponse
+from django.utils import timezone
 
 
 
@@ -60,16 +61,15 @@ def login(request):
         try:
             utilisateur = Utilisateur.objects.get(nom=nom)
             if utilisateur.password == password:
-                # Si le nom d'utilisateur et le mot de passe correspondent, redirigez vers la page d'accueil
+                request.session['utilisateur_id'] = utilisateur.id_utilisateur  # Enregistrez l'ID utilisateur dans la session
                 return render(request, 'page_acceuil.html')
             else:
-                # Si le mot de passe est incorrect, définir mot_de_passe_invalid sur True
                 mot_de_passe_invalid = True
         except Utilisateur.DoesNotExist:
-            # Si l'utilisateur n'existe pas, définir nom_utilisateur_invalid sur True
             nom_utilisateur_invalid = True
 
     return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
+
 """
 
 from django.contrib.auth import authenticate, login
@@ -1062,7 +1062,7 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
     # return {'data_pie_chart': data_pie_chart, 'production_previsions': production_previsions, 'total':total_production}
     return {'data_pie_chart': data_pie_chart,'total':total_production,'production_previsions': production_previsions, 'production_previsions_mois': production_previsions_mois}
 
-
+"""
 
 def get_chart_data(request):
     if request.method == 'POST':
@@ -1091,6 +1091,53 @@ def get_chart_data(request):
         'production_previsions_mois':data['production_previsions_mois']
         }
     return render(request, 'dashboard.html',context=context)
+
+    
+
+
+    """
+def get_chart_data(request):
+    if request.method == 'POST':
+        date_debut = request.POST.get('dateDebut')
+        date_fin = request.POST.get('dateFin')
+        region_name = request.POST.get('region')
+    else:  # GET request
+        date_debut = "2023-11"
+        date_fin = "2023-12"
+        region_name = "Adrar"  # or some other default region ID
+
+    data = extract_data_for_visualization(date_debut, date_fin, region_name)
+
+    # Visualization Logic
+    user_id = request.session.get('utilisateur_id')
+    if user_id:
+        try:
+            utilisateur = Utilisateur.objects.get(id_utilisateur=user_id)
+            region_obj = Region.objects.get(nom=region_name)
+
+            # Create the Visualisation object directly
+            Visualisation.objects.create(
+                date=timezone.now(),
+                date_debut=datetime.strptime(date_debut, "%Y-%m").date(),
+                date_fin=datetime.strptime(date_fin, "%Y-%m").date(),
+                region=region_obj,
+                utilisateur=utilisateur,
+            )
+
+        except (Utilisateur.DoesNotExist, Region.DoesNotExist, ValueError):
+            pass  # Or handle the error as needed
+    
+    context = {
+        "data_pie_chart": data['data_pie_chart'],
+        "total": data['total'],
+        'productionPrev': data['production_previsions'],
+        'production_previsions_mois': data['production_previsions_mois'],
+        'dateDeb': date_debut,
+        'dateFin': date_fin,
+        'region': region_name,  # Pass the region name to the template
+    }
+
+    return render(request, 'dashboard.html', context=context)
 
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side

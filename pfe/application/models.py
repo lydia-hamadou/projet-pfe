@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.hashers import check_password , make_password
+from django.utils import timezone
 
 
 class Region(models.Model):
@@ -51,15 +52,10 @@ class Utilisateur(models.Model):
 class Visualisation(models.Model):
     id_visualisation = models.AutoField(primary_key=True)
     date = models.DateField()
-    visualisation = models.CharField(max_length=255)
-
-class Commentaire(models.Model):
-    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
-    visualisation = models.ForeignKey(Visualisation, on_delete=models.CASCADE)
-    date = models.DateField()
-    commentaire = models.TextField()
-    class Meta:
-        unique_together = (('utilisateur', 'visualisation'),)
-
+    date_debut = models.DateField(default=timezone.now)  
+    date_fin = models.DateField(default=timezone.now) 
+    region = models.ForeignKey(Region, on_delete=models.CASCADE, null=True) 
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, null=True)  
+    
 
 
