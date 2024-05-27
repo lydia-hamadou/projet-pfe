@@ -16,8 +16,8 @@ body {
     --color-darkorange: #f06c00;
   }
   
-  .background-login-icon,
-  .logo-2-icon {
+  .background,
+  .logo {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,18 +25,18 @@ body {
     height: 100%; /* Modification ici */
     object-fit: cover;
   }
-  .logo-2-icon {
+  .logo {
     top: 30px;
     left: 32px;
     width: 99px;
     height: 77.4px;
   }
-  .group-child,
-  .group-item {
+  .div2,
+  .div3 {
     position: absolute;
     top: 26px;
   }
-  .group-child{
+  .div2{
         right: 0;
         border-top: 1px solid var(--color-darkorange);
         box-sizing: border-box;
@@ -44,7 +44,7 @@ body {
         height: 1px;
       }
 
-  .group-item {
+  .div3 {
     left: 0;
     border-top: 1px solid var(--color-darkorange);
     box-sizing: border-box;
@@ -58,7 +58,7 @@ body {
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     mix-blend-mode: darken;
   }
-  .line-parent {
+  .titre {
     position: absolute;
     top: 18px;
     left: 116px;
@@ -68,8 +68,8 @@ body {
     color: var(--color-darkorange);
   }
 
-  .frame-child input,
-  .frame-item input{
+  .form1 input,
+  .form2 input{
     border: none; /* Modification ici */
     outline: none; /* Modification ici */
     width: 100%; /* Modification ici */
@@ -79,19 +79,19 @@ body {
     color: var(--color-dimgray); /* Modification ici */
     background: none; 
   }
-  .frame-item,
+  .form2,
   .nom-dutilisateur {
     position: absolute;
     top: 2px;
     left: 2px;
   }
-  .frame-inner,
+  .button,
   .mot-de-passe {
     position: absolute;
     top: 2px;
     left: 2px;
   }
-  .frame-inner {
+  .button {
     position: absolute;
     top: 220px;
     left:30%;
@@ -124,20 +124,20 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
-  .group-parent,
-  .pagelogin-inner {
+  .div1,
+  .divglobale {
     position: absolute;
     width: 578px;
     height: 316px;
   }
-  .group-parent {
+  .div1 {
     top: calc(50% - 190px);
     left: calc(50% - 289px);
     border-radius: 30px;
     background-color: var(--color-white);
     overflow: hidden;
   }
-  .pagelogin-inner {
+  .divglobale {
     top: calc(50% - 179px);
     left: calc(50% - 309px);
   }
@@ -161,7 +161,7 @@ body {
     .error{
     margin-top: -2px;
     }
-    .frame-child {
+    .form1 {
     position: absolute;
     top: 118px;
     left: 50px;
@@ -170,7 +170,7 @@ body {
     width: 440px;
     height: 26px;
   }
-  .frame-item {
+  .form2 {
     top: 169px;
     left: 50px;
     border-bottom: 1px solid var(--color-darkorange);

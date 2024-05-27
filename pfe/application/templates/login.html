@@ -16,36 +16,36 @@
   <body>
     <div class="pagelogin">
       <img
-        class="background-login-icon"
+        class="background"
         alt=""
         src="{% static 'images/nv.png'%}"
       />
 
-      <img class="logo-2-icon" alt="" src="{% static 'images/logo.png'%}" />
+      <img class="logo" alt="" src="{% static 'images/logo.png'%}" />
 
       {% block content %}
-  <div class="pagelogin-inner">
-    <div class="group-parent">
-      <div class="line-parent">
-        <div class="group-child"></div>
-        <div class="group-item"></div>
+  <div class="divglobale">
+    <div class="div1">
+      <div class="titre">
+        <div class="div2"></div>
+        <div class="div3"></div>
         <div class="connexion">Connexion</div>
       </div>
       <form id="loginForm" method="post" action="{% url 'application:login' %}" onsubmit="console.log('Form submitted'); return true;">
         {% csrf_token %}
-        <div class="frame-child">
+        <div class="form1">
           <input type="text" class="nom-dutilisateur" name="nom" placeholder="Nom d'utilisateur" required>
           {% if nom_utilisateur_invalid %}
             <p class="error">Nom d'utilisateur invalide</p>
           {% endif %}
         </div>
-        <div class="frame-item">
+        <div class="form2">
           <input type="password" class="mot-de-passe" name="password" placeholder="Mot de passe" required>
           {% if mot_de_passe_invalid %}
             <p class="error">Mot de passe invalide</p>
           {% endif %}
         </div>
-        <div class="frame-inner">  
+        <div class="button">  
           <button class="se-connecter" type="submit">Se connecter</button>
         </div>
       </form>

@@ -14,7 +14,7 @@
   overflow: hidden;
   max-height: 100%;
 }
-.traitement-de-linformation-2-icon12 {
+.img1 {
   position: absolute;
   top: 9.8px;
   left: 9px;
@@ -28,7 +28,7 @@
   left: 40px;
   font-weight: 500;
 }
-.traitement-de-linformation-2-parent9 {
+.div1 {
   position: absolute;
   height: 14.75%;
   width: 72.83%;
@@ -41,16 +41,16 @@
   overflow: hidden;
   font-size: var(--font-size-smi);
 }
-.affichage-bilan8 {
+.affichtext {
   margin: 0;
 }
-.affichage-bilan-par-container8 {
+.affichage2 {
   position: absolute;
   top: 4.9px;
   left: 50.8px;
   font-weight: 500;
 }
-.bilan-2-icon12 {
+.icon {
   position: absolute;
   top: 4.9px;
   left: 12.8px;
@@ -58,7 +58,7 @@
   height: 33px;
   object-fit: cover;
 }
-.affichage-bilan-par-primetre-parent6 {
+.affichage {
   position: absolute;
   height: 14.29%;
   width: 72.83%;
@@ -70,13 +70,13 @@
   background-color: var(--color-darkorange-400);
   overflow: hidden;
 }
-.affichage-annuel28 {
+.affichage-annuel1 {
   position: absolute;
   top: 16px;
   left: 57px;
   font-weight: 500;
 }
-.traitement-de-linformation-1-icon20 {
+.imageannuel {
   position: absolute;
   top: 11px;
   left: 19px;
@@ -84,7 +84,7 @@
   height: 27px;
   object-fit: cover;
 }
-.affichage-annuel-parent21 {
+.affichage-annuel {
   position: absolute;
   height: 13.99%;
   width: 75.09%;
@@ -97,13 +97,13 @@
   overflow: hidden;
   color: var(--color-white);
 }
-.dashboard24 {
+.dash1 {
   position: absolute;
   top: 13px;
   left: 72px;
   font-weight: 500;
 }
-.tabelu-de-bord-214 {
+.dash2 {
   position: absolute;
   top: 3px;
   left: 16px;
@@ -111,7 +111,7 @@
   height: 40px;
   object-fit: cover;
 }
-.dashboard-parent18 {
+.dash {
   position: absolute;
   height: 12.54%;
   width: 76.98%;
@@ -124,7 +124,7 @@
   overflow: hidden;
   color: var(--color-white);
 }
-.menu32 {
+.menu {
   position: absolute;
   height: 8.89%;
   width: 28.68%;
@@ -134,8 +134,8 @@
   display: inline-block;
   color: var(--color-darkorange-300);
 }
-.frame-child62,
-.frame-child63 {
+.div2,
+.div3 {
   position: absolute;
   height: 0.29%;
   width: 17.55%;
@@ -148,13 +148,13 @@
   max-height: 100%;
   background-color:var(--color-darkorange-300); ;
 }
-.frame-child63 {
+.div3 {
   width: 16.83%;
   right: 68.11%;
   left: 15.06%;
 }
-.dashboard-inner,
-.vector-parent21 {
+.divglobale,
+.trait1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -163,16 +163,16 @@
   background-color: white;
   border-radius: var(--br-11xl);
 }
-.dashboard-inner {
+.divglobale {
   top: 301px;
   left: 45px;
   font-size: var(--font-size-sm);
 }
-.retour12 {
+.deconnecte {
   position: relative;
   font-size: 17px;
 }
-.acceuil29 {
+.acceuil {
   position: absolute;
   top: 35px;
   border-radius: var(--br-11xl);
@@ -311,9 +311,9 @@
   outline: none; 
   box-shadow: none; 
 }
-.frame-child64,
-.frame-child65,
-.frame-child66 {
+.div4,
+.div5,
+.div6 {
   position: absolute;
   top: 4px;
   left: 243px;
@@ -324,17 +324,17 @@
   width: 150px;
   height: 35px;
 }
-.frame-child65,
-.frame-child66 {
+.div5,
+.div6 {
   left: 446px;
 }
-.frame-child66 {
+.div6 {
   left: 20%;
 }
-.frame-child64{
+.div4{
 left:50%;
 }
-.frame-child65{
+.div5{
   left:70%
 }
 .date-dbut1 {
@@ -343,16 +343,16 @@ left:50%;
   left: 35px;
 }
 .date-fin1,
-.frame-child67{
+.button{
   position: absolute;
   top: 10px;
   left: 368px;
 }
-.frame-child67,
+.button,
 .rgion1 {
   left: 75%;
 }
-.frame-child67 {
+.button {
   top: 4px;
   /*left: 660px;*/
   left:90%;
@@ -366,20 +366,20 @@ left:50%;
   width: 51px;
   height: 35px;
 }
-.frame-child67 i {
+.button i {
   font-size: 24px; /* Espacement entre l'icône et le texte */
 }
-.frame-child67:hover {
+.button:hover {
     background-color: #45a049; /* Vert plus foncé au survol */
 }
 
 .dashboard,
-.rectangle-parent5 {
+.form {
   background-color: var(--color-white);
   /*background-color: transparent;*/
   overflow: hidden;
 }
-.rectangle-parent5 {
+.form {
   position: absolute;
   top: 115px;
   left: 460px;
@@ -435,7 +435,7 @@ left:50%;
   color: var(--color-snow-100);
   font-family: var(--font-montserrat);
 }
-.group-28-16 {
+.back {
     position: absolute;
     top: 0;
     left: 0;
@@ -443,8 +443,8 @@ left:50%;
     height: 990px;
     object-fit: cover;
 }
-.dashboard-inner,
-.vector-parent21 {
+.divglobale,
+.trait1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -453,12 +453,12 @@ left:50%;
   background-color: white;
   border-radius: var(--br-11xl);
 }
-.dashboard-inner {
+.divglobale {
   top: 301px;
   left: 45px;
   font-size: var(--font-size-sm);
 }
-.frame-child67 {
+.button {
   top: 4px;
   /*left: 660px;*/
   left:90%;
@@ -472,10 +472,10 @@ left:50%;
   width: 51px;
   height: 35px;
 }
-.frame-child67 i {
+.button i {
   font-size: 24px; /* Espacement entre l'icône et le texte */
 }
-.frame-child67:hover {
+.button:hover {
     background-color:  #ffc04d;; /* Vert plus foncé au survol */
 }
 /*
@@ -492,7 +492,7 @@ left:50%;
   object-fit: cover;
 }
 */
-.donnees1 {
+.donnee {
   position: absolute; /* Keep if you need absolute positioning */
   top: 681px;
   left: 80%;
@@ -504,10 +504,4 @@ left:50%;
   display: flex; /* Align icon and text horizontally */
   align-items: center; /* Vertically center icon and text */
   padding: 0 10px; /* Add padding around content */
-}
-
-.icon-excel-16 {
-  width: 24px; /* Fixed size for the icon */
-  height: 24px;
-  margin-right: 10px; /* Add space between icon and text */
 }

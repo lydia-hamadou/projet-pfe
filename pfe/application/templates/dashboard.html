@@ -25,49 +25,49 @@
   </head>
   <body>
     <div class="dashboard">
-      <img class="group-28-16" style="height: 990px; width: 1490px;" alt="" src="{% static 'images/finale_img.png'%}" />
+      <img class="back" style="height: 990px; width: 1490px;" alt="" src="{% static 'images/finale_img.png'%}" />
 
-      <div class="dashboard-inner">
-        <div class="vector-parent21">
-          <a class="traitement-de-linformation-2-parent9" style="color:white;" href="traitement_mansuel">
+      <div class="divglobale">
+        <div class="trait1">
+          <a class="div1" style="color:white;" href="traitement_mansuel">
             <img
-              class="traitement-de-linformation-2-icon12"
+              class="img1"
               alt=""
               src="{% static 'images/traitement-de-linformation (1).png'%}"
             />
 
             <div class="traitement-mansuelle11">Traitement Mansuelle</div>
           </a>
-          <a class="affichage-bilan-par-primetre-parent6"  style="color:white;" href="traitement_p1">
-            <div class="affichage-bilan-par-container8">
-              <p class="affichage-bilan8">Affichage Bilan</p>
-              <p class="affichage-bilan8">par périmetre</p>
+          <a class="affichage"  style="color:white;" href="traitement_p1">
+            <div class="affichage2">
+              <p class="affichtext">Affichage Bilan</p>
+              <p class="affichtext">par périmetre</p>
             </div>
-            <img class="bilan-2-icon12" alt="" src="{% static 'images/bilan.png'%}" />
+            <img class="icon" alt="" src="{% static 'images/bilan.png'%}" />
          </a>
-          <a class="affichage-annuel-parent21" href="traitement_annuel">
-            <div class="affichage-annuel28">Affichage Annuel</div>
+          <a class="affichage-annuel" href="traitement_annuel">
+            <div class="affichage-annuel1">Affichage Annuel</div>
             <img
-              class="traitement-de-linformation-1-icon20"
+              class="imageannuel"
               alt=""
               src="{% static 'images/traitement-de-linformation.png'%}"
             />
           </a>
-          <a class="dashboard-parent18" href="dashboard">
-            <div class="dashboard24">Dashboard</div>
+          <a class="dash" href="dashboard">
+            <div class="dash1">Dashboard</div>
             <img
-              class="tabelu-de-bord-214"
+              class="dash2"
               alt=""
               src="{% static 'images/tabelu de bord.png'%}" 
             />
           </a>
-          <b class="menu32">Menu</b>
-          <div class="frame-child62"></div>
-          <div class="frame-child63"></div>
+          <b class="menu">Menu</b>
+          <div class="div2"></div>
+          <div class="div3"></div>
         </div>
       </div>
-      <a class="acceuil29" href="login">
-        <b class="retour12">se déconnecter</b>
+      <a class="acceuil" href="login">
+        <b class="deconnecte">se déconnecter</b>
       </a>
       <div class="rectangle-blanc" ></div>
 
@@ -90,17 +90,17 @@
         <input type="hidden" name="dateFin" id="excelDateFin">
         <input type="hidden" name="region" id="excelRegion">
         <input type="hidden" name="error" id="excelError" value="{% if error %}{{ error }}{% endif %}">  
-        <button class="donnees1" type="submit">
-          <img class="icon-pdf-16" alt="" src="{% static 'images/icon-excel .png' %}" />
+        <button class="donnee" type="submit">
+          <img class="icon-pdf" alt="" src="{% static 'images/icon-excel .png' %}" />
           <span>EXCEL</span> 
         </button>
       </form>    
-      <form class="rectangle-parent5" id="chartForm" action="{% url 'application:get_chart_data' %}" method="POST">
+      <form class="form" id="chartForm" action="{% url 'application:get_chart_data' %}" method="POST">
         {% csrf_token %}
         
-        <input class="frame-child64" value="{{ dateFin }}" type="month" id="dateFin" name="dateFin" required>
+        <input class="div4" value="{{ dateFin }}" type="month" id="dateFin" name="dateFin" required>
         
-        <select name="region" id="region" class="frame-child65" required>
+        <select name="region" id="region" class="div5" required>
             <option class="rgion1" value="">Région</option>
             <option value="Stah" class="option" {% if region == "Stah" %}selected{% endif %}>Stah</option>
             <option value="Adrar" class="option" {% if region == "Adrar" %}selected{% endif %}>Adrar</option>
@@ -108,15 +108,13 @@
             <option value="Hassi Messaoud" class="option" {% if region == "Hassi Messaoud" %}selected{% endif %}>Hassi Messaoud</option>
         </select>
     
-        <input class="frame-child66" value="{{dateDeb}}" type="month" id="dateDebut" name="dateDebut" required>
+        <input class="div6" value="{{dateDeb}}" type="month" id="dateDebut" name="dateDebut" required>
         <b for="dateDebut" class="date-dbut1">Date de début:</b>
         <b class="date-fin1">Date fin:</b>
-        <button class="frame-child67" type="submit" id="submitBtn"> 
+        <button class="button" type="submit" id="submitBtn"> 
           <i class="fa-solid fa-check" style="color:gray"></i>
         </button>
-    </form>
-    
-    <div id="error-message" style="color: red; display: none;"></div> 
+    </form> 
     
       </div>
     </div>

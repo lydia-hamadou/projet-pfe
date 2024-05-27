@@ -1,4 +1,4 @@
-.background-page01-2-icon {
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -6,7 +6,7 @@
     height: 990px;
     object-fit: cover;
   }
-  .frame-child27 {
+  .div1 {
     position: absolute;
     top: 0;
     left: 45px;
@@ -19,8 +19,8 @@
     height: 149px;
     overflow: hidden;
   }
-  .frame-child28,
-  .group-icon5 {
+  .div3,
+  .logo {
     position: absolute;
     height: 21.87%;
     width:200px;
@@ -32,7 +32,7 @@
     overflow: hidden;
     /*max-height: 100%;*/ 
   }
-  .frame-child28 {
+  .div3 {
     height: 100%;
     width: 100%;
     top: 0;
@@ -42,7 +42,7 @@
     border-radius: var(--br-11xl);
     background-color: white;
   }
-  .traitement-de-linformation-2-icon4 {
+  .imagem {
     position: absolute;
     top: 9.8px;
     left: 9px;
@@ -50,13 +50,13 @@
     height: 31px;
     object-fit: cover;
   }
-  .traitement-mansuelle3 {
+  .trat_mensu2 {
     position: absolute;
     top: 17px;
     left: 40px;
     font-weight: 500;
   }
-  .traitement-de-linformation-2-parent1 {
+  .trait_mensuel {
     position: absolute;
     height: 14.75%;
     width: 72.83%;
@@ -69,16 +69,16 @@
     overflow: hidden;
     font-size: var(--font-size-smi);
   }
-  .affichage-bilan3 {
+  .afficahagetext {
     margin: 0;
   }
-  .affichage-bilan-par-container3 {
+  .afficahage1 {
     position: absolute;
     top: 4.9px;
     left: 50.8px;
     font-weight: 500;
   }
-  .bilan-2-icon4 {
+  .affichageimg {
     position: absolute;
     top: 4.9px;
     left: 12.8px;
@@ -86,7 +86,7 @@
     height: 33px;
     object-fit: cover;
   }
-  .affichage-bilan-par-primetre-parent1 {
+  .afficahage {
     position: absolute;
     height: 14.29%;
     width: 72.83%;
@@ -98,13 +98,13 @@
     background-color: var(--color-darkorange-400);
     overflow: hidden;
   }
-  .affichage-annuel17 {
+  .trait_annuel1 {
     position: absolute;
     top: 16px;
     left: 57px;
     font-weight: 500;
   }
-  .traitement-de-linformation-1-icon12 {
+  .trait_annuel_img {
     position: absolute;
     top: 11px;
     left: 19px;
@@ -112,7 +112,7 @@
     height: 27px;
     object-fit: cover;
   }
-  .affichage-annuel-parent13 {
+  .trait_annuel {
     position: absolute;
     height: 13.99%;
     width: 75.09%;
@@ -125,13 +125,13 @@
     overflow: hidden;
     color: var(--color-white);
   }
-  .dashboard19 {
+  .dashboardtxt {
     position: absolute;
     top: 13px;
     left: 72px;
     font-weight: 500;
   }
-  .tabelu-de-bord-26 {
+  .dashboardimg {
     position: absolute;
     top: 3px;
     left: 16px;
@@ -139,7 +139,7 @@
     height: 40px;
     object-fit: cover;
   }
-  .dashboard-parent13 {
+  .dash {
     position: absolute;
     height: 12.54%;
     width: 76.98%;
@@ -152,7 +152,7 @@
     overflow: hidden;
     color: var(--color-white);
   }
-  .menu24 {
+  .menuu {
     position: absolute;
     height: 8.89%;
     width: 28.68%;
@@ -162,8 +162,8 @@
     display: inline-block;
     color: var(--color-darkorange-300);
   }
-  .frame-child29,
-  .frame-child30 {
+  .div4,
+  .div5 {
     position: absolute;
     height: 0.29%;
     width: 17.55%;
@@ -176,26 +176,26 @@
     max-height: 100%;
     background-color:var(--color-darkorange-300); ;
   }
-  .frame-child30 {
+  .div5 {
     width: 16.83%;
     right: 68.11%;
     left: 15.06%;
   }
-  .frame-wrapper4,
-  .sonatrach3,
-  .vector-parent8 {
+  .menu,
+  .text1,
+  .div2 {
     position: absolute;
     top: 0;
     left: 0;
     width: 265px;
     height: 343px;
   }
-  .frame-wrapper4,
-  .sonatrach3 {
+  .menu,
+  .text1 {
     top: 301px;
     left: 64px;
   }
-  .sonatrach3 {
+  .text1 {
     height: 25.04%;
     width: 52.75%;
     top: 0;
@@ -203,33 +203,33 @@
     display: inline-block;
     color: var(--color-darkorange-100);
   }
-  .direction-de3 {
+  .text3 {
     font-size: var(--font-size-40xl-1);
   }
-  .socit-direction-de-container3 {
+  .text2 {
     height: 25.04%;
     width: 98.67%;
     top: 28.53%;
   }
-  .de-hydrocarbures3,
-  .la-commercialisation3,
-  .socit-direction-de-container3 {
+  .text5,
+  .text4,
+  .text2 {
     position: absolute;
     left: 0;
     display: inline-block;
   }
-  .la-commercialisation3 {
+  .text4 {
     height: 22.26%;
     width: 100%;
     top: 52.61%;
     font-size: var(--font-size-40xl-1);
   }
-  .de-hydrocarbures3 {
+  .text5 {
     height: 25.04%;
     width: 93.31%;
     top: 74.96%;
   }
-  .group5 {
+  .titre1 {
     position: absolute;
     height: 41.69%;
     width: 62.55%;
@@ -240,7 +240,7 @@
     font-size: var(--font-size-47xl-1);
     color: var(--color-white);
   }
-  .background-page01-2-parent {
+  .divglobale {
     width: 100%;
     position: relative;
     background-color: var(--color-white);
@@ -251,7 +251,7 @@
     color: var(--color-snow-100);
     font-family: var(--font-montserrat);
   }
-  .frame-wrapper4{ 
+  .menu{ 
     top: 301px;
     left: 45px;
     font-size: var(--font-size-sm);
