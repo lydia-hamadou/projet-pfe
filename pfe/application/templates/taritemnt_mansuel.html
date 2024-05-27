@@ -21,80 +21,79 @@
     />
   </head>
   <body>
-    <div class="ui2">
-      <img class="group-28-11" alt="" src="{% static 'images/ui1.png'%}" />
+    <div class="div_globale">
+      <img class="background" alt="" src="{% static 'images/ui1.png'%}" />
 
-      <div class="ui2-inner">
-        <div class="vector-parent6">
+      <div class="div1">
+        <div class="menu">
 
-          <a class="traitement-de-linformation-2-container" href="traitement_mansuel">
+          <a class="trait_m1" href="traitement_mansuel">
             <img
-              class="traitement-de-linformation-2-icon3"
+              class="div2m"
               alt=""
               src="{% static 'images/traitement-de-linformation (1).png'%}"
             />
-
-            <div class="traitement-mansuelle2" style="color:white;">Traitement Mansuelle</div>
+            <div class="div3" style="color:white;">Traitement Mansuelle</div>
           </a>
-          <a class="affichage-bilan-par-primetre-container" href="traitement_p1">
-            <div class="affichage-bilan-par-container2">
-              <p class="affichage-bilan2" style="color:white;">Affichage Bilan</p>
-              <p class="affichage-bilan2"style="color:white;">par périmetre</p>
+          <a class="affichage_p1" href="traitement_p1">
+            <div class="affich">
+              <p class="affich2" style="color:white;">Affichage Bilan</p>
+              <p class="affich2"style="color:white;">par périmetre</p>
             </div>
-            <img class="bilan-2-icon3" alt="" src="{% static 'images/bilan.png'%}" />
+            <img class="icone" alt="" src="{% static 'images/bilan.png'%}" />
           </a>
-          <a class="affichage-annuel-parent12" href="traitement_annuel">
-            <div class="affichage-annuel16">Affichage Annuel</div>
+          <a class="annuel" href="traitement_annuel">
+            <div class="annueltext">Affichage Annuel</div>
             <img
-              class="traitement-de-linformation-1-icon11"
+              class="annuelimg"
               alt=""
               src="{% static 'images/traitement-de-linformation.png'%}"
             />
           </a>
-          <a class="dashboard-parent12" href="dashboard">
-            <div class="dashboard18">Dashboard</div>
+          <a class="dashboard" href="dashboard">
+            <div class="dash">Dashboard</div>
             <img
-              class="tabelu-de-bord-25"
+              class="imgdash"
               alt=""
               src="{% static 'images/tabelu de bord.png'%}" 
             />
           </a>
-          <b class="menu23">Menu</b>
-          <div class="frame-child25"></div>
+          <b class="menumot">Menu</b>
+          <div class="div4"></div>
 
-          <div class="frame-child26"></div>
+          <div class="div5"></div>
         </div>
       </div>
-      <form class="vector-parent7" method="post" enctype="multipart/form-data" action="{% url 'application:index' %}">
+      <form class="form" method="post" enctype="multipart/form-data" action="{% url 'application:index' %}">
         {% csrf_token %}
-        <div class="page2-inner">
-            <label class="choose-file-label">Veuillez sélectionner le fichier Excel à vérifier </label>
-            <input type="file" name="excel_file" class="choose-file-button">
+        <div class="input">
+            <label class="label-sel">Veuillez sélectionner le fichier Excel à vérifier </label>
+            <input type="file" name="excel_file" class="btn-sel">
         </div>
-        <div class="actions-frame">
+        <div class="img">
             <img class="icon1" alt="" src="{% static 'images/Actions-frame.png'%}" />
         </div>
-        <button class="rectangle-group" type="submit" id="submitBtn">
-            <b class="test2">Test</b>
+        <button class="btn" type="submit" id="submitBtn">
+            <b class="test">Test</b>
         </button>
     </form>
-      <a class="acceuil18" href="login">
-        <b class="retour1">se déconnecter</b>
+      <a class="acceuil" href="login">
+        <b class="deconnecte">se déconnecter</b>
         </a>
-      <div class="rectangle-7-92" ></div>
+      <div class="div6" ></div>
       <a href="acceuil">
-        <img class="logo-2-icon2" alt="Description de l'image" src="{% static 'images/logo.png' %}">
+        <img class="logo" alt="Description de l'image" src="{% static 'images/logo.png' %}">
       </a>
       <img
-        class="microsoft-excel-icon1"
+        class="img1"
         alt=""
         src="{% static 'images/Microsoft Excel.png'%}"
       />
     </div>
   </body>
   <script>
-    const chooseFileInput = document.querySelector('.choose-file-button');
-   const chooseFileLabel = document.querySelector('.choose-file-label');
+    const chooseFileInput = document.querySelector('.btn-sel');
+   const chooseFileLabel = document.querySelector('.label-sel');
    
    chooseFileInput.addEventListener('change', () => {
      if (chooseFileInput.files.length > 0) {

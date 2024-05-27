@@ -22,61 +22,59 @@
     />
   </head>
   <body>
-    <div class="page-p1">
-      <img class="group-28-13" alt="" src="{% static 'images/finale_img.png'%}"/>
+    <div class="div_global">
+      <img class="background" alt="" src="{% static 'images/finale_img.png'%}"/>
 
-      <div class="page-p1-inner">
-        <div class="vector-parent16">
+      <div class="div1">
+        <div class="div2">
 
-          <a class="traitement-de-linformation-2-parent6" style="color:white;" href="traitement_mansuel">
+          <a class="trait1" style="color:white;" href="traitement_mansuel">
             <img
-              class="traitement-de-linformation-2-icon9"
+              class="trait2"
               alt=""
               src="{% static 'images/traitement-de-linformation (1).png'%}"
             />
 
-            <div class="traitement-mansuelle8">Traitement Mansuelle</div>
+            <div class="trait3">Traitement Mansuelle</div>
           </a>
-          <a class="affichage-bilan-par-primetre-parent3"style="color:white;" href="traitement_p1">
-            <div class="affichage-bilan-par-container5">
-              <p class="affichage-bilan5">Affichage Bilan</p>
-              <p class="affichage-bilan5">par périmetre</p>
+          <a class="trait_p1"style="color:white;" href="traitement_p1">
+            <div class="affiche1">
+              <p class="affiche2">Affichage Bilan</p>
+              <p class="affiche2">par périmetre</p>
             </div>
-            <img class="bilan-2-icon9" alt="" src="{% static 'images/bilan.png'%}" />
+            <img class="affiche3" alt="" src="{% static 'images/bilan.png'%}" />
            </a>
-          <a class="affichage-annuel-parent18" href="traitement_annuel">
-            <div class="affichage-annuel25">Affichage Annuel</div>
+          <a class="atraitm_annuel" href="traitement_annuel">
+            <div class="affichage-ann">Affichage Annuel</div>
             <img
-              class="traitement-de-linformation-1-icon17"
+              class="traitm_annuel1"
               alt=""
               src="{% static 'images/traitement-de-linformation.png'%}"
             />
           </a>
-          <a class="dashboard-parent15" href="dashboard">
-            <div class="dashboard21">Dashboard</div>
+          <a class="dash5" href="dashboard">
+            <div class="dash1">Dashboard</div>
             <img
-              class="tabelu-de-bord-211"
+              class="dash2"
               alt=""
               src="{% static 'images/tabelu de bord.png'%}" 
             />
           </a>
-          <b class="menu29">Menu</b>
-          <div class="frame-child44"></div>
+          <b class="menu">Menu</b>
+          <div class="div3"></div>
 
-          <div class="frame-child45"></div>
+          <div class="div4"></div>
         </div>
       </div>
-      <a class="acceuil26" href="login">
-        <b class="retour9">se déconnecter</b>
+      <a class="acceuil" href="login">
+        <b class="deconnecte">se déconnecter</b>
       </a>
-      <div class="rectangle-7-94" ></div>
-
-      <div class="page-p1-child"></div>
-      <div class="page-p1-item">
-        <table class="table-region">
+      <div class="div5" ></div>
+      <div class="div6">
+        <table class="tableau">
           <thead>
               {% if somme_attributs_par_region %}
-                  <tr class="header-row">
+                  <tr class="ligne">
                       <th><a href="#">Région</a></th>
                       <th><a href="#">Stock initial</a></th>
                       <th><a href="#">Apport de consommation interne</a></th>
@@ -93,7 +91,7 @@
           </thead>
           <tbody>
               {% for region, attributs in somme_attributs_par_region.items %}
-                  <tr class="data-row">
+                  <tr class="donnee">
                       <td>{{ region.nom }}</td>
                       <td>{{ attributs.somme_stock_ini }}</td>
                       <td>{{ attributs.somme_apport_consommation }}</td>
@@ -110,43 +108,43 @@
           </tbody>
       </table>     
       </div>
-      <div class="vector-parent17">
+      <div class="div7">
         <form id="excelForm" method="post" action="{% url 'application:generate_excel_annuele' %}" >
           {% csrf_token %}
           <input type="hidden" name="annee" id="excel_annee" value="{{ annee }}">
-          <button type="submit" class="group-child24">EXCEL</button>
+          <button type="submit" class="btnexcel">EXCEL</button>
         </form>
-        <img class="icon-pdf-16" alt="" src="{% static 'images/icon-excel .png' %}" />
+        <img class="icon-pdf" alt="" src="{% static 'images/icon-excel .png' %}" />
         <form id="pdfForm" action="{% url 'application:generate_pdf_annuel' %}" method="post">
           {% csrf_token %}
           <input type="hidden" name="annee" id="pdf_annee" value="{{ annee }}">
-          <button type="submit" class="group-child25">PDF</button>
+          <button type="submit" class="btnpdf">PDF</button>
         </form>
-        <img class="icon-excel-16" alt="" src="{% static 'images/icon-pdf 1.png'%}" />
+        <img class="icon-excel" alt="" src="{% static 'images/icon-pdf 1.png'%}" />
       </div>
       </div>
-      <div class="page-p1-inner1">
-        <form class="rectangle-parent2" method="post" action="{% url 'application:tableau_regions_annuel' %}">
+      <div class="div8">
+        <form class="form1" method="post" action="{% url 'application:tableau_regions_annuel' %}">
         {% csrf_token %}
-          <select class="frame-child46" name="annee">
+          <select class="select1" name="annee">
                <option class="anne11" value="">Année</option>
                <option value="2021" class="option">2021</option>
                <option value="2022" class="option">2022</option>
                <option value="2023" class="option">2023</option>
                <option value="2024" class="option">2024</option>
           </select>
-          <button type="submit" class="frame-child48" id="submitBtn">
+          <button type="submit" class="button" id="submitBtn">
             <i class="fa-solid fa-check" style="color: gray;"></i>  
           </button>
         </form>
       </div>
       <a href="acceuil">
-        <img class="logo-3-icon" alt="Description de l'image" src="{% static 'images/logo.png' %}">
+        <img class="logo" alt="Description de l'image" src="{% static 'images/logo.png' %}">
       </a>
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function() { // Attendre que le DOM soit chargé
-    const anneeSelect = document.querySelector('.rectangle-parent2 select[name="annee"]');
+    const anneeSelect = document.querySelector('.form1 select[name="annee"]');
 
     // Vérifier si une valeur d'année a été enregistrée (par exemple, dans sessionStorage ou localStorage)
     const storedAnnee = sessionStorage.getItem('selectedAnnee'); 
@@ -177,9 +175,9 @@ document.getElementById('pdfForm').addEventListener('submit', function(event) {
     }
 });
 
-// Formulaire de sélection d'année (rectangle-parent2)
-document.querySelector('.rectangle-parent2').addEventListener('submit', function(event) {
-    const anneeSelect = document.querySelector('.rectangle-parent2 select[name="annee"]');
+// Formulaire de sélection d'année (form1)
+document.querySelector('.form1').addEventListener('submit', function(event) {
+    const anneeSelect = document.querySelector('.form1 select[name="annee"]');
     if (anneeSelect.value === "") {
         event.preventDefault();
         alert("Veuillez sélectionner l'année.");

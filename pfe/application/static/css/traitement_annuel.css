@@ -1,10 +1,10 @@
 .frame-child43,
-.group-28-13 {
+.background {
   position: absolute;
   top: 0;
   left: 0;
 }
-.group-28-13 {
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
   overflow: hidden;
   max-height: 100%;
 }
-.traitement-de-linformation-2-icon9 {
+.trait2 {
   position: absolute;
   top: 9.8px;
   left: 9px;
@@ -30,13 +30,13 @@
   height: 31px;
   object-fit: cover;
 }
-.traitement-mansuelle8 {
+.trait3 {
   position: absolute;
   top: 17px;
   left: 40px;
   font-weight: 500;
 }
-.traitement-de-linformation-2-parent6 {
+.trait1 {
   position: absolute;
   height: 14.75%;
   width: 72.83%;
@@ -49,16 +49,16 @@
   overflow: hidden;
   font-size: var(--font-size-smi);
 }
-.affichage-bilan5 {
+.affiche2 {
   margin: 0;
 }
-.affichage-bilan-par-container5 {
+.affiche1 {
   position: absolute;
   top: 4.9px;
   left: 50.8px;
   font-weight: 500;
 }
-.bilan-2-icon9 {
+.affiche3 {
   position: absolute;
   top: 4.9px;
   left: 12.8px;
@@ -66,7 +66,7 @@
   height: 33px;
   object-fit: cover;
 }
-.affichage-bilan-par-primetre-parent3 {
+.trait_p1 {
   position: absolute;
   height: 14.29%;
   width: 72.83%;
@@ -78,13 +78,13 @@
   background-color: var(--color-darkorange-400);
   overflow: hidden;
 }
-.affichage-annuel25 {
+.affichage-ann {
   position: absolute;
   top: 16px;
   left: 57px;
   font-weight: 500;
 }
-.traitement-de-linformation-1-icon17 {
+.traitm_annuel1 {
   position: absolute;
   top: 11px;
   left: 19px;
@@ -92,7 +92,7 @@
   height: 27px;
   object-fit: cover;
 }
-.affichage-annuel-parent18 {
+.atraitm_annuel {
   position: absolute;
   height: 13.99%;
   width: 75.09%;
@@ -105,13 +105,13 @@
   overflow: hidden;
   color: var(--color-white);
 }
-.dashboard21 {
+.dash1 {
   position: absolute;
   top: 13px;
   left: 72px;
   font-weight: 500;
 }
-.tabelu-de-bord-211 {
+.dash2 {
   position: absolute;
   top: 3px;
   left: 16px;
@@ -119,7 +119,7 @@
   height: 40px;
   object-fit: cover;
 }
-.dashboard-parent15 {
+.dash5 {
   position: absolute;
   height: 12.54%;
   width: 76.98%;
@@ -132,7 +132,7 @@
   overflow: hidden;
   color: var(--color-white);
 }
-.menu29 {
+.menu {
   position: absolute;
   height: 8.89%;
   width: 28.68%;
@@ -142,8 +142,8 @@
   display: inline-block;
   color: var(--color-darkorange-300);
 }
-.frame-child44,
-.frame-child45 {
+.div3,
+.div4 {
   position: absolute;
   height: 0.29%;
   width: 17.55%;
@@ -156,13 +156,13 @@
   max-height: 100%;
   background-color: var(--color-darkorange-300);;
 }
-.frame-child45 {
+.div4 {
   width: 16.83%;
   right: 68.11%;
   left: 15.06%;
 }
-.page-p1-inner,
-.vector-parent16 {
+.div1,
+.div2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -171,50 +171,50 @@
   background-color:white ;
   border-radius: var(--br-11xl);
 }
-.page-p1-inner {
+.div1 {
   top: 301px;
   left: 45px;
   font-size: var(--font-size-sm);
   display: flex;
   justify-content: space-between;
 }
-.rectangle-parent2 select:focus {
+.form1 select:focus {
     box-shadow: 0 0 0 2px #ffa500;
   }
   
-.rectangle-parent2 select option {
+.form1 select option {
     padding: 0.5em;
   }
   
-.rectangle-parent2 select option.option {
+.form1 select option.option {
     background-color: #fff;
     /*color: #333;*/
   }
   
-.rectangle-parent2 select option.option:checked {
+.form1 select option.option:checked {
     background-color: #ffa500;
     color: #fff;
   }
   
-.rectangle-parent2 select option.option:checked:focus {
+.form1 select option.option:checked:focus {
     background-color: #ffa500;
     color: #fff;
   }
   
-.rectangle-parent2 select option.option:hover {
+.form1 select option.option:hover {
     background-color: #fff;
     color: #ffa500;
   }
   
-.rectangle-parent2 select option.option:hover:focus {
+.form1 select option.option:hover:focus {
     background-color: #fff;
     color:#ffa500;
   }
-.retour9 {
+.deconnecte {
   position: relative;
   font-size: 17px;
 }
-.acceuil26 {
+.acceuil {
   position: absolute;
   top: 35px;
   border-radius: var(--br-11xl);
@@ -231,7 +231,7 @@
   color: var(--color-white);
   text-decoration: none;
 }
-.rectangle-7-94 {
+.div5 {
   position: absolute;
   top: 96px;
   left: 456px;
@@ -240,7 +240,7 @@
   object-fit: cover;
   background-color: white;
 }
-.page-p1-child {
+.div_global-child {
   position: absolute;
   top: 511px;
   left: 534px;
@@ -248,7 +248,7 @@
   height: 100px;
   overflow: hidden;
 }
-.page-p1-item {
+.div6 {
   position: absolute;
   top: 115px;
   left: 326px;
@@ -256,15 +256,15 @@
   width: 1150px;
   height: 526px;
 }
-.group-child25,
-.icon-pdf-16 {
+.btnpdf,
+.icon-pdf {
   position: absolute;
   border-radius: var(--br-mini);
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
 }
-.icon-pdf-16 {
+.icon-pdf {
   height: 73.59%;
   width: 17.98%;
   top: 10.29%;
@@ -274,11 +274,11 @@
   object-fit: cover;
 }
 .excel13,
-.icon-excel-16 {
+.icon-excel {
   position: absolute;
   height: 70.68%;
 }
-.icon-excel-16 {
+.icon-excel {
   width: 17.26%;
   top: 14.76%;
   right: 25.22%;
@@ -290,7 +290,7 @@
   max-height: 100%;
   object-fit: cover;
 }
-.vector-parent17 {
+.div7 {
   position: absolute;
   height: 6.87%;
   width: 19.31%;
@@ -301,7 +301,7 @@
   font-size: var(--font-size-mini);
   color: var(--color-black);
 }
-.frame-child46{
+.select1{
   position: absolute;
   top: 4px;
   left: 80px;
@@ -312,7 +312,7 @@
   width: 92px;
   height: 35px;
 }
-.frame-child48 {
+.button {
   position: absolute;
   top: 7px;
   left: 238px;
@@ -343,25 +343,25 @@
   top: 10px;
   left: 154px;
 }
-.page-p1-inner1,
-.rectangle-parent2 {
+.div8,
+.form1 {
   position: absolute;
   width: 284px;
   height: 44px;
 }
-.rectangle-parent2 {
+.form1 {
   top: 0;
   left: 0;
   border-radius: var(--br-mini);
   background-color: var(--color-white);
   overflow: hidden;
 }
-.page-p1-inner1 {
+.div8 {
   top: 148px;
   left: 26px;
   color: var(--color-darkorange-300);
 }
-.logo-3-icon {
+.logo {
   position: absolute;
   top: 38px;
   left: 30px;
@@ -374,11 +374,11 @@
 }
 
 /* Style au survol de la souris */
-.logo-3-icon:hover {
+.logo:hover {
   transform: scale(1.1); /* Agrandit légèrement l'image au survol */
   /* Autres styles possibles au survol : opacité, ombre, etc. */
 }
-.page-p1 {
+.div_global {
   width: 100%;
   position: relative;
   background-color: var(--color-white);
@@ -389,37 +389,37 @@
   color: var(--color-snow-100);
   font-family: var(--font-montserrat);
 }
-.table-region {
+.tableau {
   width: 100%;
   border-collapse: collapse;
 }
-.table-region th,
-.table-region td {
+.tableau th,
+.tableau td {
     border: 1px solid #ddd;
     padding: 6px; 
     font-size: 12px; 
 }
 
-.table-region th {
+.tableau th {
   background-color: #ffc04d;
 }
 
-.table-region th a {
+.tableau th a {
     text-decoration: none;
     color: #000;
 }
 
-.table-region th a:hover {
+.tableau th a:hover {
     color: blue;
 }
-.header-row {
+.ligne {
     background-color: #ffc04d; 
 }
-.table-region th:not(:first-child),
-.table-region td {
+.tableau th:not(:first-child),
+.tableau td {
     background-color: rgba(240, 240, 240, 0.3); 
 }
-.group-child24 {
+.btnexcel {
   position: absolute;
   height: 100%;
   width: 44.63%;
@@ -435,7 +435,7 @@
   font-size:large;
   text-align: right;
 }
-.group-child25 {
+.btnpdf {
   height: 100%;
   width: 44.63%;
   top: 0;
@@ -447,7 +447,7 @@
   text-align: center; /* Align text to the center */
   padding-left: 30px; 
 }
-.frame-child48 {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,12 +460,12 @@
     transition: background-color 0.3s ease; /* Ajoute une transition sur le hover */
 }
 
-.frame-child48 i {
+.button i {
     margin-right: 5px;
     font-size: 24px; /* Espacement entre l'icône et le texte */
 }
 
 /* Style lors du survol (hover) */
-.frame-child48:hover {
+.button:hover {
     background-color:  #ffc04d;; /* Vert plus foncé au survol */
 }

@@ -1,10 +1,10 @@
 .frame-child31,
-.group-28-12 {
+.background {
   position: absolute;
   top: 0;
   left: 0;
 }
-.group-28-12 {
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
   overflow: hidden;
   max-height: 100%;
 }
-.traitement-de-linformation-2-icon5 {
+.trait_m2 {
   position: absolute;
   top: 9.8px;
   left: 9px;
@@ -30,13 +30,13 @@
   height: 31px;
   object-fit: cover;
 }
-.traitement-mansuelle4 {
+.trait_m3 {
   position: absolute;
   top: 17px;
   left: 40px;
   font-weight: 500;
 }
-.traitement-de-linformation-2-parent2 {
+.trait_m1 {
   position: absolute;
   height: 14.75%;
   width: 72.83%;
@@ -49,16 +49,16 @@
   overflow: hidden;
   font-size: var(--font-size-smi);
 }
-.affichage-bilan4 {
+.affiche1 {
   margin: 0;
 }
-.affichage-bilan-par-container4 {
+.trait_p2 {
   position: absolute;
   top: 4.9px;
   left: 50.8px;
   font-weight: 500;
 }
-.bilan-2-icon5 {
+.trait_p3 {
   position: absolute;
   top: 4.9px;
   left: 12.8px;
@@ -66,7 +66,7 @@
   height: 33px;
   object-fit: cover;
 }
-.affichage-bilan-par-primetre-parent2 {
+.trait_p1 {
   position: absolute;
   height: 14.29%;
   width: 72.83%;
@@ -78,13 +78,13 @@
   background-color: var(--color-darkorange-400);
   overflow: hidden;
 }
-.affichage-annuel18 {
+.trait_anneul2 {
   position: absolute;
   top: 16px;
   left: 57px;
   font-weight: 500;
 }
-.traitement-de-linformation-1-icon13 {
+.trait_anneul3 {
   position: absolute;
   top: 11px;
   left: 19px;
@@ -92,7 +92,7 @@
   height: 27px;
   object-fit: cover;
 }
-.affichage-annuel-parent14 {
+.trait_anneul1 {
   position: absolute;
   height: 13.99%;
   width: 75.09%;
@@ -105,13 +105,13 @@
   overflow: hidden;
   color: var(--color-white);
 }
-.dashboard20 {
+.dashboard1 {
   position: absolute;
   top: 13px;
   left: 72px;
   font-weight: 500;
 }
-.tabelu-de-bord-27 {
+.dashboard2 {
   position: absolute;
   top: 3px;
   left: 16px;
@@ -119,7 +119,7 @@
   height: 40px;
   object-fit: cover;
 }
-.dashboard-parent14 {
+.dashboard {
   position: absolute;
   height: 12.54%;
   width: 76.98%;
@@ -132,7 +132,7 @@
   overflow: hidden;
   color: var(--color-white);
 }
-.menu25 {
+.menu {
   position: absolute;
   height: 8.89%;
   width: 28.68%;
@@ -142,8 +142,8 @@
   display: inline-block;
   color: var(--color-darkorange-300);
 }
-.frame-child32,
-.frame-child33 {
+.div3,
+.div4 {
   position: absolute;
   height: 0.29%;
   width: 17.55%;
@@ -156,24 +156,24 @@
   max-height: 100%;
   background-color: var(--color-darkorange-300); ;
 }
-.frame-child33 {
+.div4 {
   width: 16.83%;
   right: 68.11%;
   left: 15.06%;
 }
-.selectpage-afterselecting-file-inner,
-.vector-parent9 {
+.div1,
+.div2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 265px;
   height: 343px;
 }
-.retour2 {
+.deconnecte {
   position: relative;
   font-size: 17px;
 }
-.acceuil19 {
+.acceuil {
   position: absolute;
   top: 35px;
   border-radius: var(--br-11xl);
@@ -192,8 +192,8 @@
   color: white;
 
 }
-.logo-2-icon3,
-.rectangle-7-93 {
+.logo,
+.div5 {
   position: absolute;
   top: 96px;
   left: 456px;
@@ -203,7 +203,7 @@
   background-color: white;
 
 }
-.logo-2-icon3 {
+.logo {
   position: absolute;
   top: 38px;
   left: 30px;
@@ -217,7 +217,7 @@
 }
 
 /* Style au survol de la souris */
-.logo-2-icon3:hover {
+.logo:hover {
   transform: scale(1.1); /* Agrandit légèrement l'image au survol */
   /* Autres styles possibles au survol : opacité, ombre, etc. */
 }
@@ -231,7 +231,7 @@
   width: 173px;
   height: 77px;
 }
-.group-child16 {
+.div6 {
   position: absolute;
   top: 0;
   left: 0;
@@ -241,7 +241,7 @@
   width:600px;
   height: 200px;
 }
-.file-verified {
+.text {
   width: max-content;
   position: absolute;
   top: 50px;
@@ -249,7 +249,7 @@
   font-size: 40px;
   width: 400px;
 }
-.image-2-icon {
+.div_icon {
   position: absolute;
   top: 54px;
   left: 400px;
@@ -258,7 +258,7 @@
   object-fit: cover;
   background-color: transparent;
 }
-.rectangle-container {
+.affichage_resultat {
   position: absolute;
   top: 258px;
   left: 40%;
@@ -278,7 +278,7 @@
   width: 380px;
   height: 54px;
 }
-.validate {
+.sauvgaed {
   position:absolute;
   top: calc(50% - 14px);
   /*left: calc(50% - 40px);*/
@@ -289,7 +289,7 @@
   width: 200px;
   color:white;
 }
-.rectangle-parent1 {
+.form {
   position: absolute;
   border: none;
   top: calc(50% + 100px);
@@ -302,7 +302,7 @@
   display: flex;
   justify-content: center;
 }
-.selectpage-afterselecting-file-child {
+.div7 {
   position: absolute;
   top: 475px;
   left: 55%;
@@ -316,7 +316,7 @@
   left: 722px;
   color: var(--color-black);
 }
-.selectpage-afterselecting-file {
+.div_global {
   width: 100%;
   position: relative;
   background-color: var(--color-white);
@@ -328,7 +328,7 @@
   font-family: var(--font-poppins);
   background-color: white;
 }
-.selectpage-afterselecting-file-inner {
+.div1 {
   top: 301px;
   left: 45px;
   font-size: var(--font-size-sm);
@@ -339,7 +339,7 @@
   background-color: white;
   border-radius: var(--br-11xl);
 }
-.logo-2-icon3 {
+.logo {
   position: absolute;
   top: 38px;
   left: 30px;
