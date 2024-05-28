@@ -199,35 +199,46 @@ var Prévision3 = data3.map(function(item) { return (item.prevision); });
           }
       });
       new Chart("line-chart", {
-          type: 'line',
-          data: {
-              labels:labels3,
-              datasets: [{
-                  label: 'Production',
-                  data: Production3,
-                  backgroundColor: 'rgba(21, 96, 122, 1)',
-                  borderColor: 'rgba(21, 96, 122, 1)',
-                  borderWidth: 1
-              }, {
-                  label: 'Prévision',
-                  data: Prévision3,
-                  backgroundColor: 'rgba(250, 140, 0, 1)',
-                  borderColor: 'rgba(250, 140, 0, 1)',
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              title: {
-                  display: true,
-                  text: 'Évolution de la production et prévision'
-              },
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
-      });
+    type: 'line',
+    data: {
+        labels: labels3.map(function(month) {
+            // Formatage des mois, par exemple: "Jan 2024"
+            return new Date(month + '-01').toLocaleString('default', { month: 'short'});
+        }),
+        datasets: [{
+            label: 'Production',
+            data: Production3,
+            backgroundColor: 'rgba(21, 96, 122, 1)',
+            borderColor: 'rgba(21, 96, 122, 1)',
+            borderWidth: 1
+        }, {
+            label: 'Prévision',
+            data: Prévision3,
+            backgroundColor: 'rgba(250, 140, 0, 1)',
+            borderColor: 'rgba(250, 140, 0, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'Évolution de la production et prévision'
+        },
+        maintainAspectRatio: false, // Permet au graphique de s'adapter à la largeur du conteneur
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Mois'
+                }
+            },
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
       
     document.getElementById('submitBtn').addEventListener('click', function(event) {
         const dateDebutInput = document.getElementById('dateDebut');

@@ -955,243 +955,18 @@ def generate_excel_annuele(request):
 
         return response
 
-from datetime import datetime
-from django.db.models import Sum, Count
-from .models import Fichier_mansuelle, Prévision_perimetre
-from django.http import JsonResponse
-from django.db.utils import IntegrityError
-"""juste
-def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
-   
-    # Convert date strings to datetime objects
-   
-    date_format = "%m"  # adjust this format according to your data
-    mois_francais = {
-    'janvier': '01',
-    'février': '02',
-    'mars': '03',
-    'avril': '04',
-    'mai': '05',
-    'juin': '06',
-    'juillet': '07',
-    'août': '08',
-    'septembre': '09',
-    'octobre': '10',
-    'novembre': '11',
-    'décembre': '12'
-    }
-    for fichier in Fichier_mansuelle.objects.all():
-        if fichier.mois in mois_francais:
-            fichier.mois = mois_francais[fichier.mois]
-            try:
-                fichier.save()
-            except IntegrityError:
-                pass
-    date_debut = datetime.strptime(date_debut, "%Y-%m")
-    date_fin = datetime.strptime(date_fin, "%Y-%m")
-    print(date_debut.year)
 
-# Filter fichiers
-    fichiers = Fichier_mansuelle.objects.filter(
-        Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-        Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
-        Q(périmètre__region__nom=region)
-    )
-    
-
-    # Calculate production sum for each perimeter
-    production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
-
-    # Calculate total production for the specified period
-    total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
-
-    # Calculate percentages of production for each perimeter
-    data_pie_chart = [
-        {'perimetre': item['périmètre__nom'], 'percentage': (item['production'] / total_production) * 100 if total_production!= 0 else 0}
-        for item in production_par_perimetre
-    ]
-    for data in data_pie_chart:
-        data['percentage'] = float(data['percentage']) 
-    
-
-    # Calculate average production for each month
-    moyenne_production_mensuelle = fichiers.values('mois','périmètre__nom').annotate(moyenne_production=Sum('produit') / Count('périmètre'))
-
-    # Calculate predictions for each perimeter
-    previsions = Prévision_perimetre.objects.filter(
-        Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-        Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
-        Q(périmètre__region__nom=region)
-
-    )
-    print(previsions)
-
-    # Calculate real production and prediction for each month
-    production_previsions = [
-        {
-           
-            'perimetre': item['périmètre__nom'],
-            'production_mensuelle': item['moyenne_production'],
-            'prevision': previsions.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
-        }
-        for item in moyenne_production_mensuelle
-    ]
-
-    moyenne_production_mensuelle_mois = fichiers.values('mois').annotate(moyenne_production=Sum('produit') / Count('mois'))
-    production_previsions_mois = [
-        {
-           
-            'mois': item['mois'],
-            'production_mensuelle': item['moyenne_production'],
-            'prevision': previsions.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
-        }
-        for item in moyenne_production_mensuelle_mois
-    ]
-
-
-    for d in production_previsions:
-        d['production_mensuelle'] = float(d['production_mensuelle']) 
-        d['prevision'] = float(d['prevision']) 
-
-    for d in production_previsions_mois:
-        d['production_mensuelle'] = float(d['production_mensuelle']) 
-        d['prevision'] = float(d['prevision']) 
-
-
-
-    # return {'data_pie_chart': data_pie_chart, 'production_previsions': production_previsions, 'total':total_production}
-    return {'data_pie_chart': data_pie_chart,'total':total_production,'production_previsions': production_previsions, 'production_previsions_mois': production_previsions_mois}
-
-
-#finjuste
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+handler = logging.StreamHandler()
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 from datetime import datetime
 from django.db.models import Sum, Count, Q
+from calendar import month_abbr
 from .models import Fichier_mansuelle, Prévision_perimetre
-
-def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
-    # Conversion des dates en objets datetime
-    date_format = "%Y-%m"
-    mois_francais = {
-        'janvier': '01',
-        'février': '02',
-        'mars': '03',
-        'avril': '04',
-        'mai': '05',
-        'juin': '06',
-        'juillet': '07',
-        'août': '08',
-        'septembre': '09',
-        'octobre': '10',
-        'novembre': '11',
-        'décembre': '12'
-    }
-    for fichier in Fichier_mansuelle.objects.all():
-        if fichier.mois in mois_francais:
-            fichier.mois = mois_francais[fichier.mois]
-            try:
-                fichier.save()
-            except IntegrityError:
-                pass
-    date_debut = datetime.strptime(date_debut, date_format)
-    date_fin = datetime.strptime(date_fin, date_format)
-
-    # Filtrage des fichiers
-    fichiers = Fichier_mansuelle.objects.filter(
-        Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-        Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
-        Q(périmètre__region__nom=region)
-    )
-
-    # Calcul de la production totale
-    total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
-
-    # Calcul de la production par périmètre
-    production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
-
-    # Calcul des pourcentages de production pour chaque périmètre
-    data_pie_chart = [
-        {
-            'perimetre': item['périmètre__nom'],
-            'percentage': (item['production'] / total_production) * 100 if total_production != 0 else 0
-        }
-        for item in production_par_perimetre
-    ]
-
-    # Conversion des pourcentages en float
-    for data in data_pie_chart:
-        data['percentage'] = float(data['percentage'])
-
-    # Calcul de la production moyenne par périmètre et par mois
-    moyenne_production_mensuelle = fichiers.values('mois', 'périmètre__nom').annotate(
-        moyenne_production=Sum('produit') / Count('périmètre')
-    )
-
-    # Filtrage des prévisions (modification ici pour plus de clarté)
-    previsions_par_perimetre_mois = (
-        Prévision_perimetre.objects
-        .filter(
-            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
-            Q(périmètre__region__nom=region)
-        )
-        .values('mois', 'périmètre__nom')
-        .annotate(prevision=Sum('prévision'))
-        .order_by('mois', 'périmètre__nom')
-    )
-    
-
-
-    # Fusion des données de production et de prévision
-    production_previsions = []
-    for item in moyenne_production_mensuelle:
-        prevision_item = previsions_par_perimetre_mois.filter(
-            mois=item['mois'], périmètre__nom=item['périmètre__nom']
-        ).first()
-        production_previsions.append({
-            'perimetre': item['périmètre__nom'],
-            'production_mensuelle': float(item['moyenne_production']),
-            'prevision': float(prevision_item['prevision']) if prevision_item else 0.0,
-        })
-    
-    
-
-    # Calcul de la production et des prévisions par mois (tous périmètres confondus)
-    moyenne_production_mensuelle_mois = fichiers.values('mois').annotate(moyenne_production=Sum('produit') / Count('mois'))
-    production_previsions_mois = [
-        {
-            'mois': item['mois'],
-            'production_mensuelle': float(item['moyenne_production']),
-            'prevision': previsions_par_perimetre_mois.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
-        }
-        for item in moyenne_production_mensuelle_mois
-    ]
-
-    # Conversion en float
-    for d in production_previsions_mois:
-        d['production_mensuelle'] = float(d['production_mensuelle'])
-        d['prevision'] = float(d['prevision'])
-
-    return {
-        'data_pie_chart': data_pie_chart,
-        'total': total_production,
-        'production_previsions': production_previsions,
-        'production_previsions_mois': production_previsions_mois,
-    }    
-
-essaye
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-import logging
-from django.db.models import Sum, Avg, Q
-from .models import Fichier_mansuelle, Prévision_perimetre
-
-# Configure logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-handler = logging.StreamHandler()
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-handler.setFormatter(formatter)
-logger.addHandler(handler)
+#une meilleure justee**********************
 
 def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
     try:
@@ -1200,161 +975,12 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
         date_debut = datetime.strptime(date_debut, date_format)
         date_fin = datetime.strptime(date_fin, date_format)
 
-        # Mapping des mois français vers des nombres
-        mois_francais_to_num = {
-            'janvier': 1, 'février': 2, 'fevrier': 2, 'mars': 3, 'avril': 4, 'mai': 5, 'juin': 6,
-            'juillet': 7, 'août': 8, 'aout': 8, 'septembre': 9, 'octobre': 10, 'novembre': 11,
-            'décembre': 12, 'decembre': 12
-        }
-        mois_num_to_francais = {v: k for k, v in mois_francais_to_num.items()}
-
-        # Ensure all month names in Fichier_mansuelle are converted to numbers
-        for fichier in Fichier_mansuelle.objects.all():
-            if isinstance(fichier.mois, str):
-                fichier.mois = fichier.mois.lower()  # Ensure case insensitivity
-                fichier.mois = mois_francais_to_num.get(fichier.mois, fichier.mois)
-                if isinstance(fichier.mois, int):
-                    fichier.save()
-
-        # Filtrage des fichiers par région et période
+        # Filtrage des fichiers avec une logique de dates plus claire
         fichiers = Fichier_mansuelle.objects.filter(
-            périmètre__region__nom=region
-        ).filter(
-            Q(annee__gt=date_debut.year, annee__lt=date_fin.year) |
-            Q(annee=date_debut.year, mois__gte=date_debut.month) |
-            Q(annee=date_fin.year, mois__lte=date_fin.month)
-        ).order_by('annee', 'mois')
-
-        # Calcul de la production totale
-        total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
-
-        # Calcul de la production par périmètre
-        production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
-
-        # Calcul des pourcentages de production pour chaque périmètre
-        data_pie_chart = [
-            {
-                'perimetre': item['périmètre__nom'],
-                'percentage': round((item['production'] / total_production) * 100, 2) if total_production > 0 else 0
-            }
-            for item in production_par_perimetre
-        ]
-
-        # Calcul de la différence en mois entre les dates de début et de fin
-        diff_mois = relativedelta(date_fin, date_debut).months + 1
-
-        if diff_mois <= 2:  # Si la période est de 2 mois ou moins
-            # Calcul de la production moyenne par périmètre et par mois
-            moyenne_production_mensuelle = fichiers.values('mois', 'périmètre__nom').annotate(
-                moyenne_production=Avg('produit')
-            )
-
-            # Filtrage des prévisions par date et région
-            previsions_par_perimetre_mois = (
-                Prévision_perimetre.objects.filter(
-                    périmètre__region__nom=region
-                ).filter(
-                    Q(annee__gt=date_debut.year, annee__lt=date_fin.year) |
-                    Q(annee=date_debut.year, mois__gte=date_debut.month) |
-                    Q(annee=date_fin.year, mois__lte=date_fin.month)
-                )
-                .values('mois', 'périmètre__nom')
-                .annotate(prevision=Sum('prévision'))
-                .order_by('mois', 'périmètre__nom')
-            )
-
-            # Ensure all month names in previsions are converted to numbers
-            for prevision in previsions_par_perimetre_mois:
-                if isinstance(prevision['mois'], str):
-                    prevision['mois'] = prevision['mois'].lower()  # Ensure case insensitivity
-                    prevision['mois'] = mois_francais_to_num.get(prevision['mois'], prevision['mois'])
-
-            # Fusion des données de production et de prévision
-            production_previsions = []
-            for item in moyenne_production_mensuelle:
-                mois_num = int(item['mois']) if isinstance(item['mois'], int) else 0
-                mois_valide = 1 <= mois_num <= 12
-                prevision_item = next(
-                    (p for p in previsions_par_perimetre_mois if p['mois'] == mois_num and p['périmètre__nom'] == item['périmètre__nom']),
-                    None
-                )
-                production_previsions.append({
-                    'perimetre': item['périmètre__nom'],
-                    'production_mensuelle': float(item['moyenne_production']),
-                    'prevision': float(prevision_item['prevision']) if prevision_item else 0.0,
-                    'mois': mois_num_to_francais.get(mois_num, 'Mois inconnu') if mois_valide else 'Mois inconnu'
-                })
-
-            production_previsions_mois = [
-                {
-                    'mois': mois_num_to_francais.get(int(item['mois']), 'Mois inconnu'),
-                    'production_mensuelle': float(item['moyenne_production']),
-                    'prevision': sum(p['prevision'] for p in previsions_par_perimetre_mois if p['mois'] == int(item['mois']))
-                }
-                for item in moyenne_production_mensuelle
-            ]
-
-        else:  # Si la période est de plus de 2 mois
-            moyenne_production = fichiers.aggregate(moyenne_production=Avg('produit'))['moyenne_production'] or 0
-            moyenne_prevision = Prévision_perimetre.objects.filter(
-                périmètre__region__nom=region
-            ).filter(
-                Q(annee__gt=date_debut.year, annee__lt=date_fin.year) |
-                Q(annee=date_debut.year, mois__gte=date_debut.month) |
-                Q(annee=date_fin.year, mois__lte=date_fin.month)
-            ).aggregate(moyenne_prevision=Avg('prévision'))['moyenne_prevision'] or 0
-
-            production_previsions_mois = [{
-                'mois': f"{date_debut.year}-{date_debut.month:02d} - {date_fin.year}-{date_fin.month:02d}",
-                'production_mensuelle': float(moyenne_production),
-                'prevision': float(moyenne_prevision)
-            }]
-
-            production_previsions = []
-            for perimetre in fichiers.values_list('périmètre__nom', flat=True).distinct():
-                production_previsions.append({
-                    'perimetre': perimetre,
-                    'production_mensuelle': float(moyenne_production),
-                    'prevision': float(moyenne_prevision)
-                })
-
-        return {
-            'data_pie_chart': data_pie_chart,
-            'total': total_production,
-            'production_previsions': production_previsions,
-            'production_previsions_mois': production_previsions_mois,
-        }
-
-    except Exception as e:
-        logger.error(f"An error occurred: {e}")
-        raise
-"""
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-import logging
-from django.db.models import Sum, Avg, Count, Q
-from django.db.utils import IntegrityError
-from .models import Fichier_mansuelle, Prévision_perimetre
-
-# Configure logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-handler = logging.StreamHandler()
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-handler.setFormatter(formatter)
-logger.addHandler(handler)
-
-def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
-    try:
-        # Conversion des dates en objets datetime
-        date_format = "%Y-%m"
-        date_debut = datetime.strptime(date_debut, date_format)
-        date_fin = datetime.strptime(date_fin, date_format)
-
-        # Filtrage des fichiers
-        fichiers = Fichier_mansuelle.objects.filter(
-            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
+            Q(annee__gt=date_debut.year) | 
+            (Q(annee=date_debut.year) & Q(mois__gte=date_debut.month)),
+            Q(annee__lt=date_fin.year) | 
+            (Q(annee=date_fin.year) & Q(mois__lte=date_fin.month)),
             Q(périmètre__region__nom=region)
         )
 
@@ -1379,15 +1005,17 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
 
         # Calcul de la production moyenne par périmètre et par mois
         moyenne_production_mensuelle = fichiers.values('mois', 'périmètre__nom').annotate(
-            moyenne_production=Sum('produit') / Count('périmètre')
+            moyenne_production=Sum('produit') / Count('mois')
         )
 
         # Filtrage des prévisions
         previsions_par_perimetre_mois = (
             Prévision_perimetre.objects
             .filter(
-                Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-                Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
+                Q(annee__gt=date_debut.year) | 
+                (Q(annee=date_debut.year) & Q(mois__gte=date_debut.month)),
+                Q(annee__lt=date_fin.year) | 
+                (Q(annee=date_fin.year) & Q(mois__lte=date_fin.month)),
                 Q(périmètre__region__nom=region)
             )
             .values('mois', 'périmètre__nom')
@@ -1408,14 +1036,13 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
             })
 
         # Calcul de la production et des prévisions par mois
-        moyenne_production_mensuelle_mois = fichiers.values('mois').annotate(moyenne_production=Sum('produit') / Count('mois'))
         production_previsions_mois = [
             {
                 'mois': item['mois'],
                 'production_mensuelle': float(item['moyenne_production']),
                 'prevision': previsions_par_perimetre_mois.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
             }
-            for item in moyenne_production_mensuelle_mois
+            for item in moyenne_production_mensuelle
         ]
 
         # Conversion en float
@@ -1432,10 +1059,11 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
 
     except IntegrityError as ie:
         logger.warning(f"IntegrityError occurred: {ie}")
-        pass  # Ignore IntegrityError and continue
+        pass  # Ignorer l'IntegrityError et continuer
     except Exception as e:
         logger.error(f"An error occurred: {e}")
         raise
+
 
 
 def get_chart_data(request):
@@ -1485,53 +1113,8 @@ def get_chart_data(request):
 
 
 
-"""
 
-def get_chart_data(request):
-    if request.method == 'POST':
-        date_debut = request.POST.get('dateDebut')
-        date_fin = request.POST.get('dateFin')
-        region = request.POST.get('region')
-    
-        data = extract_data_for_visualization(date_debut, date_fin, region)
 
-        context = {
-        "data_pie_chart": data['data_pie_chart'],
-        "total": data['total'],
-        'productionPrev':data['production_previsions'],
-        'production_previsions_mois':data['production_previsions_mois'],
-        'dateDeb':date_debut,
-        'dateFin':date_fin,
-        'region':region
-        }
-        return render(request, 'dashboard.html',context=context)
-
-    data = extract_data_for_visualization("2020-01", "2030-12", "Adrar")
-    context = {
-        "data_pie_chart": data['data_pie_chart'],
-        "total": data['total'],
-        'productionPrev':data['production_previsions'],
-        'production_previsions_mois':data['production_previsions_mois']
-        }
-    return render(request, 'dashboard.html',context=context)
-
-    
-    
-    """
-
-   
-    
-    
-from openpyxl import Workbook
-from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
-from openpyxl.utils import get_column_letter
-from django.http import HttpResponse
-from io import BytesIO
-from .models import Region, Fichier_mansuelle, Prévision_perimetre
-from django.db.models import Sum, Count, Q, Value, F, FloatField
-from django.db.models.functions import Coalesce
-from django.db.models import Case, When
-from datetime import datetime
 """
 def generate_excel_from_extract(request):
     if request.method == 'POST':
