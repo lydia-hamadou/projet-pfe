@@ -383,16 +383,17 @@ def save_data(request):
 
             except Périmètre.DoesNotExist:
                 perimetres_inexistants.append(perimetre_name)
+
+        if perimetres_inexistants:
+            return render(request, 'page_réponce.html', {'message': "fichier sauvgardé et Périmètres inexistants"}) 
+        else:
             return render(request, 'page_réponce.html', {'message': "Fichier sauvegardé" ,'error': True})
 
 
     except FileNotFoundError:
         return render(request, 'page_acceuil.html', {'error': "Le fichier sélectionné n'a pas été trouvé."})
 
-from django.db.models import Sum, F
-from django.db.models.functions import Coalesce 
-from django.shortcuts import render
-from .models import Region, Périmètre, Fichier_mansuelle
+
 
 def tableau_regions(request):
     somme_attributs_par_region = {}
