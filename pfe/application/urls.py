@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import acceuil,taritemnt_mansuel,essay3,essay4,index,generate_excel_from_extract,get_chart_data,page_reponce,login,essay6,page_resultat_verifier,essay8,save_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel,tableau_regions_annuel,generate_pdf_annuel,generate_excel_annuele,dashboard,dashboard
+from .views import acceuil,taritemnt_mansuel,fichier_verifier,fichier_non_verifier,index,generate_excel_from_extract,get_chart_data,page_reponce,login,loginn,page_resultat_verifier,save_data,traitement_annuel,traitement_p1,tableau_regions,generate_pdf,generate_excel,tableau_regions_annuel,generate_pdf_annuel,generate_excel_annuele,dashboard,dashboard
                     
 
 app_name = 'application'
 
 urlpatterns = [
-    path('', essay6, name='app'),
+    path('', loginn, name='app'),
     path('login/',login, name='login'),
     path('save_data/login',login, name='login'),
     path('page_resultat_non_verifier/login',login, name='login'),
@@ -24,7 +24,6 @@ urlpatterns = [
     path('tableau_regions_annuel', tableau_regions_annuel, name='tableau_regions_annuel'),
     path('generate_pdf_annuel', generate_pdf_annuel, name='generate_pdf_annuel'),
     path('generate_excel_annuele', generate_excel_annuele, name='generate_excel_annuele'),
-    path('sauvgarder', essay8, name='sauvgarder'),
     path('login/acceuil', acceuil, name='acceuil'),
     path('acceuil/login', acceuil, name='acceuil'),
     path('acceuil', acceuil, name='acceuil1'),
@@ -52,8 +51,8 @@ urlpatterns = [
 
     path('login/traitement_mansuel', taritemnt_mansuel, name='traitement_mansuel'),
     path('traitement_mansuel', taritemnt_mansuel, name='traitement_mansuel'),
-    path('affichage_resutat_valide', essay3, name='affichage_resutat_valide'),
-    path('affichage_resutat_nonvalide', essay4, name='affichage_resutat_nonvalide'),
+    path('affichage_resutat_valide', fichier_verifier, name='affichage_resutat_valide'),
+    path('affichage_resutat_nonvalide', fichier_non_verifier, name='affichage_resutat_nonvalide'),
     path('login/traitement_annuel',traitement_annuel, name='traitement_annuel'),
     path('login/traitement_p1',traitement_p1, name='traitement_p1'),
     path('traitement_annuel',traitement_annuel, name='traitement_annuel'),

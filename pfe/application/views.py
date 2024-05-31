@@ -1,53 +1,59 @@
-from django.http import HttpResponse
 import pandas as pd
+import os
 from .models import Fichier_mansuelle , Périmètre
+from django.http import HttpResponseBadRequest, HttpResponseServerError, HttpResponse
 import logging
 from django.shortcuts import render, redirect
 from reportlab.lib.pagesizes import A4, landscape
-from django.contrib import messages
 from .models import Utilisateur, Fichier_mansuelle ,Périmètre,Region,Prévision_perimetre,Visualisation
-from django.db.models import Sum, F, FloatField
 from django.db.models.functions import Coalesce
 from io import BytesIO
 from openpyxl import Workbook
-from openpyxl.styles import Font, Alignment, PatternFill
 from reportlab.lib.pagesizes import letter, landscape
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
 from reportlab.lib import colors
 from reportlab.lib.units import cm
 from django.db.models import Sum, F, FloatField,Value
-from django.db.models.functions import Coalesce
-from django.http import HttpResponse
 from django.db.models import Sum, F, Value, FloatField
-from django.db.models.functions import Coalesce
 from openpyxl.utils import get_column_letter
 from openpyxl.styles.borders import Border, Side
-from django.db.models import Q
 from django.http import JsonResponse
 from django.db.models import Count
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
-import pandas as pd
 from .models import Périmètre, Fichier_mansuelle
-from django.core.files.storage import FileSystemStorage
 from django.conf import settings
-import os
-from django.shortcuts import render, redirect
-from django.core.files.storage import FileSystemStorage
-from django.conf import settings
-import os
-import pandas as pd
 from django.views.decorators.http import require_http_methods
-from django.http import HttpResponseBadRequest, HttpResponseServerError, HttpResponse
 from django.utils import timezone
+from datetime import datetime
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+from openpyxl.utils import get_column_letter
+from django.db.models import Sum, Count, Q
+from django.db.models import F, Value, Case, When
+from django.db.models.functions import Coalesce
+from django.db.utils import IntegrityError
 
-
-
-from django.contrib.auth import authenticate
-
-from django.shortcuts import render
-from .models import Utilisateur
+def acceuil(request):
+   return render(request,'page_acceuil.html')
+def taritemnt_mansuel(request):
+   return render(request,'taritemnt_mansuel.html')
+def fichier_verifier(request):
+   return render(request,'page_resultat_verifier.html')
+def fichier_non_verifier(request):
+   return render(request,'page_resultat_non_verifier.html')
+def loginn(request):
+   return render(request,'login.html')
+def essay8(request):
+   return render(request,'page_sauvgarde.html')
+def traitement_p1(request):
+   return render(request,'traitement_p1.html')
+def traitement_annuel(request):
+   return render(request,'traitement_annuel.html')
+def dashboard(request):
+   return render(request,'dashboard.html')
+def page_reponce(request):
+   return render(request,'page_réponce.html')
 
  
 def login(request):
@@ -61,7 +67,7 @@ def login(request):
         try:
             utilisateur = Utilisateur.objects.get(nom=nom)
             if utilisateur.password == password:
-                request.session['utilisateur_id'] = utilisateur.id_utilisateur  # Enregistrez l'ID utilisateur dans la session
+                request.session['utilisateur_id'] = utilisateur.id_utilisateur  
                 return render(request, 'page_acceuil.html')
             else:
                 mot_de_passe_invalid = True
@@ -70,70 +76,76 @@ def login(request):
 
     return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
 
-"""
 
-from django.contrib.auth import authenticate, login
 
-from django.contrib.auth import authenticate, login
+@require_http_methods(["GET", "POST"])
+def index(request):
+    if request.method == "POST":
+        if "excel_file" in request.FILES:
+            excel_file = request.FILES["excel_file"]
+            try:
+                df = pd.read_excel(excel_file, decimal=',', engine='openpyxl')
 
-@login_required(login_url='application:acceuil')
-def login(request):
-    if request.user.is_authenticated:
-        request.session.flush()
-        return redirect('application:acceuil')
+                
+                numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne', 
+                                   'Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres',
+                                   'Pertes', 'Expédition vers TRC', 'Livraison']
 
-    nom_utilisateur_invalid = False
-    mot_de_passe_invalid = False
+                missing_columns = [col for col in numeric_columns if col not in df.columns]
+                if missing_columns:
+                    return HttpResponseBadRequest(f"Colonnes manquantes dans le fichier Excel : {', '.join(missing_columns)}")
 
-    if request.method == 'POST':
-        nom = request.POST.get('nom')
-        password = request.POST.get('password')
+                
+                for col in numeric_columns:
+                    df[col] = df[col].astype(str).str.replace(r'[ .]', '', regex=True)
 
-        user = authenticate(request, username=nom, password=password)  # Authentification avec Django
+                df['Production'] = df['Production'].astype(str).str.replace('.', ',', regex=False)
+                df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+                df['Production'] = pd.to_numeric(df['Production'], errors='coerce')  
 
-        if user is not None:
-            login(request, user)  # Connexion de l'utilisateur
-            return redirect('application:acceuil')
+                test_result = True
+                for index, row in df.iloc[1:-1].iterrows():
+                    test = row['Stock Initial'] + row['Apports pour Consommation Interne'] + row['Production'] - \
+                           row['Prélèvement ou consommation interne'] - row['Prélèvements pour la Consommation autres périmètres'] - \
+                           row['Pertes'] - row['Expédition vers TRC'] - row['Livraison']
+                    if abs(test) > 0.1:  
+                        test_result = False
+                        failed_row_index = index + 2  
+                        break
+                if test_result:
+                    fs = FileSystemStorage()
+                    filename = fs.save(excel_file.name, excel_file)
+                    file_path = os.path.join(settings.MEDIA_ROOT, filename)
+                    request.session['excel_file_path'] = file_path
+                    return redirect('application:page_resultat_verifier')
+                else:
+                    return render(request, 'page_resultat_non_verifier.html', {'failed_row_index': failed_row_index})
+
+            except pd.errors.EmptyDataError:
+                return HttpResponseBadRequest("Le fichier Excel est vide.")  
+            except pd.errors.ParserError:
+                return HttpResponseBadRequest("Erreur lors de la lecture du fichier Excel. Vérifiez le format.")  
+            except KeyError as e:
+                return HttpResponseBadRequest(f"Colonne manquante dans le fichier Excel : {e}") 
+            except ValueError as e:
+                return HttpResponseBadRequest(str(e)) 
+            except Exception as e:  
+                return HttpResponseServerError(f"Une erreur inattendue s'est produite : {e}")  
         else:
-            mot_de_passe_invalid = True  # Mot de passe incorrect
+            return HttpResponseBadRequest("Veuillez sélectionner un fichier.")  
 
-    return render(request, 'login.html', {'nom_utilisateur_invalid': nom_utilisateur_invalid, 'mot_de_passe_invalid': mot_de_passe_invalid})
-
-"""
-def acceuil(request):
-   return render(request,'page_acceuil.html')
-def taritemnt_mansuel(request):
-   return render(request,'taritemnt_mansuel.html')
-def essay3(request):
-   return render(request,'page_resultat_verifier.html')
-def essay4(request):
-   return render(request,'page_resultat_non_verifier.html')
-def essay5(request):
-   return render(request,'dashboard.html')
-def essay6(request):
-   return render(request,'login.html')
-def essay7(request):
-   return render(request,'creation_compt.html')
-def essay8(request):
-   return render(request,'page_sauvgarde.html')
-def traitement_p1(request):
-   return render(request,'traitement_p1.html')
-def traitement_annuel(request):
-   return render(request,'traitement_annuel.html')
-def dashboard(request):
-   return render(request,'dashboard.html')
-def page_reponce(request):
-   return render(request,'page_réponce.html')
+    else:
+        return render(request, "page_acceuil.html") 
 
 
 
 def page_resultat_verifier(request):
     if request.method == 'POST':
-        return save_data(request)  # Appeler save_data si le formulaire est soumis
+        return save_data(request)  
     else:
         excel_file_path = request.session.get('excel_file_path')
         if not excel_file_path:
-            return redirect('index')  # Rediriger si aucun fichier n'est trouvé
+            return redirect('index')  
         return render(request, 'page_resultat_verifier.html', {'excel_file_path': excel_file_path})
 
 
@@ -145,8 +157,6 @@ def save_data(request):
 
     try:
         df = pd.read_excel(excel_file_path, decimal=',')
-
-        # Convertir les colonnes nécessaires en nombres flottants
         numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne',
                            'Prélèvement ou consommation interne',
                            'Prélèvements pour la Consommation autres périmètres',
@@ -155,12 +165,9 @@ def save_data(request):
         for col in numeric_columns:
             df[col] = pd.to_numeric(df[col], errors='coerce')
         df.fillna(0, inplace=True)
-
-        # Extraction des valeurs de mois et année pour la première ligne
         mois = df.iloc[0, 13]
         annee = df.iloc[0, 14]
 
-        # Liste pour stocker les périmètres inexistants
         perimetres_inexistants = []
 
         for index, row in df.iloc[1:-1].iterrows():
@@ -169,10 +176,9 @@ def save_data(request):
             try:
                 perimetre = Périmètre.objects.get(nom=perimetre_name)
 
-                # Vérification de l'existence de l'entrée
+                
                 if Fichier_mansuelle.objects.filter(mois=mois, annee=annee, périmètre=perimetre).exists():
                                         return render(request, 'page_réponce.html', {'message': "Fichier existe" , 'error': False} )
-                # Calcul de la production en utilisant la formule
                 production = (
                     row['Prélèvement ou consommation interne'] +
                     row['Prélèvements pour la Consommation autres périmètres'] +
@@ -204,7 +210,7 @@ def save_data(request):
                 perimetres_inexistants.append(perimetre_name)
 
         if perimetres_inexistants:
-            return render(request, 'page_réponce.html', {'message': "fichier sauvgardé et Périmètres inexistants"}) 
+            return render(request, 'page_réponce.html', {'message': "Périmètres inexistants"}) 
         else:
             return render(request, 'page_réponce.html', {'message': "Fichier sauvegardé" ,'error': True})
 
@@ -221,7 +227,7 @@ def tableau_regions(request):
         mois = request.POST.get('mois')
         annee = request.POST.get('annee')
 
-        if not mois or not annee:  # Vérifier si mois ou année est None
+        if not mois or not annee:  
             return render(request, 'traitement_p1.html', {'mois': mois, 'annee': annee})
 
         regions = Region.objects.all()
@@ -230,7 +236,6 @@ def tableau_regions(request):
             perimetres = Périmètre.objects.filter(region=region)
             fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
 
-            # Calculer les sommes des attributs pour chaque région
             somme_stock_ini = fichiers_par_region.aggregate(somme_stock_ini=Sum('stock_ini', default=0, output_field=FloatField()))['somme_stock_ini']
             somme_apport_consommation = fichiers_par_region.aggregate(somme_apport_consommation=Sum('Apport_consommation', default=0, output_field=FloatField()))['somme_apport_consommation']
             somme_produit = fichiers_par_region.aggregate(somme_produit=Sum('produit', default=0, output_field=FloatField()))['somme_produit']
@@ -240,13 +245,11 @@ def tableau_regions(request):
             somme_expedie = fichiers_par_region.aggregate(somme_expedie=Sum('expedie', default=0, output_field=FloatField()))['somme_expedie']
             somme_laivraison = fichiers_par_region.aggregate(somme_laivraison=Sum('laivraison', default=0, output_field=FloatField()))['somme_laivraison']
 
-            # Calculer somme_exp_trc
             somme_exp_trc = fichiers_par_region.aggregate(somme_exp_trc=Sum(F('expedie') / F('densite'), default=0, output_field=FloatField()))['somme_exp_trc']
 
-            # Calculer somme_stock_final
+     
             somme_stock_final = somme_produit - somme_preleve - somme_pertes - somme_expedie + somme_laivraison + somme_stock_ini - somme_apport_consommation
 
-            # Formater les valeurs pour n'afficher qu'un nombre fixe de décimales
             somme_stock_ini = "{:.3f}".format(somme_stock_ini or 0)
             somme_apport_consommation = "{:.3f}".format(somme_apport_consommation or 0)
             somme_produit = "{:.3f}".format(somme_produit or 0)
@@ -258,7 +261,7 @@ def tableau_regions(request):
             somme_exp_trc = "{:.3f}".format(somme_exp_trc or 0)
             somme_stock_final = "{:.3f}".format(somme_stock_final or 0)
 
-            # Ajouter les sommes des attributs à la région
+            
             somme_attributs_par_region[region] = {
                 'somme_stock_ini': somme_stock_ini,
                 'somme_apport_consommation': somme_apport_consommation,
@@ -275,15 +278,14 @@ def tableau_regions(request):
     return render(request, 'traitement_p1.html', {'somme_attributs_par_region': somme_attributs_par_region, 'mois': mois, 'annee': annee})
 
 
-#ca marche tres bien 
 def generate_pdf(request):
     if request.method == 'POST':
         mois = request.POST.get('mois')
         annee = request.POST.get('annee')
         
-        if not mois or not annee:  # Vérification si mois ou année est None
+        if not mois or not annee:  
             return render(request, 'traitement_p1.html', {'mois': mois, 'annee': annee})
-        # Fetch data as in the generate_excel function
+        
         somme_attributs_par_region = {}
         regions = Region.objects.all()
 
@@ -291,7 +293,6 @@ def generate_pdf(request):
             perimetres = Périmètre.objects.filter(region=region)
             fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
 
-            # Calculate attributes for each region
             somme_perimetre_attributs = []
             for perimetre in perimetres:
                 somme_stock_ini = "{:.3f}".format(fichiers_par_region.filter(périmètre=perimetre).aggregate(somme_stock_ini=Coalesce(Sum('stock_ini'), Value(0), output_field=FloatField()))['somme_stock_ini'])
@@ -322,24 +323,17 @@ def generate_pdf(request):
 
             somme_attributs_par_region[region] = somme_perimetre_attributs
 
-        # Create PDF response and document
         response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'filename="regions_summary.pdf"'
-        doc = SimpleDocTemplate(response, pagesize=landscape(A4),  # Use A4 landscape for more space
+        doc = SimpleDocTemplate(response, pagesize=landscape(A4),  
                            leftMargin=0.1*cm, rightMargin=0.1*cm, 
                            topMargin=0.1*cm, bottomMargin=0.1*cm)
 
-        # Define table headers
         headers = ['Région', 'Périmètre', 'Stock initial', 'Consommation I', 'Production', 'Prélévement CI',
                    'Prélévement CP', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition TRC en m3', 'Stock final']
 
-        # Define larger column widths
         col_widths = [3.4 * cm, 3.7 * cm, 2 * cm,2.3 * cm,2 * cm, 2.5 * cm,2.5 * cm, 1.5 * cm, 3.1 * cm, 1.5 * cm, 3.1 * cm, 2 * cm]
-
-        # Create a list to hold table data
         table_data = [headers]
-
-        # Add data for each region and perimetre
         for region, perimetres in somme_attributs_par_region.items():
             for perimetre_data in perimetres:
                 row_data = [region.nom, perimetre_data['nom']]
@@ -347,50 +341,40 @@ def generate_pdf(request):
                     row_data.append(perimetre_data[attribut])
                 table_data.append(row_data)
 
-            # Add totals for the perimetres
             perimetre_totals = ['Total pour ' + region.nom, '', *[float("{:.3f}".format(sum(float(perimetre_data[attribut]) for perimetre_data in perimetres))) for attribut in ['somme_stock_ini', 'somme_apport_consommation', 'somme_produit', 'somme_consomme', 'somme_preleve', 'somme_pertes', 'somme_expedie', 'somme_laivraison', 'somme_exp_trc', 'somme_stock_final']]]
             table_data.append(perimetre_totals)
 
-        # Create table
+       
         table = Table(table_data, colWidths=col_widths)
-
-        # Add style for table
         style = TableStyle([
-            ('BACKGROUND', (0, 0), (-1, 0), colors.orange),  # Header background color
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),  # Header text color
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  # Center align all cells
-            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  # Header font
-            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  # Header padding
+            ('BACKGROUND', (0, 0), (-1, 0), colors.orange), 
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),  
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  
              ('FONTSIZE', (0, 1), (-1, -1), 7),
-              ('FONTSIZE', (0, 0), (-1, 0), 8),  # Smaller font size
-            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  # Row background color
-            ('GRID', (0, 0), (-1, -1), 1, colors.black)  # Grid lines
+              ('FONTSIZE', (0, 0), (-1, 0), 8), 
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  
+            ('GRID', (0, 0), (-1, -1), 1, colors.black)  
         ])
 
         table.setStyle(style)
-
-        # Add table to document
         doc.build([table])
-
         return response
 
-#ca marche tres bien 
+ 
 def generate_excel(request):
     if request.method == 'POST':
         mois = request.POST.get('mois')
         annee = request.POST.get('annee')
         
-        if not mois or not annee:  # Vérification si mois ou année est None
+        if not mois or not annee: 
             return render(request, 'traitement_p1.html', {'mois': mois, 'annee': annee})
         
         regions = Region.objects.all()
-
-        # Créer un nouveau classeur Excel
         wb = Workbook()
         ws = wb.active
         ws.title = "Régions"
-
-        # Définir les styles
         bold_font = Font(bold=True)
         center_alignment = Alignment(horizontal='center')
         orange_fill = PatternFill(start_color='FFA500', end_color='FFA500', fill_type='solid')
@@ -399,21 +383,17 @@ def generate_excel(request):
                               top=Side(style='thin', color='000000'),
                               bottom=Side(style='thin', color='000000'))
 
-        # Écrire le mois et l'année au début du document
         ws['A1'] = 'Mois : ' + mois
         ws['A2'] = 'Année : ' + annee
-
-        # Fusionner les cellules pour afficher le mois et l'année
         ws.merge_cells('A1:B1')
         ws.merge_cells('A2:B2')
 
-        # Appliquer le style aux cellules du mois et de l'année
         ws['A1'].font = bold_font
         ws['A1'].alignment = center_alignment
         ws['A2'].font = bold_font
         ws['A2'].alignment = center_alignment
 
-        # Ajouter les noms des attributs en première ligne
+        
         headers = ['Région', 'Périmètre', 'Stock initial', 'Apport de consommation interne', 'Production', 'Consommation interne',
                    'Prélévement ou consommation autre périmétre', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition vers TRC en m3', 'Stock final']
 
@@ -423,14 +403,11 @@ def generate_excel(request):
             cell.alignment = center_alignment
             cell.fill = orange_fill
 
-        row_num = 4  # Commencer à partir de la ligne 4
+        row_num = 4  
 
-        # Écrire les données pour chaque région
         for region in regions:
             perimetres = Périmètre.objects.filter(region=region)
             fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, mois=mois, annee=annee)
-
-            # Écrire les données pour chaque périmètre dans la région
             for perimetre in perimetres:
                 attributs = [
                     region.nom,
@@ -447,48 +424,39 @@ def generate_excel(request):
                     fichiers_par_region.filter(périmètre=perimetre).aggregate(somme_stock_final=Coalesce(Sum(F('produit') - F('preleve') - F('pertes') - F('expedie') + F('laivraison') + F('stock_ini') - F('Apport_consommation')), Value(0), output_field=FloatField()))['somme_stock_final']
                 ]
 
-                # Écrire les données avec style
+                
                 for col_num, value in enumerate(attributs, 1):
                     cell = ws.cell(row=row_num, column=col_num, value=value)
                     cell.alignment = center_alignment
 
-                row_num += 1  # Déplacer vers la ligne suivante
+                row_num += 1  
 
-            # Écrire le total des périmètres pour cette région
             total_attributs = []
             for col_num in range(3, ws.max_column + 1):
                 total = sum(ws.cell(row=row, column=col_num).value or 0 for row in range(row_num - len(perimetres), row_num))
                 total_attributs.append(total)
 
-            # Écrire les totaux dans la même colonne que les attributs correspondants
             for col_num, value in enumerate(total_attributs, 3):
                 cell = ws.cell(row=row_num, column=col_num, value=value)
                 cell.font = bold_font
                 cell.alignment = center_alignment
 
-            # Écrire le texte "Total pour région" dans la première colonne
             cell = ws.cell(row=row_num, column=1, value="Total pour " + region.nom)
             cell.font = bold_font
             cell.alignment = center_alignment
 
-            row_num += 1  # Déplacer vers la ligne suivante
-
-        # Ajuster la largeur des colonnes
+            row_num += 1  
         for col_num in range(1, ws.max_column + 1):
             column_letter = get_column_letter(col_num)
             ws.column_dimensions[column_letter].auto_size = True
 
-        # Appliquer les bordures à toutes les cellules
         for row in ws.iter_rows():
             for cell in row:
                 cell.border = black_border
-
-        # Générer le fichier Excel en mémoire
         excel_data = BytesIO()
         wb.save(excel_data)
         excel_data.seek(0)
 
-        # Créer une réponse HTTP avec le fichier Excel
         response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
         response['Content-Disposition'] = 'attachment; filename=bilan_par_périmétre.xlsx'
 
@@ -499,7 +467,7 @@ def tableau_regions_annuel(request, annee=None):
     
     if request.method == 'POST':
         annee = request.POST.get('annee')
-    if not annee:  # Vérifier si l'année est None
+    if not annee:  
             return render(request, 'traitement_annuel.html', {'annee': annee})
     if annee:
         regions = Region.objects.all()
@@ -507,8 +475,7 @@ def tableau_regions_annuel(request, annee=None):
         for region in regions:
             perimetres = Périmètre.objects.filter(region=region)
             fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, annee=annee)
-            
-            # Calculer les sommes des attributs pour chaque région
+        
             somme_stock_ini = fichiers_par_region.aggregate(somme_stock_ini=Sum('stock_ini', default=0, output_field=FloatField()))['somme_stock_ini']
             somme_apport_consommation = fichiers_par_region.aggregate(somme_apport_consommation=Sum('Apport_consommation', default=0, output_field=FloatField()))['somme_apport_consommation']
             somme_produit = fichiers_par_region.aggregate(somme_produit=Sum('produit', default=0, output_field=FloatField()))['somme_produit']
@@ -518,13 +485,10 @@ def tableau_regions_annuel(request, annee=None):
             somme_expedie = fichiers_par_region.aggregate(somme_expedie=Sum('expedie', default=0, output_field=FloatField()))['somme_expedie']
             somme_laivraison = fichiers_par_region.aggregate(somme_laivraison=Sum('laivraison', default=0, output_field=FloatField()))['somme_laivraison']
 
-            # Calculer somme_exp_trc
             somme_exp_trc = fichiers_par_region.aggregate(somme_exp_trc=Sum(F('expedie') / F('densite'), default=0, output_field=FloatField()))['somme_exp_trc']
 
-            # Calculer somme_stock_final
             somme_stock_final = somme_produit - somme_preleve - somme_pertes - somme_expedie + somme_laivraison + somme_stock_ini - somme_apport_consommation
             
-            # Formater les valeurs pour n'afficher qu'un nombre fixe de décimales
             somme_stock_ini = "{:.3f}".format(somme_stock_ini or 0)
             somme_apport_consommation = "{:.3f}".format(somme_apport_consommation or 0)
             somme_produit = "{:.3f}".format(somme_produit or 0)
@@ -535,8 +499,7 @@ def tableau_regions_annuel(request, annee=None):
             somme_laivraison = "{:.3f}".format(somme_laivraison or 0)
             somme_exp_trc = "{:.3f}".format(somme_exp_trc or 0)
             somme_stock_final = "{:.3f}".format(somme_stock_final or 0)
-            
-            # Ajouter les sommes des attributs à la région
+        
             somme_attributs_par_region[region] = {
                 'somme_stock_ini': somme_stock_ini,
                 'somme_apport_consommation': somme_apport_consommation,
@@ -553,15 +516,14 @@ def tableau_regions_annuel(request, annee=None):
     return render(request, 'traitement_annuel.html', {'somme_attributs_par_region': somme_attributs_par_region, 'annee': annee})
 
 
-#ca marche
+
 def generate_pdf_annuel(request):
     if request.method == 'POST':
         annee = request.POST.get('annee')
 
-        if not annee:  # Vérifier si l'année est None
+        if not annee: 
             return render(request, 'traitement_annuel.html', {'annee': annee})
 
-        # Fetch data for the selected year
         somme_attributs_par_region = {}
         regions = Region.objects.all()
 
@@ -569,7 +531,6 @@ def generate_pdf_annuel(request):
             perimetres = Périmètre.objects.filter(region=region)
             fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, annee=annee)
             
-            # Calculate attribute sums for each region
             somme_perimetre_attributs = []
             for perimetre in perimetres:
                 somme_stock_ini = "{:.3f}".format(fichiers_par_region.filter(périmètre=perimetre).aggregate(somme_stock_ini=Coalesce(Sum('stock_ini'), Value(0), output_field=FloatField()))['somme_stock_ini'])
@@ -600,23 +561,17 @@ def generate_pdf_annuel(request):
 
             somme_attributs_par_region[region] = somme_perimetre_attributs
 
-             # Create PDF response
         response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'filename="regions_summary.pdf"'
-        doc = SimpleDocTemplate(response, pagesize=landscape(A4),  # Use A4 landscape for more space
+        doc = SimpleDocTemplate(response, pagesize=landscape(A4),  
                            leftMargin=0.1*cm, rightMargin=0.1*cm, 
                            topMargin=0.1*cm, bottomMargin=0.1*cm)
         
         headers = ['Région', 'Périmètre', 'Stock initial', 'Consommation I', 'Production', 'Prélévement CI',
                    'Prélévement CP', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition TRC en m3', 'Stock final']
 
-        # Define larger column widths
         col_widths = [3.4 * cm, 3.7 * cm, 2 * cm,2.3 * cm,2 * cm, 2.5 * cm,2.5 * cm, 1.5 * cm, 3.1 * cm, 1.5 * cm, 3.1 * cm, 2 * cm]
-
-        # Create a list to hold table data
         table_data = [headers]
-
-        # Add data for each region and perimetre
         for region, perimetres in somme_attributs_par_region.items():
             for perimetre_data in perimetres:
                 row_data = [region.nom, perimetre_data['nom']]
@@ -624,36 +579,26 @@ def generate_pdf_annuel(request):
                     row_data.append(perimetre_data[attribut])
                 table_data.append(row_data)
 
-            # Add totals for the perimetres
             perimetre_totals = ['Total pour ' + region.nom, '', *[float("{:.3f}".format(sum(float(perimetre_data[attribut]) for perimetre_data in perimetres))) for attribut in ['somme_stock_ini', 'somme_apport_consommation', 'somme_produit', 'somme_consomme', 'somme_preleve', 'somme_pertes', 'somme_expedie', 'somme_laivraison', 'somme_exp_trc', 'somme_stock_final']]]
             table_data.append(perimetre_totals)
 
-        # Create table
         table = Table(table_data, colWidths=col_widths)
 
-        # Add style for table
+      
         style = TableStyle([
-            ('BACKGROUND', (0, 0), (-1, 0), colors.orange),  # Header background color
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),  # Header text color
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  # Center align all cells
-            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  # Header font
-            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  # Header padding
+            ('BACKGROUND', (0, 0), (-1, 0), colors.orange), 
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.black), 
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12), 
             ('FONTSIZE', (0, 1), (-1, -1), 7),
-            ('FONTSIZE', (0, 0), (-1, 0), 8),  # Smaller font size
-            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  # Row background color
-            ('GRID', (0, 0), (-1, -1), 1, colors.black)  # Grid lines
+            ('FONTSIZE', (0, 0), (-1, 0), 8), 
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige), 
+            ('GRID', (0, 0), (-1, -1), 1, colors.black)  
         ])
 
         table.setStyle(style)
-
-        # Add table to document
         doc.build([table])
-
-        table.setStyle(style)
-
-        # Add table to document
-        doc.build([table])
-
         return response
 
 
@@ -661,17 +606,13 @@ def generate_excel_annuele(request):
     if request.method == 'POST':
         annee = request.POST.get('annee')
 
-        if not annee:  # Vérifier si l'année est None
+        if not annee:  
             return render(request, 'traitement_annuel.html', {'annee': annee})
 
         regions = Region.objects.all()
-
-        # Créer un nouveau classeur Excel
         wb = Workbook()
         ws = wb.active
         ws.title = "Régions"
-
-        # Définir les styles
         bold_font = Font(bold=True)
         center_alignment = Alignment(horizontal='center')
         orange_fill = PatternFill(start_color='FFA500', end_color='FFA500', fill_type='solid')
@@ -680,17 +621,12 @@ def generate_excel_annuele(request):
                               top=Side(style='thin', color='000000'),
                               bottom=Side(style='thin', color='000000'))
 
-        # Écrire le mois et l'année au début du document
+        
         ws['A1'] = 'Année : ' + annee
 
-        # Fusionner les cellules pour afficher le mois et l'année
         ws.merge_cells('A1:B1')
-
-        # Appliquer le style aux cellules du mois et de l'année
         ws['A1'].font = bold_font
         ws['A1'].alignment = center_alignment
-
-        # Ajouter les noms des attributs en première ligne
         headers = ['Région', 'Périmètre', 'Stock initial', 'Apport de consommation interne', 'Production', 'Consommation',
                    'Prélevé', 'Pertes', 'Expédition vers TRC', 'Livraison', 'Expédition vers TRC en m3', 'Stock final']
 
@@ -700,14 +636,11 @@ def generate_excel_annuele(request):
             cell.alignment = center_alignment
             cell.fill = orange_fill
 
-        row_num = 4  # Commencer à partir de la ligne 4
-
-        # Écrire les données pour chaque région
+        row_num = 4  
         for region in regions:
             perimetres = Périmètre.objects.filter(region=region)
             fichiers_par_region = Fichier_mansuelle.objects.filter(périmètre__in=perimetres, annee=annee)
 
-            # Écrire les données pour chaque périmètre dans la région
             for perimetre in perimetres:
                 attributs = [
                     region.nom,
@@ -724,48 +657,35 @@ def generate_excel_annuele(request):
                     fichiers_par_region.filter(périmètre=perimetre).aggregate(somme_stock_final=Coalesce(Sum(F('produit') - F('preleve') - F('pertes') - F('expedie') + F('laivraison') + F('stock_ini') - F('Apport_consommation')), Value(0), output_field=FloatField()))['somme_stock_final']
                 ]
 
-                # Écrire les données avec style
                 for col_num, value in enumerate(attributs, 1):
                     cell = ws.cell(row=row_num, column=col_num, value=value)
                     cell.alignment = center_alignment
 
-                row_num += 1  # Déplacer vers la ligne suivante
-
-            # Écrire le total des périmètres pour cette région
+                row_num += 1 
             total_attributs = []
             for col_num in range(3, ws.max_column + 1):
                 total = sum(ws.cell(row=row, column=col_num).value or 0 for row in range(row_num - len(perimetres), row_num))
                 total_attributs.append(total)
 
-            # Écrire les totaux dans la même colonne que les attributs correspondants
             for col_num, value in enumerate(total_attributs, 3):
                 cell = ws.cell(row=row_num, column=col_num, value=value)
                 cell.font = bold_font
                 cell.alignment = center_alignment
-
-            # Écrire le texte "Total pour région" dans la première colonne
             cell = ws.cell(row=row_num, column=1, value="Total pour " + region.nom)
             cell.font = bold_font
             cell.alignment = center_alignment
 
-            row_num += 1  # Déplacer vers la ligne suivante
-
-        # Ajuster la largeur des colonnes
+            row_num += 1  
         for col_num in range(1, ws.max_column + 1):
             column_letter = get_column_letter(col_num)
             ws.column_dimensions[column_letter].auto_size = True
 
-        # Appliquer les bordures à toutes les cellules
         for row in ws.iter_rows():
             for cell in row:
                 cell.border = black_border
-
-        # Générer le fichier Excel en mémoire
         excel_data = BytesIO()
         wb.save(excel_data)
         excel_data.seek(0)
-
-        # Créer une réponse HTTP avec le fichier Excel
         response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
         response['Content-Disposition'] = 'attachment; filename=bilan_annuel.xlsx'
 
@@ -782,15 +702,12 @@ from datetime import datetime
 from django.db.models import Sum, Count, Q
 from calendar import month_abbr
 from .models import Fichier_mansuelle, Prévision_perimetre
-#une meilleure justee**********************
+
 def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
     try:
-        # Conversion des dates en objets datetime
         date_format = "%Y-%m"
         date_debut = datetime.strptime(date_debut, date_format)
         date_fin = datetime.strptime(date_fin, date_format)
-
-        # Filtrage des fichiers avec une logique de dates plus claire
         fichiers = Fichier_mansuelle.objects.filter(
             Q(annee__gt=date_debut.year) | 
             (Q(annee=date_debut.year) & Q(mois__gte=date_debut.month)),
@@ -799,13 +716,8 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
             Q(périmètre__region__nom=region)
         )
 
-        # Calcul de la production totale
         total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
-
-        # Calcul de la production par périmètre
         production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
-
-        # Calcul des pourcentages de production pour chaque périmètre
         data_pie_chart = [
             {
                 'perimetre': item['périmètre__nom'],
@@ -813,17 +725,13 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
             }
             for item in production_par_perimetre
         ]
-
-        # Conversion des pourcentages en float
         for data in data_pie_chart:
             data['percentage'] = float(data['percentage'])
 
-        # Calcul de la production moyenne par périmètre et par mois
         moyenne_production_mensuelle = fichiers.values('mois', 'périmètre__nom').annotate(
             moyenne_production=Sum('produit') / Count('mois')
         )
 
-        # Filtrage des prévisions
         previsions_par_perimetre_mois = (
             Prévision_perimetre.objects
             .filter(
@@ -837,8 +745,6 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
             .annotate(prevision=Sum('prévision'))
             .order_by('mois', 'périmètre__nom')
         )
-
-        # Fusion des données de production et de prévision
         production_previsions = []
         for item in moyenne_production_mensuelle:
             prevision_item = previsions_par_perimetre_mois.filter(
@@ -849,8 +755,6 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
                 'production_mensuelle': float(item['moyenne_production']),
                 'prevision': float(prevision_item['prevision']) if prevision_item else 0.0,
             })
-
-        # Calcul de la production et des prévisions par mois
         production_previsions_mois = [
             {
                 'mois': item['mois'],
@@ -859,8 +763,6 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
             }
             for item in moyenne_production_mensuelle
         ]
-
-        # Conversion en float
         for d in production_previsions_mois:
             d['production_mensuelle'] = float(d['production_mensuelle'])
             d['prevision'] = float(d['prevision'])
@@ -874,7 +776,7 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
 
     except IntegrityError as ie:
         logger.warning(f"IntegrityError occurred: {ie}")
-        pass  # Ignorer l'IntegrityError et continuer
+        pass  
     except Exception as e:
         logger.error(f"An error occurred: {e}")
         raise
@@ -884,21 +786,16 @@ def get_chart_data(request):
         date_debut = request.POST.get('dateDebut')
         date_fin = request.POST.get('dateFin')
         region_name = request.POST.get('region')
-    else:  # GET request
+    else:  
         date_debut = "2023-11"
         date_fin = "2023-12"
-        region_name = "Adrar"  # or some other default region ID
-
+        region_name = "Adrar"  
     data = extract_data_for_visualization(date_debut, date_fin, region_name)
-
-    # Visualization Logic
     user_id = request.session.get('utilisateur_id')
     if user_id:
         try:
             utilisateur = Utilisateur.objects.get(id_utilisateur=user_id)
             region_obj = Region.objects.get(nom=region_name)
-
-            # Create the Visualisation object directly
             Visualisation.objects.create(
                 date=timezone.now(),
                 date_debut=datetime.strptime(date_debut, "%Y-%m").date(),
@@ -908,7 +805,7 @@ def get_chart_data(request):
             )
 
         except (Utilisateur.DoesNotExist, Region.DoesNotExist, ValueError):
-            pass  # Or handle the error as needed
+            pass  
     
     context = {
         "data_pie_chart": data['data_pie_chart'],
@@ -917,157 +814,12 @@ def get_chart_data(request):
         'production_previsions_mois': data['production_previsions_mois'],
         'dateDeb': date_debut,
         'dateFin': date_fin,
-        'region': region_name,  # Pass the region name to the template
+        'region': region_name,  
     }
 
     return render(request, 'dashboard.html', context=context)
 
 
-
-
-
-
-
-"""
-def generate_excel_from_extract(request):
-    if request.method == 'POST':
-        date_debut_str = request.POST.get('dateDebut')
-        date_fin_str = request.POST.get('dateFin')
-        region_nom = request.POST.get('region')
-        error_message = request.POST.get('error', '')
-
-        try:
-            date_debut = datetime.strptime(date_debut_str, "%Y-%m")
-            date_fin = datetime.strptime(date_fin_str, "%Y-%m")
-            region = Region.objects.get(nom=region_nom)
-        except ValueError:
-            error_message = "Format de date incorrect. Utilisez YYYY-MM."
-        except Region.DoesNotExist:
-            error_message = "Région introuvable."
-
-        if error_message:
-            request.POST._mutable = True
-            request.POST['error'] = error_message
-            return render(request, 'dashboard.html', request.POST)
-        mois_francais = {
-            'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04',
-            'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08',
-            'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
-        }
-        try:
-        # Mise à jour des mois en français vers leur équivalent numérique
-         Fichier_mansuelle.objects.filter(mois__in=mois_francais.keys()).update(
-            mois=Case(
-                *[When(mois=k, then=Value(v)) for k, v in mois_francais.items()],
-                default=F('mois')
-            )
-         )
-        except IntegrityError:
-         pass
-
-        fichiers = Fichier_mansuelle.objects.filter(
-            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
-            Q(périmètre__region=region)
-        )
-
-        production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
-        total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
-
-        moyenne_production_mensuelle = fichiers.values('mois', 'périmètre__nom').annotate(moyenne_production=Sum('produit') / Count('périmètre'))
-
-        previsions = Prévision_perimetre.objects.filter(
-            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
-            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
-            Q(périmètre__region=region)
-        )
-
-        production_previsions = [
-            {
-                'perimetre': item['périmètre__nom'],
-                'production_mensuelle': item['moyenne_production'],
-                'prevision': previsions.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
-            }
-            for item in moyenne_production_mensuelle
-        ]
-
-        # --- Création du fichier Excel ---
-        wb = Workbook()
-        ws = wb.active
-        ws.title = f"Données de {region_nom}"
-
-        # Styles
-        bold_font = Font(bold=True)
-        center_alignment = Alignment(horizontal='center')
-        orange_fill = PatternFill(start_color="FFA500", end_color="FFA500", fill_type="solid")
-        thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
-
-        # Date et région en première ligne
-        ws.merge_cells('A1:C1')
-        ws['A1'] = f"Région: {region_nom} - Période: {date_debut_str} à {date_fin_str}"
-        ws['A1'].font = bold_font
-        ws['A1'].alignment = center_alignment
-
-        # En-têtes
-        headers = ['Périmètre', 'Production', 'Prévision']
-        for col_num, header in enumerate(headers, 1):
-            cell = ws.cell(row=3, column=col_num, value=header)  # Ligne 3 pour les en-têtes
-            cell.font = bold_font
-            cell.alignment = center_alignment
-            cell.fill = orange_fill
-            cell.border = thin_border
-
-        # Écriture des données
-        row_num = 4  # Commencer à la ligne 4 (après les en-têtes)
-        for data in production_previsions:
-            ws.cell(row=row_num, column=1, value=data['perimetre']).border = thin_border
-            ws.cell(row=row_num, column=2, value=data['production_mensuelle']).border = thin_border
-            ws.cell(row=row_num, column=3, value=data['prevision']).border = thin_border
-            row_num += 1
-
-        # Total (ligne après les données)
-        ws.cell(row=row_num, column=1, value="Total").font = bold_font
-        ws.cell(row=row_num, column=1).border = thin_border
-        ws.cell(row=row_num, column=2, value=total_production).font = bold_font
-        ws.cell(row=row_num, column=2).border = thin_border
-
-        # Ajustement des colonnes
-        for col_idx in range(1, ws.max_column + 1):  # Itérer sur les indices de colonnes
-           max_length = 0
-           column_letter = get_column_letter(col_idx)  # Obtenir la lettre de la colonne à partir de l'index
-
-           for row_idx in range(1, ws.max_row + 1):  # Itérer sur les indices de lignes
-             cell = ws.cell(row=row_idx, column=col_idx)
-             if cell.value:
-                max_length = max(max_length, len(str(cell.value)))
-    
-             adjusted_width = max_length + 2  # padding
-             ws.column_dimensions[column_letter].width = adjusted_width
-
-        # Générer le fichier Excel
-        excel_data = BytesIO()
-        wb.save(excel_data)
-        excel_data.seek(0)
-
-        response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-        response['Content-Disposition'] = f'attachment; filename=donnees_{region_nom}_{date_debut_str}_{date_fin_str}.xlsx'
-
-        return response
-"""
-#fonction_améliorer
-from datetime import datetime
-from openpyxl import Workbook
-from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
-from openpyxl.utils import get_column_letter
-from io import BytesIO
-from django.http import HttpResponse
-from django.db.models import Sum, Count, Q
-from django.core.exceptions import ObjectDoesNotExist
-from .models import Fichier_mansuelle, Prévision_perimetre, Region
-from django.db.models import F, Value, Case, When
-from django.db.models.functions import Coalesce
-from django.db.utils import IntegrityError
-
 def generate_excel_from_extract(request):
     if request.method == 'POST':
         date_debut_str = request.POST.get('dateDebut')
@@ -1096,7 +848,6 @@ def generate_excel_from_extract(request):
         }
 
         try:
-            # Mise à jour des mois en français vers leur équivalent numérique
             Fichier_mansuelle.objects.filter(mois__in=mois_francais.keys()).update(
                 mois=Case(
                     *[When(mois=k, then=Value(v)) for k, v in mois_francais.items()],
@@ -1132,60 +883,52 @@ def generate_excel_from_extract(request):
             for item in moyenne_production_mensuelle
         ]
 
-        # --- Création du fichier Excel ---
         wb = Workbook()
         ws = wb.active
         ws.title = f"Données de {region_nom}"
 
-        # Styles
         bold_font = Font(bold=True)
         center_alignment = Alignment(horizontal='center')
         orange_fill = PatternFill(start_color="FFA500", end_color="FFA500", fill_type="solid")
         thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
 
-        # Date et région en première ligne
         ws.merge_cells('A1:C1')
         ws['A1'] = f"Région: {region_nom} - Période: {date_debut_str} à {date_fin_str}"
         ws['A1'].font = bold_font
         ws['A1'].alignment = center_alignment
 
-        # En-têtes
         headers = ['Périmètre', 'Production', 'Prévision']
         for col_num, header in enumerate(headers, 1):
-            cell = ws.cell(row=3, column=col_num, value=header)  # Ligne 3 pour les en-têtes
+            cell = ws.cell(row=3, column=col_num, value=header)  
             cell.font = bold_font
             cell.alignment = center_alignment
             cell.fill = orange_fill
             cell.border = thin_border
 
-        # Écriture des données
-        row_num = 4  # Commencer à la ligne 4 (après les en-têtes)
+      
+        row_num = 4 
         for data in production_previsions:
             ws.cell(row=row_num, column=1, value=data['perimetre']).border = thin_border
             ws.cell(row=row_num, column=2, value=data['production_mensuelle']).border = thin_border
             ws.cell(row=row_num, column=3, value=data['prevision']).border = thin_border
             row_num += 1
-
-        # Total (ligne après les données)
         ws.cell(row=row_num, column=1, value="Total").font = bold_font
         ws.cell(row=row_num, column=1).border = thin_border
         ws.cell(row=row_num, column=2, value=total_production).font = bold_font
         ws.cell(row=row_num, column=2).border = thin_border
 
-        # Ajustement des colonnes
-        for col_idx in range(1, ws.max_column + 1):  # Itérer sur les indices de colonnes
+        for col_idx in range(1, ws.max_column + 1):  
            max_length = 0
-           column_letter = get_column_letter(col_idx)  # Obtenir la lettre de la colonne à partir de l'index
-
-           for row_idx in range(1, ws.max_row + 1):  # Itérer sur les indices de lignes
+           column_letter = get_column_letter(col_idx)  
+           for row_idx in range(1, ws.max_row + 1):  
              cell = ws.cell(row=row_idx, column=col_idx)
              if cell.value:
                 max_length = max(max_length, len(str(cell.value)))
     
-             adjusted_width = max_length + 2  # padding
+             adjusted_width = max_length + 2  
              ws.column_dimensions[column_letter].width = adjusted_width
 
-        # Générer le fichier Excel
+      
         excel_data = BytesIO()
         wb.save(excel_data)
         excel_data.seek(0)
@@ -1194,72 +937,4 @@ def generate_excel_from_extract(request):
         response['Content-Disposition'] = f'attachment; filename=donnees_{region_nom}_{date_debut_str}_{date_fin_str}.xlsx'
 
         return response
-
-@require_http_methods(["GET", "POST"])
-def index(request):
-    if request.method == "POST":
-        if "excel_file" in request.FILES:
-            excel_file = request.FILES["excel_file"]
-            try:
-                df = pd.read_excel(excel_file, decimal=',', engine='openpyxl')
-
-                # Colonnes numériques à vérifier (sans "Production")
-                numeric_columns = ['Stock Initial', 'Apports pour Consommation Interne', 
-                                   'Prélèvement ou consommation interne', 'Prélèvements pour la Consommation autres périmètres',
-                                   'Pertes', 'Expédition vers TRC', 'Livraison']
-
-                # Vérifier si les colonnes requises sont présentes
-                missing_columns = [col for col in numeric_columns if col not in df.columns]
-                if missing_columns:
-                    return HttpResponseBadRequest(f"Colonnes manquantes dans le fichier Excel : {', '.join(missing_columns)}")
-
-                # Nettoyage des données : supprimer les espaces et les points dans les colonnes numériques
-                for col in numeric_columns:
-                    df[col] = df[col].astype(str).str.replace(r'[ .]', '', regex=True)
-
-                # Remplacer les points par des virgules dans la colonne "Production"
-                df['Production'] = df['Production'].astype(str).str.replace('.', ',', regex=False)
-
-                # Conversion en numérique avec gestion des valeurs non numériques (sauf "Production")
-                df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
-                df['Production'] = pd.to_numeric(df['Production'], errors='coerce')  # Convertir "Production" séparément
-
-                # Identifier les colonnes avec des valeurs non valides (NaN), excluant "Production"
-               
-                # Effectuer le test sur chaque ligne (à partir de la deuxième ligne, en excluant la dernière)
-                test_result = True
-                for index, row in df.iloc[1:-1].iterrows():
-                    test = row['Stock Initial'] + row['Apports pour Consommation Interne'] + row['Production'] - \
-                           row['Prélèvement ou consommation interne'] - row['Prélèvements pour la Consommation autres périmètres'] - \
-                           row['Pertes'] - row['Expédition vers TRC'] - row['Livraison']
-                    if abs(test) > 0.1:  # Test avec une tolérance de 1
-                        test_result = False
-                        failed_row_index = index + 2  # Pour afficher le numéro de ligne correct dans Excel (en commençant à 1)
-                        break
-
-                # Rediriger en fonction du résultat du test
-                if test_result:
-                    fs = FileSystemStorage()
-                    filename = fs.save(excel_file.name, excel_file)
-                    file_path = os.path.join(settings.MEDIA_ROOT, filename)
-                    request.session['excel_file_path'] = file_path
-                    return redirect('application:page_resultat_verifier')
-                else:
-                    return render(request, 'page_resultat_non_verifier.html', {'failed_row_index': failed_row_index})
-
-            except pd.errors.EmptyDataError:
-                return HttpResponseBadRequest("Le fichier Excel est vide.")  # Renvoyer une réponse 400 Bad Request
-            except pd.errors.ParserError:
-                return HttpResponseBadRequest("Erreur lors de la lecture du fichier Excel. Vérifiez le format.")  # Renvoyer une réponse 400 Bad Request
-            except KeyError as e:
-                return HttpResponseBadRequest(f"Colonne manquante dans le fichier Excel : {e}")  # Renvoyer une réponse 400 Bad Request
-            except ValueError as e:
-                return HttpResponseBadRequest(str(e))  # Renvoyer une réponse 400 Bad Request avec le message d'erreur spécifique
-            except Exception as e:  
-                return HttpResponseServerError(f"Une erreur inattendue s'est produite : {e}")  # Renvoyer une réponse 500 Internal Server Error
-        else:
-            return HttpResponseBadRequest("Veuillez sélectionner un fichier.")  # Renvoyer une réponse 400 Bad Request
-
-    else:
-        return render(request, "page_acceuil.html") 
 

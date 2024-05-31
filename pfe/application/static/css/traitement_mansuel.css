@@ -206,33 +206,6 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-/*.base-excelxlsx {
-  position: absolute;
-  top: 14px;
-  left: 82px;
-  font-weight: 500;
-  display: inline-block;
-  width: 194px;
-  height: 29px;
-}
-.btn-sel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-*/
-/*.input {
-  height: 100%;
-  width: 100%;
-  top: 34.28%;
-  right: 5.56%;
-  bottom: 56.83%;
-  left: 39.72%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}*/
 .btn-sel {
   position: absolute;
   top: 0;
@@ -395,15 +368,11 @@
   width: 99px;
   height: 77.4px;
   object-fit: cover;
-  /* Styles supplémentaires pour l'apparence du lien */
-  display: block; /* Assure que l'image remplit toute la zone cliquable */
-  transition: transform 0.3s ease; /* Ajoute un effet de transition fluide */
+  display: block; 
+  transition: transform 0.3s ease; 
 }
-
-/* Style au survol de la souris */
 .logo:hover {
-  transform: scale(1.1); /* Agrandit légèrement l'image au survol */
-  /* Autres styles possibles au survol : opacité, ombre, etc. */
+  transform: scale(1.1); 
 }
 .label-sel {
   position: absolute;

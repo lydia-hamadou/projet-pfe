@@ -2,27 +2,19 @@ body {
     margin: 0;
     line-height: normal;
   }
-  
   :root {
-    /* fonts */
-   /* --font-inter: Inter;*/
-  
-    /* font sizes */
     --font-size-mini: 15px;
-  
-    /* Colors */
     --color-white: #fff;
     --color-dimgray: #787070;
     --color-darkorange: #f06c00;
   }
-  
   .background,
   .logo {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Modification ici */
-    height: 100%; /* Modification ici */
+    width: 100%; 
+    height: 100%; 
     object-fit: cover;
   }
   .logo {
@@ -70,13 +62,13 @@ body {
 
   .form1 input,
   .form2 input{
-    border: none; /* Modification ici */
-    outline: none; /* Modification ici */
-    width: 100%; /* Modification ici */
-    height: 100%; /* Modification ici */
-    font-size: 16px; /* Modification ici */
-    font-family: var(--font-inter); /* Modification ici */
-    color: var(--color-dimgray); /* Modification ici */
+    border: none; 
+    outline: none; 
+    width: 100%; 
+    height: 100%; 
+    font-size: 16px; 
+    font-family: var(--font-inter); 
+    color: var(--color-dimgray); 
     background: none; 
   }
   .form2,

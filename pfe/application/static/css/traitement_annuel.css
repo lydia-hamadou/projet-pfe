@@ -273,11 +273,7 @@
   left: 2.16%;
   object-fit: cover;
 }
-.excel13,
-.icon-excel {
-  position: absolute;
-  height: 70.68%;
-}
+
 .icon-excel {
   width: 17.26%;
   top: 14.76%;
@@ -368,15 +364,12 @@
   width: 99px;
   height: 77.4px;
   object-fit: cover;
-  /* Styles supplémentaires pour l'apparence du lien */
-  display: block; /* Assure que l'image remplit toute la zone cliquable */
-  transition: transform 0.3s ease; /* Ajoute un effet de transition fluide */
+  display: block;
+  transition: transform 0.3s ease; 
 }
 
-/* Style au survol de la souris */
 .logo:hover {
-  transform: scale(1.1); /* Agrandit légèrement l'image au survol */
-  /* Autres styles possibles au survol : opacité, ombre, etc. */
+  transform: scale(1.1); 
 }
 .div_global {
   width: 100%;
@@ -444,28 +437,49 @@
   background-color: white;
   left: 55.37%;
   font-size:large;
-  text-align: center; /* Align text to the center */
+  text-align: center; 
   padding-left: 30px; 
 }
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 12px; /* Ajustez selon vos préférences */
-    /*background-color: #4CAF50; /* Vert */
+    padding: 8px 12px; 
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Ajoute une transition sur le hover */
+    transition: background-color 0.3s ease; 
 }
 
 .button i {
     margin-right: 5px;
-    font-size: 24px; /* Espacement entre l'icône et le texte */
+    font-size: 24px;
 }
-
-/* Style lors du survol (hover) */
 .button:hover {
-    background-color:  #ffc04d;; /* Vert plus foncé au survol */
+    background-color:  #ffc04d;
+}
+.excel13,
+.icon-excel {
+  position: absolute;
+  height: 70.68%;
+}
+.icon-excel {
+  width: 17.26%;
+  top: 14.76%;
+  right: 25.22%;
+  bottom: 14.56%;
+  left: 57.53%;
+  border-radius: var(--br-mini);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.excel13 {
+  width: 23.78%;
+  top: 29.51%;
+  left: 74.78%;
+  font-weight: 500;
+  display: inline-block;
 }

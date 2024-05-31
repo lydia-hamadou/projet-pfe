@@ -210,16 +210,12 @@
   width: 99px;
   height: 77.4px;
   object-fit: cover;
-  /* Styles supplémentaires pour l'apparence du lien */
-  display: block; /* Assure que l'image remplit toute la zone cliquable */
+  display: block; 
   transition: transform 0.3s ease; 
-  background-color: transparent;/* Ajoute un effet de transition fluide */
+  background-color: transparent;
 }
-
-/* Style au survol de la souris */
 .logo:hover {
-  transform: scale(1.1); /* Agrandit légèrement l'image au survol */
-  /* Autres styles possibles au survol : opacité, ombre, etc. */
+  transform: scale(1.1); 
 }
 .result {
   position: absolute;
@@ -310,9 +306,9 @@
   background-color: green;
   width: 150px;
   height: 50px;
-  display: flex; /* Utilisation de flexbox pour le centrage */
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 .sauvgaed {
   display: inline-block;
@@ -320,9 +316,9 @@
   left: 15%;
   height: 30px;
   color: white;
-  background-color: green; /* Couleur de fond verte */
-  border: none;          /* Enlève la bordure par défaut du bouton */
-}
+  background-color: green; 
+  border: none;     
+}    
 .div_icon {
   position: absolute;
   top: 54px;
@@ -334,7 +330,7 @@
 .text {
   width: max-content;
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 150px;
   font-size: 40px;
   width: 400px;
@@ -359,19 +355,18 @@ height: 45px;
 object-fit: cover;
 }
 #message-container {
-  display: flex;    /* Use flexbox for alignment */
-  align-items: center; /* Vertically center icon and text */
+  display: flex;    
+  align-items: center; 
 }
 
 .message-text { 
-  margin-top: 25px;  /* Style for the message text */
-  margin-right: 10px;  /* Space between text and icon */
-  /* Add other styles as needed (font size, color, etc.) */
+  margin-top: 25px;  
+  margin-right: 10px;  
 }
 
 .message-icon {
-  margin-top: 25px;   /* Style for the icon */
+  margin-top: 25px;   
   font-size: 50px;
-  color: #001f3f  /* Adjust icon size as needed */
+  color: #001f3f  
 }
 

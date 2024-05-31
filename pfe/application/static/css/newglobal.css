@@ -4,12 +4,9 @@ body {
   }
   
   :root {
-    /* fonts */
     --font-montserrat: Montserrat;
     --font-inter: Inter;
     --font-poppins: Poppins;
-  
-    /* font sizes */
     --font-size-xl: 20px;
     --font-size-5xl: 24px;
     --font-size-47xl-1: 66.1px;
@@ -21,8 +18,6 @@ body {
     --font-size-21xl: 40px;
     --font-size-sm: 14px;
     --font-size-smi: 13px;
-  
-    /* Colors */
     --color-white: #fff;
     --color-blueviolet: #9747ff;
     --color-darkorange-100: #f7971d;
@@ -36,11 +31,7 @@ body {
     --color-gainsboro-200: rgba(217, 217, 217, 0.2);
     --color-gray-100: #807a7a;
     --color-gray-200: rgba(0, 0, 0, 0.5);
-  
-    /* Paddings */
     --padding-3xs: 10px;
-  
-    /* Border radiuses */
     --br-8xs: 5px;
     --br-11xl: 30px;
     --br-21xl: 40px;
