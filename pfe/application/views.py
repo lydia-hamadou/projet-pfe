@@ -967,7 +967,6 @@ from django.db.models import Sum, Count, Q
 from calendar import month_abbr
 from .models import Fichier_mansuelle, Prévision_perimetre
 #une meilleure justee**********************
-
 def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) -> dict:
     try:
         # Conversion des dates en objets datetime
@@ -1063,8 +1062,6 @@ def extract_data_for_visualization(date_debut: str, date_fin: str, region: str) 
     except Exception as e:
         logger.error(f"An error occurred: {e}")
         raise
-
-
 
 def get_chart_data(request):
     if request.method == 'POST':
