@@ -383,10 +383,6 @@ def save_data(request):
 
             except Périmètre.DoesNotExist:
                 perimetres_inexistants.append(perimetre_name)
-
-        if perimetres_inexistants:
-            return render(request, 'page_réponce.html', {'message': "Périmètres inexistants"}) 
-        else:
             return render(request, 'page_réponce.html', {'message': "Fichier sauvegardé" ,'error': True})
 
 

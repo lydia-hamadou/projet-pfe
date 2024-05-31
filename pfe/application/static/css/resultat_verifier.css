@@ -339,3 +339,39 @@
   font-size: 40px;
   width: 400px;
 }
+.div1 {
+  top: 301px;
+  left: 45px;
+  font-size: var(--font-size-sm);
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-snow-100);
+  font-family: var(--font-montserrat);
+  background-color: white;
+  border-radius: var(--br-11xl);
+}
+.div_icon {
+position: absolute;
+top: 80px;
+left: 500px;
+width: 45px;
+height: 45px;
+object-fit: cover;
+}
+#message-container {
+  display: flex;    /* Use flexbox for alignment */
+  align-items: center; /* Vertically center icon and text */
+}
+
+.message-text { 
+  margin-top: 25px;  /* Style for the message text */
+  margin-right: 10px;  /* Space between text and icon */
+  /* Add other styles as needed (font size, color, etc.) */
+}
+
+.message-icon {
+  margin-top: 25px;   /* Style for the icon */
+  font-size: 50px;
+  color: #001f3f  /* Adjust icon size as needed */
+}
+

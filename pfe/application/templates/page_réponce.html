@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
@@ -20,35 +21,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
     />
   </head>
-  <style>
-  .div1 {
-    top: 301px;
-    left: 45px;
-    font-size: var(--font-size-sm);
-    display: flex;
-    justify-content: space-between;
-    color: var(--color-snow-100);
-    font-family: var(--font-montserrat);
-    background-color: white;
-    border-radius: var(--br-11xl);
-  }
-  .div_icon {
-  position: absolute;
-  top: 80px;
-  left: 500px;
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-}
-.text {
-  width: max-content;
-  position: absolute;
-  top: 40px;
-  left: 100px;
-  font-size: 40px;
-  width: 400px;
-}
-</style>
   <body>
 
     <div class="div_global" >
@@ -106,9 +78,10 @@
       <b class="result">result</b>
       <div class="affichage_resultat">
         <div class="div6"></div>
-        <div class="text" id="message-container" style="left: 100px;" ></div>
-        <!--<img id="message-icon" class="div_icon" style="display: none;"> -->
-      </div>
+        <div class="text" id="message-container" style="left: 100px;">
+            <span class="message-text"></span> <i class="message-icon"></i> 
+        </div>
+     </div>
       <div class="div7">
          <b class="r">R</b>
       </div>
@@ -120,20 +93,25 @@
       const error = "{{ error }}";
       
       if (message) {
-          const messageElement = document.createElement('p');
-          messageElement.textContent = message;
-      
-          messageContainer.appendChild(messageElement);
+    const messageTextElement = document.createElement('span');
+    messageTextElement.textContent = message;
+    messageTextElement.classList.add('message-text'); // Add class for styling
 
-          messageIcon.style.display = 'block';
-          if (error === 'True') {
-              messageElement.classList.add('error-message');
-              messageIcon.src = "{% static '' %}"; 
-          } else {
-              messageElement.classList.add('success-message');
-              messageIcon.src = "{% static '' %}"; 
-          }
-      }
+    const messageIcon = document.createElement('i');
+    messageIcon.classList.add('message-icon');
+
+    const messageContainer = document.getElementById('message-container');
+    messageContainer.appendChild(messageTextElement); // Append text first
+    messageContainer.appendChild(messageIcon);       // Then append icon
+
+    if (error === 'True') {
+        messageTextElement.classList.add('error-message');
+        messageIcon.classList.add('fa-solid', 'fa-file-export');
+    } else {
+        messageTextElement.classList.add('success-message');
+        messageIcon.classList.add('fa-solid', 'fa-file-excel');
+    }
+}
       </script>
   </body>
 </html>
