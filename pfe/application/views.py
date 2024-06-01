@@ -178,7 +178,7 @@ def save_data(request):
 
                 
                 if Fichier_mansuelle.objects.filter(mois=mois, annee=annee, périmètre=perimetre).exists():
-                                        return render(request, 'page_réponce.html', {'message': "Fichier existe" , 'error': False} )
+                                        return render(request, 'page_réponce.html', {'message': "existe déjà" , 'error': False} )
                 production = (
                     row['Prélèvement ou consommation interne'] +
                     row['Prélèvements pour la Consommation autres périmètres'] +
@@ -352,8 +352,8 @@ def generate_pdf(request):
             ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  
-             ('FONTSIZE', (0, 1), (-1, -1), 7),
-              ('FONTSIZE', (0, 0), (-1, 0), 8), 
+            ('FONTSIZE', (0, 1), (-1, -1), 7),
+            ('FONTSIZE', (0, 0), (-1, 0), 8), 
             ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  
             ('GRID', (0, 0), (-1, -1), 1, colors.black)  
         ])
@@ -459,7 +459,6 @@ def generate_excel(request):
 
         response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
         response['Content-Disposition'] = 'attachment; filename=bilan_par_périmétre.xlsx'
-
         return response
 
 def tableau_regions_annuel(request, annee=None):
