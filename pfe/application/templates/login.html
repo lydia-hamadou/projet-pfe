@@ -72,8 +72,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   var nomInput = document.querySelector('.nom-dutilisateur');
   var motDePasseInput = document.querySelector('.mot-de-passe');
-
-  // Hide the placeholder for the input field with an error message
   if (document.querySelector('.error')) {
     var errorElement = document.querySelector('.error');
     if (errorElement.previousElementSibling.classList.contains('nom-dutilisateur')) {
@@ -88,8 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
   var nomInput = document.querySelector('.nom-dutilisateur');
   var motDePasseInput = document.querySelector('.mot-de-passe');
-
-  // Hide the placeholder for the input field with an error message
   if (document.querySelector('.error')) {
     var errorElement = document.querySelector('.error');
     if (errorElement.previousElementSibling.classList.contains('nom-dutilisateur')) {
@@ -99,8 +95,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     nomInput.value = '';
     motDePasseInput.value = '';
-
-    // Remove error message when input field is typed in
     removeErrorMessage(nomInput, errorElement);
     removeErrorMessage(motDePasseInput, errorElement);
   }

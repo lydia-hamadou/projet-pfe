@@ -210,7 +210,6 @@ var Prévision3 = data3.map(function(item) { return (item.prevision); });
     type: 'line',
     data: {
         labels: labels3.map(function(month) {
-            // Formatage des mois, par exemple: "Jan 2024"
             return new Date(month + '-01').toLocaleString('default', { month: 'short'});
         }),
         datasets: [{
@@ -232,7 +231,7 @@ var Prévision3 = data3.map(function(item) { return (item.prevision); });
             display: true,
             text: 'Évolution de la production et prévision'
         },
-        maintainAspectRatio: false, // Permet au graphique de s'adapter à la largeur du conteneur
+        maintainAspectRatio: false, 
         scales: {
             x: {
                 title: {
@@ -254,51 +253,43 @@ var Prévision3 = data3.map(function(item) { return (item.prevision); });
         const regionSelect = document.getElementById('region');
 
         if (dateDebutInput.value === "" || dateFinInput.value === "" || regionSelect.value === "") {
-            event.preventDefault(); // Empêcher la soumission du formulaire
-            alert("Veuillez sélectionner une date de début, une date de fin et une région."); // Afficher une alerte
+            event.preventDefault(); 
+            alert("Veuillez sélectionner une date de début, une date de fin et une région."); 
         }
     });
     document.addEventListener("DOMContentLoaded", function() {
     const chartForm = document.getElementById("chartForm");
     const excelForm = document.getElementById("excelForm");
     const excelButton = document.querySelector("#excelForm button[type='submit']");
-    const errorInput = document.getElementById("excelError"); // Récupérer le champ caché
+    const errorInput = document.getElementById("excelError"); 
 
     if (chartForm && excelForm && excelButton) {
         excelButton.addEventListener("click", function(event) {
             event.preventDefault();
-
-            // Récupérer les valeurs du formulaire "chartForm"
             const chartDateDebut = chartForm.querySelector("#dateDebut").value;
             const chartDateFin = chartForm.querySelector("#dateFin").value;
             const chartRegion = chartForm.querySelector("#region").value;
 
-            // Vérification des champs requis (date de début, date de fin, région)
             if (!chartDateDebut || !chartDateFin || chartRegion === "") {
                 alert("Veuillez sélectionner une date de début, une date de fin et une région.");
                 return;
             }
 
-            // Mettre à jour les champs cachés du formulaire "excelForm"
+            
             excelForm.querySelector("#excelDateDebut").value = chartDateDebut;
             excelForm.querySelector("#excelDateFin").value = chartDateFin;
             excelForm.querySelector("#excelRegion").value = chartRegion;
-
-            // Soumettre le formulaire "excelForm" directement
             excelForm.submit(); 
         });
 
-        // Vérification du message d'erreur (après la soumission du formulaire)
+        
         if (errorInput && errorInput.value) {
             alert(errorInput.value);
-            errorInput.value = ""; // Effacer le message d'erreur après l'avoir affiché
+            errorInput.value = ""; 
         }
     } else {
         console.error("Un ou plusieurs formulaires requis sont manquants.");
     }
 });
-
-
-
 </script>
 </html>

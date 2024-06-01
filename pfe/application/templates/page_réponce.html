@@ -95,14 +95,14 @@
       if (message) {
     const messageTextElement = document.createElement('span');
     messageTextElement.textContent = message;
-    messageTextElement.classList.add('message-text'); // Add class for styling
+    messageTextElement.classList.add('message-text'); 
 
     const messageIcon = document.createElement('i');
     messageIcon.classList.add('message-icon');
 
     const messageContainer = document.getElementById('message-container');
-    messageContainer.appendChild(messageTextElement); // Append text first
-    messageContainer.appendChild(messageIcon);       // Then append icon
+    messageContainer.appendChild(messageTextElement); 
+    messageContainer.appendChild(messageIcon);      
 
     if (error === 'True') {
         messageTextElement.classList.add('error-message');

@@ -134,7 +134,7 @@
               <option value="2023" class="option">2023</option>
               <option value="2024" class="option">2024</option>
           </select>
-          <select class="select2" name="mois" id="mois-select"> <!-- Ajoutez l'attribut name pour le mois -->
+          <select class="select2" name="mois" id="mois-select"> 
               <option class="mois3" value="">Mois</option>
               <option value="janvier" class="option">janvier</option>
               <option value="février" class="option">février</option>
@@ -160,23 +160,17 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-     // Récupérer les éléments de sélection par leur attribut name
      var anneeSelect = document.querySelector('select[name="annee"]');
      var moisSelect = document.querySelector('select[name="mois"]');
- 
-     // Restaurer les valeurs sélectionnées dans le stockage local
      var selectedAnnee = localStorage.getItem('selectedAnnee');
      var selectedMois = localStorage.getItem('selectedMois');
- 
-     // Restaurer les valeurs sélectionnées dans les menus déroulants
+
      if (selectedAnnee) {
          anneeSelect.value = selectedAnnee;
      }
      if (selectedMois) {
          moisSelect.value = selectedMois;
      }
- 
-     // Ajouter des gestionnaires d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
      anneeSelect.addEventListener('change', function() {
          localStorage.setItem('selectedAnnee', anneeSelect.value);
      });
@@ -184,8 +178,6 @@
          localStorage.setItem('selectedMois', moisSelect.value);
      });
  
-     // Ajouter un gestionnaire d'événements pour enregistrer les valeurs sélectionnées dans le stockage local
-     // avant la soumission du formulaire
      document.querySelector('form').addEventListener('submit', function() {
          localStorage.setItem('selectedAnnee', anneeSelect.value);
          localStorage.setItem('selectedMois', moisSelect.value);
@@ -197,27 +189,23 @@
      const moisSelect = document.getElementById('mois-select');
  
      if (anneeSelect.value === "" || moisSelect.value === "") {
-         event.preventDefault(); // Empêcher la soumission du formulaire
-         alert("Veuillez sélectionner l'année et le mois."); // Afficher une alerte
+         event.preventDefault(); 
+         alert("Veuillez sélectionner l'année et le mois."); 
      }
  });
  document.getElementById('pdfForm').addEventListener('submit', function(event) {
      const anneeInput = document.getElementById('pdf_annee');
      const moisInput = document.getElementById('pdf_mois');
- 
-     // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
      if (!anneeInput.value || !moisInput.value) {
-         event.preventDefault(); // Empêcher la soumission du formulaire
+         event.preventDefault(); 
          alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de générer le PDF.");
      }
  });
  document.getElementById('excelForm').addEventListener('submit', function(event) {
      const anneeInput = document.getElementById('excel_annee');
      const moisInput = document.getElementById('excel_mois');
- 
-     // Vérifier si les valeurs de l'année et du mois sont présentes et non vides
      if (!anneeInput.value || !moisInput.value) {
-         event.preventDefault(); // Empêcher la soumission du formulaire
+         event.preventDefault(); 
          alert("Veuillez sélectionner l'année et le mois pour afficher le bilan à l'écran avant de télécharger le fichier Excel.");
      }
  });

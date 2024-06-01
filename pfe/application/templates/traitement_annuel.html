@@ -143,21 +143,17 @@
       </a>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', function() { // Attendre que le DOM soit chargé
+      document.addEventListener('DOMContentLoaded', function() { 
     const anneeSelect = document.querySelector('.form1 select[name="annee"]');
-
-    // Vérifier si une valeur d'année a été enregistrée (par exemple, dans sessionStorage ou localStorage)
     const storedAnnee = sessionStorage.getItem('selectedAnnee'); 
     if (storedAnnee) {
-        anneeSelect.value = storedAnnee; // Restaurer la valeur sélectionnée
+        anneeSelect.value = storedAnnee; 
     }
-
-    // Ajouter un écouteur d'événement pour enregistrer la valeur sélectionnée
     anneeSelect.addEventListener('change', function() {
         sessionStorage.setItem('selectedAnnee', this.value);
     });
 });
-      // Formulaire Excel
+      
 document.getElementById('excelForm').addEventListener('submit', function(event) {
     const anneeInput = document.getElementById('excel_annee');
     if (!anneeInput.value) { 
@@ -165,8 +161,6 @@ document.getElementById('excelForm').addEventListener('submit', function(event) 
         alert("Veuillez sélectionner l'année pour afficher le bilan à l'écran avant de télécharger le fichier Excel");
     }
 });
-
-// Formulaire PDF
 document.getElementById('pdfForm').addEventListener('submit', function(event) {
     const anneeInput = document.getElementById('pdf_annee');
     if (!anneeInput.value) { 
@@ -174,8 +168,6 @@ document.getElementById('pdfForm').addEventListener('submit', function(event) {
         alert("Veuillez sélectionner l'année pour afficher le bilan à l'écran avant de générer le PDF");
     }
 });
-
-// Formulaire de sélection d'année (form1)
 document.querySelector('.form1').addEventListener('submit', function(event) {
     const anneeSelect = document.querySelector('.form1 select[name="annee"]');
     if (anneeSelect.value === "") {

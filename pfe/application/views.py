@@ -815,10 +815,10 @@ def get_chart_data(request):
         'dateFin': date_fin,
         'region': region_name,  
     }
-
     return render(request, 'dashboard.html', context=context)
 
-
+"""
+# à voir
 def generate_excel_from_extract(request):
     if request.method == 'POST':
         date_debut_str = request.POST.get('dateDebut')
@@ -937,3 +937,145 @@ def generate_excel_from_extract(request):
 
         return response
 
+
+
+"""
+
+def generate_excel_from_extract(request):
+    if request.method == 'POST':
+        date_debut_str = request.POST.get('dateDebut')
+        date_fin_str = request.POST.get('dateFin')
+        region_nom = request.POST.get('region')
+        error_message = request.POST.get('error', '')
+
+        try:
+            date_debut = datetime.strptime(date_debut_str, "%Y-%m")
+            date_fin = datetime.strptime(date_fin_str, "%Y-%m")
+            region = Region.objects.get(nom=region_nom)
+        except ValueError:
+            error_message = "Format de date incorrect. Utilisez YYYY-MM."
+        except Region.DoesNotExist:
+            error_message = "Région introuvable."
+
+        if error_message:
+            request.POST._mutable = True
+            request.POST['error'] = error_message
+            return render(request, 'dashboard.html', request.POST)
+
+        mois_francais = {
+            'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04',
+            'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08',
+            'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
+        }
+
+        try:
+            Fichier_mansuelle.objects.filter(mois__in=mois_francais.keys()).update(
+                mois=Case(
+                    *[When(mois=k, then=Value(v)) for k, v in mois_francais.items()],
+                    default=F('mois')
+                )
+            )
+        except IntegrityError:
+            pass
+
+        fichiers = Fichier_mansuelle.objects.filter(
+            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
+            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
+            Q(périmètre__region=region)
+        )
+
+        production_par_perimetre = fichiers.values('périmètre__nom').annotate(production=Sum('produit'))
+        total_production = fichiers.aggregate(total=Sum('produit'))['total'] or 0
+
+        moyenne_production_mensuelle = fichiers.values('mois', 'périmètre__nom').annotate(moyenne_production=Sum('produit') / Count('périmètre'))
+
+        previsions = Prévision_perimetre.objects.filter(
+            Q(annee__gte=date_debut.year, mois__gte=date_debut.month) &
+            Q(annee__lte=date_fin.year, mois__lte=date_fin.month) &
+            Q(périmètre__region=region)
+        )
+
+        production_previsions = [
+            {
+                'perimetre': item['périmètre__nom'],
+                'production_mensuelle': item['moyenne_production'],
+                'prevision': previsions.filter(mois=item['mois']).aggregate(prevision=Sum('prévision'))['prevision'] or 0
+            }
+            for item in moyenne_production_mensuelle
+        ]
+
+        wb = Workbook()
+
+        def create_sheet_with_data(wb, sheet_title, table_title, headers, data, total=None):
+            ws = wb.create_sheet(title=sheet_title)
+            bold_font = Font(bold=True)
+            center_alignment = Alignment(horizontal='center')
+            orange_fill = PatternFill(start_color="FFA500", end_color="FFA500", fill_type="solid")
+            thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
+            ws.merge_cells('A1:C1')
+            ws['A1'] = table_title
+            ws['A1'].font = bold_font
+            ws['A1'].alignment = center_alignment
+
+            for col_num, header in enumerate(headers, 1):
+                cell = ws.cell(row=2, column=col_num, value=header)
+                cell.font = bold_font
+                cell.alignment = center_alignment
+                cell.fill = orange_fill
+                cell.border = thin_border
+
+            for row_num, row_data in enumerate(data, 3):
+                for col_num, value in enumerate(row_data, 1):
+                    cell = ws.cell(row=row_num, column=col_num, value=value)
+                    cell.border = thin_border
+
+            if total:
+                total_row = len(data) + 3
+                for col_num, value in enumerate(total, 1):
+                    cell = ws.cell(row=total_row, column=col_num, value=value)
+                    cell.font = bold_font
+                    cell.border = thin_border
+
+            for col_idx in range(1, ws.max_column + 1):
+                max_length = 0
+                column_letter = get_column_letter(col_idx)
+                for row_idx in range(1, ws.max_row + 1):
+                    cell = ws.cell(row=row_idx, column=col_idx)
+                    if cell.value:
+                        max_length = max(max_length, len(str(cell.value)))
+                adjusted_width = max_length + 2
+                ws.column_dimensions[column_letter].width = adjusted_width
+
+      
+        create_sheet_with_data(
+            wb,
+            "Production par périmètre",
+            f"Production par périmètre pour {region_nom}",
+            ['Périmètre', 'Production'],
+            [(data['périmètre__nom'], data['production']) for data in production_par_perimetre],
+            total=["Total", total_production]
+        )
+
+        create_sheet_with_data(
+            wb,
+            "Production prévisions",
+            f"Production prévisions pour {region_nom}",
+            ['Périmètre', 'Production Mensuelle', 'Prévision'],
+            [(data['perimetre'], data['production_mensuelle'], data['prevision']) for data in production_previsions]
+        )
+
+        create_sheet_with_data(
+            wb,
+            "Moyenne production mensuelle",
+            f"Moyenne production mensuelle pour {region_nom}",
+            ['Mois', 'Périmètre', 'Moyenne Production'],
+            [(data['mois'], data['périmètre__nom'], data['moyenne_production']) for data in moyenne_production_mensuelle]
+        )
+        del wb[wb.sheetnames[0]]
+
+        excel_data = BytesIO()
+        wb.save(excel_data)
+        excel_data.seek(0)
+        response = HttpResponse(excel_data, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        response['Content-Disposition'] = f'attachment; filename=donnees_{region_nom}_{date_debut_str}_{date_fin_str}.xlsx'
+        return response
